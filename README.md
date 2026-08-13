@@ -4,7 +4,7 @@ Aplicación educativa de lectoescritura, bienestar emocional y seguridad digital
 
 ## Aplicación
 
-El código fuente está en la raíz y se compila con Vite. GitHub Actions instala las versiones fijadas en `package-lock.json`, genera `dist/` y lo publica automáticamente en GitHub Pages al actualizar `main`.
+El código fuente está en `src/` y se compila con Vite. GitHub Actions instala las versiones fijadas en `package-lock.json`, genera `dist/` y lo publica automáticamente en GitHub Pages al actualizar `main`. La raíz contiene también la salida compilada para el despliegue estático de Hostinger.
 
 ```sh
 npm ci
