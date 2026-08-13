@@ -145,7 +145,10 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice', onRe
         });
         hint.textContent = '✓ Audio .opus guardado de forma privada.';
       } catch (error) {
-        hint.textContent = `No se pudo guardar: ${error.message || 'revisa la conexión.'}`;
+        hint.textContent = `⚠️ Audio no guardado: ${error.message || 'revisa la conexión.'}`;
+        result.hidden = false;
+        result.className = 'reading-result try';
+        result.innerHTML = `<strong>Tu lectura sí fue comprobada, pero el audio no subió.</strong><span>${escapeHtml(error.message || 'Revisa la conexión y vuelve a intentarlo.')}</span>`;
       }
     };
 
