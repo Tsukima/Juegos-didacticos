@@ -4,10 +4,10 @@ Aplicación web estática de lectoescritura, bienestar emocional y seguridad dig
 
 ## Publicación
 
-Sube el contenido de esta carpeta al directorio público de tu dominio. Para probarla localmente usa un servidor HTTP (los módulos ES no funcionan bien abriendo `index.html` como archivo):
+Sube el contenido del repositorio al directorio público de tu dominio. Para probarla localmente usa un servidor HTTP (los módulos ES no funcionan bien abriendo `index.html` como archivo):
 
 ```sh
-python -m http.server 8080 -d app
+python -m http.server 8080
 ```
 
 ## Contenido del PDF
