@@ -57,3 +57,20 @@ export async function getCloudReadingSummary() {
     average: data.length ? Math.round(data.reduce((sum, row) => sum + row.score, 0) / data.length) : 0
   };
 }
+
+export async function getReadingRecordings() {
+  await ensureAnonymousSession();
+  const {data, error} = await supabase
+    .from('reading_recordings')
+    .select('id, exercise_id, storage_path, score, passed, duration_ms, created_at')
+    .order('created_at', {ascending: false})
+    .limit(50);
+  if (error) throw error;
+  if (!data.length) return [];
+
+  const {data: signedFiles, error: signedError} = await supabase.storage
+    .from('reading-audios')
+    .createSignedUrls(data.map(item => item.storage_path), 600);
+  if (signedError) throw signedError;
+  return data.map((item, index) => ({...item, audioUrl: signedFiles[index]?.signedUrl || null}));
+}
