@@ -7,6 +7,7 @@
 @media(max-width:540px){.reading-check-head{display:block}.privacy-chip{display:inline-flex;margin-bottom:.7rem}}
 .consent-box{display:flex;gap:.7rem;align-items:flex-start;margin:1rem 0;padding:.8rem;background:#fff9e9;border:1px solid #f1dda0;border-radius:14px}.consent-box input{margin-top:.3rem;transform:scale(1.25)}.consent-box span{display:grid;gap:.2rem}.consent-box small{color:var(--muted);line-height:1.4}
 .reading-text{display:grid;gap:.35rem;margin:.4rem 0 1rem;padding:1rem;background:#fff;border:2px solid #b9d9cf;border-radius:15px}.reading-text span{color:var(--teal);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.reading-text strong{font-size:clamp(1.15rem,3vw,1.45rem);line-height:1.45;color:var(--ink)}
+.post-reading-actions{margin-top:1.25rem;animation:actions-in .35s ease both}.post-reading-actions[hidden]{display:none!important}@keyframes actions-in{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
 
 /* Adventure world theme */
 :root{--ink:#123c39;--muted:#587571;--bg:#dff8ef;--card:rgba(255,255,255,.88);--teal:#168876;--mint:#d9f7eb;--yellow:#ffd85e;--coral:#ff8a6c;--sky:#74d7dc;--lime:#bfe766;--line:rgba(31,128,109,.18);--shadow:0 18px 45px rgba(20,93,80,.16),0 3px 0 rgba(255,255,255,.72) inset;--radius:25px}

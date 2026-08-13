@@ -44,10 +44,17 @@ function bindSecurityGame(scenario) {
         right ? 'Muy bien, ahora leámoslo juntos' : 'Vamos a leerlo juntos y descubramos la pista',
         scenario.text
       ));
-      bindReadingCheck(feedback, scenario.text, scenario.id);
       if (right) {
-        feedback.insertAdjacentHTML('beforeend', '<div class="actions"><a class="button" href="#seguridad">Siguiente reto</a></div>');
+        feedback.insertAdjacentHTML('beforeend', '<div class="actions post-reading-actions" hidden><a class="button" href="#seguridad">Siguiente reto</a></div>');
       }
+      bindReadingCheck(feedback, scenario.text, scenario.id, () => {
+        const actions = feedback.querySelector('.post-reading-actions');
+        if (actions) {
+          actions.hidden = false;
+          actions.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+          toast('🎙️ Lectura comprobada. ¡Puedes continuar!');
+        }
+      });
     });
   });
 }

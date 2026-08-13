@@ -51,7 +51,7 @@ export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos', t
   </section>`;
 };
 
-export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
+export function bindReadingCheck(root, targetText, exerciseId = 'practice', onReadingChecked) {
   const button = root?.querySelector('.record-reading');
   const result = root?.querySelector('.reading-result');
   const hint = root?.querySelector('.recording-hint');
@@ -64,6 +64,7 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
   }
 
   let activeRecognition;
+  let hasUnlocked = false;
   button.addEventListener('click', async () => {
     if (activeRecognition) {
       activeRecognition.stop();
@@ -104,6 +105,10 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
       const passed = best.score >= (shortText ? 1 : .65);
       readingOutcome = {score: best.score, passed};
       store.addReadingAttempt(exerciseId, best.score, passed);
+      if (!hasUnlocked) {
+        hasUnlocked = true;
+        onReadingChecked?.(readingOutcome);
+      }
       result.hidden = false;
       result.className = `reading-result ${passed ? 'success' : 'try'}`;
       result.innerHTML = passed
