@@ -41,7 +41,8 @@ function bindSecurityGame(scenario) {
         feedback.innerHTML = '<strong>Mr. Pizza casi te engaña.</strong> Busca la opción que protege tus datos y te acerca a un adulto.';
       }
       feedback.insertAdjacentHTML('beforeend', readingCheckMarkup(
-        right ? 'Muy bien, ahora leámoslo juntos' : 'Vamos a leerlo juntos y descubramos la pista'
+        right ? 'Muy bien, ahora leámoslo juntos' : 'Vamos a leerlo juntos y descubramos la pista',
+        scenario.text
       ));
       bindReadingCheck(feedback, scenario.text, scenario.id);
       if (right) {

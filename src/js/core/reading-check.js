@@ -12,6 +12,10 @@ const normalize = text => text
   .replace(/\s+/g, ' ')
   .trim();
 
+const escapeHtml = text => String(text).replace(/[&<>'"]/g, character => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+}[character]));
+
 const readingScore = (expected, heard) => {
   const wanted = normalize(expected).split(' ').filter(Boolean);
   const spoken = normalize(heard).split(' ').filter(Boolean);
@@ -26,7 +30,7 @@ const readingScore = (expected, heard) => {
   return hits / wanted.length;
 };
 
-export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos') => {
+export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos', targetText = '') => {
   const savesAudio = Boolean(store.get().settings?.saveAudio);
   return `
   <section class="reading-check" aria-labelledby="reading-check-title">
@@ -36,6 +40,10 @@ export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos') =
         <h3 id="reading-check-title">${title}</h3>
       </div>
       <span class="privacy-chip">${savesAudio?'☁️ Guardado privado': '🔒 No se guardará'}</span>
+    </div>
+    <div class="reading-text" aria-label="Texto que debes leer">
+      <span>Lee en voz alta:</span>
+      <strong>${escapeHtml(targetText)}</strong>
     </div>
     <button class="button record-reading" type="button">🎙️ Grabar lectura</button>
     <p class="recording-hint muted">${savesAudio?'Se guardará como .opus en el espacio privado de Supabase.':'El adulto puede activar el guardado privado desde su panel.'}</p>
