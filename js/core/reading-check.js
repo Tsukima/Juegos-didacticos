@@ -1,3 +1,5 @@
+import {store} from './store.js?v=4';
+
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 const normalize = text => text
@@ -22,12 +24,12 @@ const readingScore = (expected, heard) => {
   return hits / wanted.length;
 };
 
-export const readingCheckMarkup = () => `
+export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos') => `
   <section class="reading-check" aria-labelledby="reading-check-title">
     <div class="reading-check-head">
       <div>
         <p class="eyebrow">Comprobador de lectura</p>
-        <h3 id="reading-check-title">Lee el texto en voz alta</h3>
+        <h3 id="reading-check-title">${title}</h3>
       </div>
       <span class="privacy-chip">🔒 No guardamos el audio</span>
     </div>
@@ -36,7 +38,7 @@ export const readingCheckMarkup = () => `
     <div class="reading-result" role="status" aria-live="polite" hidden></div>
   </section>`;
 
-export function bindReadingCheck(root, targetText) {
+export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
   const button = root?.querySelector('.record-reading');
   const result = root?.querySelector('.reading-result');
   const hint = root?.querySelector('.recording-hint');
@@ -75,6 +77,7 @@ export function bindReadingCheck(root, targetText) {
       const best = alternatives[0];
       const shortText = normalize(targetText).split(' ').length <= 2;
       const passed = best.score >= (shortText ? 1 : .65);
+      store.addReadingAttempt(exerciseId, best.score, passed);
       result.hidden = false;
       result.className = `reading-result ${passed ? 'success' : 'try'}`;
       result.innerHTML = passed
