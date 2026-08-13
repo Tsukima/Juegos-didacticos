@@ -1,4 +1,6 @@
 import {store} from './store.js?v=4';
+import {startOpusRecording} from './opus-recorder.js';
+import {uploadReadingAudio} from './supabase.js';
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -24,19 +26,22 @@ const readingScore = (expected, heard) => {
   return hits / wanted.length;
 };
 
-export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos') => `
+export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos') => {
+  const savesAudio = Boolean(store.get().settings?.saveAudio);
+  return `
   <section class="reading-check" aria-labelledby="reading-check-title">
     <div class="reading-check-head">
       <div>
         <p class="eyebrow">Comprobador de lectura</p>
         <h3 id="reading-check-title">${title}</h3>
       </div>
-      <span class="privacy-chip">🔒 No guardamos el audio</span>
+      <span class="privacy-chip">${savesAudio?'☁️ Guardado privado': '🔒 No se guardará'}</span>
     </div>
     <button class="button record-reading" type="button">🎙️ Grabar lectura</button>
-    <p class="recording-hint muted">Acepta el permiso del micrófono y lee a tu ritmo.</p>
+    <p class="recording-hint muted">${savesAudio?'Se guardará como .opus en el espacio privado de Supabase.':'El adulto puede activar el guardado privado desde su panel.'}</p>
     <div class="reading-result" role="status" aria-live="polite" hidden></div>
   </section>`;
+};
 
 export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
   const button = root?.querySelector('.record-reading');
@@ -51,13 +56,25 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
   }
 
   let activeRecognition;
-  button.addEventListener('click', () => {
+  button.addEventListener('click', async () => {
     if (activeRecognition) {
       activeRecognition.stop();
       return;
     }
 
     const recognition = new SpeechRecognition();
+    const savesAudio = Boolean(store.get().settings?.saveAudio);
+    let opusCapture;
+    let readingOutcome;
+    if (savesAudio) {
+      try { opusCapture = await startOpusRecording(); }
+      catch {
+        result.hidden = false;
+        result.className = 'reading-result try';
+        result.innerHTML = '<strong>No puedo abrir el micrófono.</strong><span>Revisa el permiso en el candado del navegador y vuelve a probar.</span>';
+        return;
+      }
+    }
     activeRecognition = recognition;
     recognition.lang = 'es-ES';
     recognition.continuous = false;
@@ -77,6 +94,7 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
       const best = alternatives[0];
       const shortText = normalize(targetText).split(' ').length <= 2;
       const passed = best.score >= (shortText ? 1 : .65);
+      readingOutcome = {score: best.score, passed};
       store.addReadingAttempt(exerciseId, best.score, passed);
       result.hidden = false;
       result.className = `reading-result ${passed ? 'success' : 'try'}`;
@@ -94,12 +112,28 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice') {
         : '<strong>No he podido oírte bien.</strong><span>Comprueba el micrófono y vuelve a probar cuando quieras.</span>';
     };
 
-    recognition.onend = () => {
+    recognition.onend = async () => {
       activeRecognition = null;
       button.classList.remove('recording');
       button.textContent = '🎙️ Volver a grabar';
       button.setAttribute('aria-pressed', 'false');
-      hint.textContent = 'La grabación ha terminado y no se conserva.';
+      if (!opusCapture) {
+        hint.textContent = 'La grabación ha terminado y no se conserva.';
+        return;
+      }
+      hint.textContent = 'Codificando y guardando el audio…';
+      try {
+        const {blob, durationMs} = await opusCapture.stop();
+        await uploadReadingAudio(blob, {
+          exerciseId,
+          score: readingOutcome?.score || 0,
+          passed: readingOutcome?.passed || false,
+          durationMs
+        });
+        hint.textContent = '✓ Audio .opus guardado de forma privada.';
+      } catch (error) {
+        hint.textContent = `No se pudo guardar: ${error.message || 'revisa la conexión.'}`;
+      }
     };
 
     try { recognition.start(); } catch { recognition.abort(); }

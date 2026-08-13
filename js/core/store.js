@@ -1,5 +1,5 @@
 const KEY='tinkie-progress-v1';
-const defaults={stars:0,xp:0,streak:0,lastDay:'',completed:[],sessions:[],readingAttempts:[],settings:{sound:true,focus:false,dailyGoal:3},profile:{name:'Explorador'}};
+const defaults={stars:0,xp:0,streak:0,lastDay:'',completed:[],sessions:[],readingAttempts:[],settings:{sound:true,focus:false,dailyGoal:3,saveAudio:false},profile:{name:'Explorador'}};
 const today=()=>new Date().toISOString().slice(0,10);
 export const store={
   get(){try{return {...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return structuredClone(defaults)}},

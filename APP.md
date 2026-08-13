@@ -16,4 +16,13 @@ El PDF solicitado no estaba presente durante la creación. `js/pdf-data/cards.js
 
 ## Privacidad
 
-El progreso se guarda en `localStorage` en el propio dispositivo. No hay analítica, anuncios, chat, compras ni llamadas de red.
+El progreso básico se guarda en `localStorage`. Cuando un adulto activa el consentimiento, las lecturas se codifican como Ogg/Opus y se guardan en un bucket privado de Supabase. RLS limita cada sesión a sus propios archivos y metadatos; nunca se incluye una clave secreta en el navegador.
+
+## Supabase
+
+- Proyecto: `Aprende Conmigo` (`yicqgbycigyhniaozrez`)
+- Bucket privado: `reading-audios`
+- Tabla: `public.reading_recordings`
+- Migración: `supabase/migrations/20260813222157_create_reading_recordings.sql`
+
+Las sesiones anónimas deben estar habilitadas en **Authentication → Providers → Anonymous Sign-Ins**. La clave incluida en el cliente es publicable; la protección efectiva se aplica mediante RLS.
