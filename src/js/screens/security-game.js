@@ -1,6 +1,6 @@
 import {securityScenarios} from '../security/security-data.js';
 import {store} from '../core/store.js';
-import {toast} from '../core/utils.js';
+import {toast, speak} from '../core/utils.js';
 import {readingCheckMarkup, bindReadingCheck} from '../core/reading-check.js?v=4';
 
 export function securityGameScreen(id) {
@@ -15,6 +15,7 @@ export function securityGameScreen(id) {
       <article class="card">
         <div class="character"><div class="avatar">🍕</div><strong>Detecta la trampa</strong></div>
         <div class="game-prompt">${scenario.text}</div>
+        <button type="button" class="button secondary pizza-listen">🍕 Escuchar a Mr. Pizza</button>
         <h2>${scenario.question}</h2>
         <div class="options">
           ${scenario.options.map((option, index) => `<button class="option answer" data-i="${index}">${option}</button>`).join('')}
@@ -27,6 +28,7 @@ export function securityGameScreen(id) {
 function bindSecurityGame(scenario) {
   const root = document.querySelector('.game-shell');
   if (!root) return;
+  root.querySelector('.pizza-listen')?.addEventListener('click', () => speak(scenario.text, 'pizza'));
   root.querySelectorAll('.answer').forEach(button => {
     button.addEventListener('click', () => {
       const feedback = root.querySelector('.feedback');
