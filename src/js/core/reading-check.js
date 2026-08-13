@@ -85,7 +85,7 @@ export function bindReadingCheck(root, targetText, exerciseId = 'practice', onRe
       }
     }
     activeRecognition = recognition;
-    recognition.lang = 'es-ES';
+    recognition.lang = 'es-MX';
     recognition.continuous = false;
     recognition.interimResults = false;
     recognition.maxAlternatives = 3;
