@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#40b99c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tinkie">
   <meta name="description" content="Tinkie, aventuras cortas para leer, crecer y navegar con seguridad.">
   <title>Tinkie · Tu aventura de lectura</title>
-  <script type="module" crossorigin src="./assets/index-DRlNDpVo.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DjcinxE5.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/tinkie-192.png">
+  <script type="module" crossorigin src="./assets/index-C86vKSZq.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B5oRrOS5.css">
 </head>
 <body>
   <a class="skip-link" href="#app">Saltar al contenido</a>
@@ -40,6 +46,7 @@
     <a href="#valores" data-route="valores"><span>💛</span><div><strong>Valores</strong><small>Respeto, empatía y confianza</small></div></a>
     <a href="#seguridad" data-route="seguridad"><span>🛡️</span><div><strong>Seguridad digital</strong><small>Aprende a protegerte con Mr. Pizza</small></div></a>
     <a href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span><div><strong>Panel familiar</strong><small>Progreso, audios y preferencias</small></div></a>
+    <button class="install-app-button" id="install-app" type="button" hidden><span>📲</span><div><strong>Instalar Tinkie</strong><small>Añadir la aplicación a este teléfono</small></div></button>
   </nav>
   <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
     <button class="auth-close" id="auth-close" type="button" aria-label="Cerrar">×</button>
