@@ -1,7 +1,7 @@
 import {createClient} from '@supabase/supabase-js';
 
-const SUPABASE_URL = 'https://yicqgbycigyhniaozrez.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_n5dj4O0Y7xrnJsukglPziw_yMznAPA2';
+export const SUPABASE_URL = 'https://yicqgbycigyhniaozrez.supabase.co';
+export const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_n5dj4O0Y7xrnJsukglPziw_yMznAPA2';
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: {persistSession: true, autoRefreshToken: true, detectSessionInUrl: false}

@@ -1,4 +1,4 @@
-import {supabase} from './supabase.js';
+import {supabase, SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL} from './supabase.js';
 
 const authRedirect = () => `${location.origin}${location.pathname}#adultos`;
 
@@ -39,6 +39,15 @@ export async function signInWithGoogle() {
     options: {redirectTo: authRedirect()}
   });
   if (error) throw error;
+}
+
+export async function getAuthCapabilities() {
+  const response = await fetch(`${SUPABASE_URL}/auth/v1/settings`, {
+    headers: {apikey: SUPABASE_PUBLISHABLE_KEY}
+  });
+  if (!response.ok) throw new Error('No se pudo consultar la configuración de acceso.');
+  const settings = await response.json();
+  return {email: Boolean(settings.external?.email), google: Boolean(settings.external?.google)};
 }
 
 export async function sendPasswordReset(email) {
