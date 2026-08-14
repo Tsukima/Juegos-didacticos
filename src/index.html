@@ -70,6 +70,14 @@
       <a class="button primary" href="#adultos" onclick="document.querySelector('#auth-dialog').close()">Ir al panel familiar</a>
       <button class="button ghost" id="auth-signout" type="button">Cerrar sesión</button>
     </section>
+    <section id="auth-recovery-view" hidden>
+      <p>Escribe una contraseña segura que puedas recordar.</p>
+      <form id="recovery-form">
+        <label>Nueva contraseña<input id="recovery-password" type="password" autocomplete="new-password" minlength="6" required></label>
+        <label>Repite la contraseña<input id="recovery-password-confirm" type="password" autocomplete="new-password" minlength="6" required></label>
+        <button class="button primary auth-submit" id="recovery-submit" type="submit">Guardar contraseña</button>
+      </form>
+    </section>
     <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
   </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

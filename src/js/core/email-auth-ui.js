@@ -7,6 +7,7 @@ import {
   signOutEmailAccount,
   updatePassword
 } from './email-auth.js';
+import {authRedirectType} from './supabase.js';
 
 const friendlyError = error => {
   const message = (error?.message || '').toLowerCase();
@@ -25,6 +26,7 @@ export function setupEmailAuth(toast) {
   const form = document.querySelector('#auth-form');
   const guestView = document.querySelector('#auth-guest-view');
   const userView = document.querySelector('#auth-user-view');
+  const recoveryView = document.querySelector('#auth-recovery-view');
   const message = document.querySelector('#auth-message');
   let mode = 'login';
 
@@ -47,11 +49,23 @@ export function setupEmailAuth(toast) {
     label.textContent = signedIn ? 'Mi cuenta' : 'Entrar';
     guestView.hidden = signedIn;
     userView.hidden = !signedIn;
+    recoveryView.hidden = true;
     document.querySelector('#account-email').textContent = user?.email || '';
+  };
+
+  const showRecovery = () => {
+    guestView.hidden = true;
+    userView.hidden = true;
+    recoveryView.hidden = false;
+    document.querySelector('#auth-title').textContent = 'Crea una contraseña nueva';
+    setMessage();
+    if (!dialog.open) dialog.showModal();
+    setTimeout(() => document.querySelector('#recovery-password')?.focus(), 0);
   };
 
   const open = async () => {
     setMessage();
+    document.querySelector('#auth-title').textContent = 'Guarda el progreso en tu cuenta';
     try { paintAccount(await getEmailAccount()); } catch { paintAccount(null); }
     dialog.showModal();
   };
@@ -107,17 +121,33 @@ export function setupEmailAuth(toast) {
     } catch (error) { setMessage(friendlyError(error), 'error'); }
   });
 
+  document.querySelector('#recovery-form').addEventListener('submit', async event => {
+    event.preventDefault();
+    const password = document.querySelector('#recovery-password').value;
+    const confirmation = document.querySelector('#recovery-password-confirm').value;
+    const submit = document.querySelector('#recovery-submit');
+    if (password !== confirmation) return setMessage('Las contraseñas no coinciden.', 'error');
+    submit.disabled = true;
+    setMessage('Guardando la contraseña nueva…');
+    try {
+      await updatePassword(password);
+      document.querySelector('#recovery-form').reset();
+      document.querySelector('#auth-title').textContent = 'Guarda el progreso en tu cuenta';
+      paintAccount(await getEmailAccount());
+      setMessage('Contraseña actualizada. Ya puedes continuar.', 'success');
+      toast('Contraseña actualizada');
+    } catch (error) {
+      setMessage(friendlyError(error), 'error');
+    } finally { submit.disabled = false; }
+  });
+
   onEmailAccountChange((event, user) => {
     paintAccount(user);
     if (event !== 'PASSWORD_RECOVERY') return;
-    setTimeout(async () => {
-      const password = prompt('Escribe tu nueva contraseña (mínimo 6 caracteres):');
-      if (!password) return;
-      try {
-        await updatePassword(password);
-        toast('Contraseña actualizada');
-      } catch (error) { setMessage(friendlyError(error), 'error'); }
-    }, 0);
+    showRecovery();
   });
-  getEmailAccount().then(paintAccount).catch(() => paintAccount(null));
+  getEmailAccount().then(user => {
+    paintAccount(user);
+    if (authRedirectType === 'recovery' && user) showRecovery();
+  }).catch(() => paintAccount(null));
 }
