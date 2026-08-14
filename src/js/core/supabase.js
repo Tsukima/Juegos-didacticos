@@ -4,18 +4,13 @@ export const SUPABASE_URL = 'https://yicqgbycigyhniaozrez.supabase.co';
 export const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_n5dj4O0Y7xrnJsukglPziw_yMznAPA2';
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
-  auth: {persistSession: true, autoRefreshToken: true, detectSessionInUrl: false}
+  auth: {persistSession: true, autoRefreshToken: true, detectSessionInUrl: true}
 });
 
 export async function ensureAnonymousSession() {
   const {data: {session}} = await supabase.auth.getSession();
   if (session) return session;
-  const {data, error} = await supabase.auth.signInAnonymously();
-  if (error?.code === 'anonymous_provider_disabled') {
-    throw new Error('El guardado privado aún no está activado en Supabase. Un adulto debe habilitar los inicios de sesión anónimos.');
-  }
-  if (error) throw error;
-  return data.session;
+  throw new Error('Inicia sesión con el correo familiar para guardar y consultar las grabaciones.');
 }
 
 export async function uploadReadingAudio(blob, {exerciseId, score, passed, durationMs}) {

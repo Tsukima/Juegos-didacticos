@@ -10,6 +10,7 @@ import {securityGameScreen} from './screens/security-game.js?v=4';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
+import {setupEmailAuth} from './core/email-auth-ui.js';
 
 const routes = {inicio:homeScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
@@ -69,6 +70,7 @@ function render() {
 }
 
 setupPwaInstall(toast);
+setupEmailAuth(toast);
 const focus = document.querySelector('#focus-toggle');
 focus.onclick = () => {
   const on = !document.body.classList.contains('focus-mode');

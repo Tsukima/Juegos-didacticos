@@ -12,7 +12,7 @@
   <title>Tinkie · Tu aventura de lectura</title>
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/tinkie-192.png">
-  <script type="module" crossorigin src="./assets/index-DYBzjUNh.js"></script>
+  <script type="module" crossorigin src="./assets/index-GWKgqDHt.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-B5oRrOS5.css">
 </head>
 <body>
@@ -23,6 +23,7 @@
     <a class="brand" href="#inicio" aria-label="Tinkie, inicio"><span class="brand-mark">🦜</span><span>Tinkie</span><small>Aprende jugando</small></a>
     <div class="top-actions">
       <div class="streak" title="Racha actual"><span aria-hidden="true">🔥</span> <strong id="streak-count">0</strong></div>
+      <button class="account-button" id="account-button" type="button" aria-haspopup="dialog"><span aria-hidden="true">👤</span><span id="account-label">Entrar</span></button>
       <button class="icon-button" id="focus-toggle" aria-pressed="false" title="Modo foco">◉ <span>Foco</span></button>
     </div>
   </header>
@@ -47,6 +48,31 @@
     <a href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span><div><strong>Panel familiar</strong><small>Progreso, audios y preferencias</small></div></a>
     <button class="install-app-button" id="install-app" type="button" hidden><span>📲</span><div><strong>Instalar Tinkie</strong><small>Añadir la aplicación a este teléfono</small></div></button>
   </nav>
+  <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+    <button class="auth-close" id="auth-close" type="button" aria-label="Cerrar">×</button>
+    <p class="eyebrow">Espacio familiar privado</p>
+    <h2 id="auth-title">Guarda el progreso en tu cuenta</h2>
+    <p>Entra para guardar y consultar las grabaciones desde tus dispositivos.</p>
+    <section id="auth-guest-view">
+      <div class="auth-tabs" aria-label="Acceso a la cuenta">
+        <button class="active" type="button" data-auth-mode="login">Iniciar sesión</button>
+        <button type="button" data-auth-mode="register">Crear cuenta</button>
+      </div>
+      <form id="auth-form">
+        <label>Correo electrónico<input id="auth-email" type="email" autocomplete="email" required></label>
+        <label>Contraseña<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required></label>
+        <button class="button primary auth-submit" id="auth-submit" type="submit">Entrar</button>
+      </form>
+      <button class="auth-reset" id="auth-reset" type="button">He olvidado mi contraseña</button>
+    </section>
+    <section id="auth-user-view" hidden>
+      <p>Sesión iniciada como</p>
+      <p class="account-email" id="account-email"></p>
+      <a class="button primary" href="#adultos" onclick="document.querySelector('#auth-dialog').close()">Ir al panel familiar</a>
+      <button class="button ghost" id="auth-signout" type="button">Cerrar sesión</button>
+    </section>
+    <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
