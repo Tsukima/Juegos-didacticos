@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#40b99c">
   <meta name="description" content="Tinkie, aventuras cortas para leer, crecer y navegar con seguridad.">
   <title>Tinkie · Tu aventura de lectura</title>
-  <script type="module" crossorigin src="./assets/index-CLKoMCY5.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C2r92rIu.css">
+  <script type="module" crossorigin src="./assets/index-CJQkZorl.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DuXWtyuP.css">
 </head>
 <body>
   <a class="skip-link" href="#app">Saltar al contenido</a>
@@ -17,6 +17,7 @@
     <a class="brand" href="#inicio" aria-label="Tinkie, inicio"><span class="brand-mark">🦜</span><span>Tinkie</span><small>Aprende jugando</small></a>
     <div class="top-actions">
       <div class="streak" title="Racha actual"><span aria-hidden="true">🔥</span> <strong id="streak-count">0</strong></div>
+      <button class="account-button" id="account-button" type="button" aria-haspopup="dialog"><span aria-hidden="true">👤</span><span id="account-label">Entrar</span></button>
       <button class="icon-button" id="focus-toggle" aria-pressed="false" title="Modo foco">◉ <span>Foco</span></button>
     </div>
   </header>
@@ -40,6 +41,18 @@
     <a href="#seguridad" data-route="seguridad"><span>🛡️</span><div><strong>Seguridad digital</strong><small>Aprende a protegerte con Mr. Pizza</small></div></a>
     <a href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span><div><strong>Panel familiar</strong><small>Progreso, audios y preferencias</small></div></a>
   </nav>
+  <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+    <button class="auth-close" id="auth-close" type="button" aria-label="Cerrar">×</button>
+    <div id="auth-guest-view">
+      <p class="eyebrow">Espacio familiar privado</p><h2 id="auth-title">Guarda el progreso en tu cuenta</h2><p class="muted">Entra para consultar las grabaciones desde tus dispositivos.</p>
+      <button class="google-auth-button" id="google-auth" type="button"><span>G</span> Continuar con Google</button>
+      <div class="auth-divider"><span>o con correo</span></div>
+      <div class="auth-tabs" role="tablist"><button class="active" id="auth-login-tab" type="button" role="tab" aria-selected="true">Iniciar sesión</button><button id="auth-register-tab" type="button" role="tab" aria-selected="false">Crear cuenta</button></div>
+      <form id="auth-form"><label>Correo electrónico<input id="auth-email" type="email" autocomplete="email" required placeholder="familia@ejemplo.com"></label><label>Contraseña<input id="auth-password" type="password" autocomplete="current-password" minlength="8" required placeholder="Mínimo 8 caracteres"></label><button class="button auth-submit" id="auth-submit" type="submit">Iniciar sesión</button><button class="auth-reset" id="auth-reset" type="button">He olvidado mi contraseña</button></form>
+    </div>
+    <div id="auth-user-view" hidden><p class="eyebrow">Sesión familiar</p><h2>Cuenta conectada</h2><p class="account-email" id="account-email"></p><p class="muted">Tus grabaciones privadas están vinculadas a esta cuenta.</p><a class="button" href="#adultos" id="go-adult-panel">Ver panel familiar</a><button class="button secondary" id="account-signout" type="button">Cerrar sesión</button></div>
+    <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
