@@ -25,13 +25,21 @@
       <a href="#misiones" data-route="misiones"><span>🗺️</span> Misiones</a>
       <a href="#lectura" data-route="lectura"><span>📖</span> Lectura</a>
       <a href="#logros" data-route="logros"><span>🏆</span> Logros</a>
-      <a href="#valores" data-route="valores"><span>💛</span> Valores</a>
-      <a href="#seguridad" data-route="seguridad"><span>🛡️</span> Seguridad</a>
-      <a href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span> Panel familiar</a>
+      <a class="nav-secondary" href="#valores" data-route="valores"><span>💛</span> Valores</a>
+      <a class="nav-secondary" href="#seguridad" data-route="seguridad"><span>🛡️</span> Seguridad</a>
+      <a class="nav-secondary" href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span> Panel familiar</a>
+      <button class="mobile-more-toggle" id="mobile-more-toggle" type="button" aria-expanded="false" aria-controls="mobile-more-menu"><span>•••</span> Más</button>
     </nav>
     <main id="app" tabindex="-1" aria-live="polite"></main>
   </div>
+  <button class="mobile-menu-backdrop" id="mobile-menu-backdrop" type="button" aria-label="Cerrar menú" tabindex="-1"></button>
+  <nav class="mobile-more-menu" id="mobile-more-menu" aria-label="Más apartados" aria-hidden="true">
+    <div class="mobile-menu-heading"><strong>Más lugares</strong><button id="mobile-menu-close" type="button" aria-label="Cerrar">×</button></div>
+    <a href="#valores" data-route="valores"><span>💛</span><div><strong>Valores</strong><small>Respeto, empatía y confianza</small></div></a>
+    <a href="#seguridad" data-route="seguridad"><span>🛡️</span><div><strong>Seguridad digital</strong><small>Aprende a protegerte con Mr. Pizza</small></div></a>
+    <a href="#adultos" data-route="adultos"><span>👨‍👩‍👦</span><div><strong>Panel familiar</strong><small>Progreso, audios y preferencias</small></div></a>
+  </nav>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <script type="module" src="./js/app.js?v=5"></script>
+  <script type="module" src="./js/app.js?v=6"></script>
 </body>
 </html>
