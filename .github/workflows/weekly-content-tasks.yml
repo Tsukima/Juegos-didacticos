@@ -1,0 +1,61 @@
+name: Preparar contenido semanal con Copilot
+
+on:
+  schedule:
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/weekly-content-tasks.yml
+
+concurrency:
+  group: weekly-content-tasks
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create-tasks:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Crear tareas editoriales de la semana
+        shell: bash
+        run: |
+          week="$(date -u +%G-W%V)"
+
+          create_task() {
+            local title="$1"
+            local body="$2"
+            local existing
+            existing="$(gh issue list --repo "$GITHUB_REPOSITORY" --state all --search "$title in:title" --json number --jq 'length')"
+            if [ "$existing" -gt 0 ]; then
+              echo "Ya existe: $title"
+              return
+            fi
+            gh issue create --repo "$GITHUB_REPOSITORY" --title "$title" --assignee "$GITHUB_REPOSITORY_OWNER" --body "$body"
+          }
+
+          create_task "[Contenido $week] Historias de Tinkie" "@$GITHUB_REPOSITORY_OWNER, asigna esta incidencia a Copilot usando el agente **Generador de Historias Tinkie**.
+
+          ## Encargo semanal
+
+          Genera tres historias: una inicial (4-6), una media (7-9) y una avanzada (10-12). Usa temas y valores diferentes, respeta las instrucciones comunes y evita repetir historias existentes.
+
+          Guarda cada JSON en \`content/historias/\`, actualiza \`content/historias/index.json\`, valida los archivos y abre una pull request. No modifiques la aplicación ni publiques en Supabase.
+
+          La pull request debe quedar pendiente de revisión adulta."
+
+          create_task "[Contenido $week] Lenguaje de Tinkie" "@$GITHUB_REPOSITORY_OWNER, asigna esta incidencia a Copilot usando el agente **Generador de Lenguaje Tinkie**.
+
+          ## Encargo semanal
+
+          Genera tres sets de vocabulario: uno inicial (4-6), uno medio (7-9) y uno avanzado (10-12). Utiliza temas diferentes, comprueba la separación silábica y evita repetir contenido existente.
+
+          Guarda los JSON en \`content/lenguaje/\`, valida los archivos y abre una pull request. No modifiques la aplicación ni publiques en Supabase.
+
+          La pull request debe quedar pendiente de revisión adulta."
