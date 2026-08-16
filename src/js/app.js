@@ -7,6 +7,7 @@ import {securityScreen} from './screens/security.js';
 import {adultsScreen, bindAdultRecordings} from './screens/adults.js?v=5';
 import {gameScreen} from './screens/game.js?v=4';
 import {securityGameScreen} from './screens/security-game.js?v=4';
+import {storyScreen, bindStoryScreen} from './screens/story.js';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
@@ -51,13 +52,20 @@ function bindPage() {
     }
   });
   bindAdultRecordings();
+  bindStoryScreen(toast);
 }
 
-function render() {
+let renderSequence = 0;
+async function render() {
+  const sequence = ++renderSequence;
   const {route, id, params} = parse();
-  const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : routes[route] || homeScreen;
+  const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : route === 'cuento' ? () => storyScreen(id) : routes[route] || homeScreen;
   closeMobileMenu();
-  document.querySelector('#app').innerHTML = view(params);
+  const app = document.querySelector('#app');
+  app.innerHTML = '<div class="card loading-card" role="status">Preparando la aventura…</div>';
+  const html = await view(params);
+  if (sequence !== renderSequence) return;
+  app.innerHTML = html;
   document.querySelectorAll('[data-route]').forEach(link => {
     link.classList.toggle('active', link.dataset.route === route);
     if (link.dataset.route === route) link.setAttribute('aria-current', 'page');
@@ -65,7 +73,7 @@ function render() {
   });
   document.querySelector('#mobile-more-toggle')?.classList.toggle('active', ['valores','seguridad','adultos'].includes(route));
   document.querySelector('#streak-count').textContent = store.get().streak;
-  document.querySelector('#app').focus({preventScroll:true});
+  app.focus({preventScroll:true});
   bindPage();
 }
 

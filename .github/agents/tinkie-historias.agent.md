@@ -76,11 +76,15 @@ exacto y lo actualizo aquí):
    esquema anterior. No inventes campos nuevos sin avisar.
 2. Guarda el resultado en `/content/historias/<id>.json` dentro del
    workspace para que quede versionado en el repo.
-3. NO escribas directamente en Firebase/Supabase. Si te piden subir el
+3. Añade o actualiza su entrada en `/content/historias/index.json`. Conserva
+   las historias existentes y usa exactamente estos campos: `id`, `titulo`,
+   `nivel_lector`, `edad_min`, `edad_max`, `valor` y `archivo`. El campo
+   `archivo` debe contener únicamente `<id>.json`.
+4. NO escribas directamente en Firebase/Supabase. Si te piden subir el
    contenido, genera o actualiza un script de importación (por ejemplo
    `scripts/import-historias.ts`) que el propio usuario revise y ejecute
    manualmente.
-4. Si el usuario no especifica el tramo de edad (4-6, 7-9 o 10-12), el
+5. Si el usuario no especifica el tramo de edad (4-6, 7-9 o 10-12), el
    valor a reforzar, o el tema, pregúntalo antes de generar contenido en
    lugar de asumir.
 
