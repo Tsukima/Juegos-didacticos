@@ -1,0 +1,26 @@
+name: Probar notificación móvil
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Crear incidencia de prueba
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "🦜 Prueba de notificación de Tinkie" \
+            --body "Esta incidencia comprueba que las alertas del proyecto llegan a GitHub Mobile.
+
+          Si recibiste la notificación, la conexión funciona correctamente.
+
+          > Creada manualmente desde el flujo **Probar notificación móvil**." \
+            --assignee "$GITHUB_REPOSITORY_OWNER"
