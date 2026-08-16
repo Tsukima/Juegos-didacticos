@@ -18,9 +18,9 @@ jobs:
           gh issue create \
             --repo "$GITHUB_REPOSITORY" \
             --title "🦜 Prueba de notificación de Tinkie" \
-            --body "Esta incidencia comprueba que las alertas del proyecto llegan a GitHub Mobile.
+            --body "@$GITHUB_REPOSITORY_OWNER, esta incidencia comprueba que las alertas del proyecto llegan a GitHub Mobile.
 
-          Si recibiste la notificación, la conexión funciona correctamente.
+          Si recibiste esta mención directa, la conexión funciona correctamente.
 
           > Creada manualmente desde el flujo **Probar notificación móvil**." \
             --assignee "$GITHUB_REPOSITORY_OWNER"
