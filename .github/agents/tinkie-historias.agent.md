@@ -61,6 +61,12 @@ exacto y lo actualizo aquí):
   "edad_max": 6,
   "valor": "string",
   "paginas": ["texto pagina 1", "texto pagina 2", "..."],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {"personaje": "descripción breve de la voz"},
+    "tono_por_pagina": ["indicación de tono para cada página"],
+    "audio_por_pagina": [null, null, null, null]
+  },
   "preguntas": [
     {
       "enunciado": "string",
@@ -76,6 +82,9 @@ exacto y lo actualizo aquí):
 
 1. Cuando te pida una historia (o un lote), genera el JSON siguiendo el
    esquema anterior. No inventes campos nuevos sin avisar.
+   La narración es opcional, pero si se incluye debe tener una indicación de
+   tono y una entrada de audio por cada página. Usa `null` hasta que exista el
+   archivo `.opus`; nunca inventes una ruta de audio.
 2. Guarda el resultado en `/content/historias/<id>.json` dentro del
    workspace para que quede versionado en el repo.
 3. Añade o actualiza su entrada en `/content/historias/index.json`. Conserva
