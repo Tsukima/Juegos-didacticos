@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "el-mapa-de-las-palabras-perdidas",
+    "titulo": "El mapa de las palabras perdidas",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "perseverancia",
+    "archivo": "el-mapa-de-las-palabras-perdidas.json"
+  }
+]

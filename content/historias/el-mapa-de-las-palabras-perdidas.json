@@ -1,0 +1,49 @@
+{
+  "id": "el-mapa-de-las-palabras-perdidas",
+  "titulo": "El mapa de las palabras perdidas",
+  "nivel_lector": "avanzado",
+  "edad_min": 10,
+  "edad_max": 12,
+  "valor": "perseverancia",
+  "paginas": [
+    "Tinkie y Pepito encontraron un mapa dentro de un libro antiguo. Sus caminos estaban dibujados con tinta verde, pero varias palabras habían desaparecido. Sin ellas, era imposible saber dónde terminaba la ruta.",
+    "La primera pista decía: «Busca donde las historias descansan». Pepito pensó en abandonar porque la frase le parecía demasiado extraña. Tinkie propuso leerla otra vez, palabra por palabra, sin apresurarse.",
+    "Entonces comprendieron que las historias descansaban en la biblioteca. Allí encontraron una tarjeta escondida entre dos libros. La tarjeta contenía una palabra difícil: «constancia».",
+    "Tinkie separó la palabra en partes: cons-tan-cia. Pepito la repitió lentamente hasta pronunciarla con seguridad. Al hacerlo, una nueva línea apareció sobre el mapa.",
+    "La ruta los llevó hasta una caja con seis piezas de madera. Intentaron colocarlas varias veces, pero ninguna combinación parecía correcta. En lugar de rendirse, observaron las formas, hicieron una pausa y volvieron a intentarlo.",
+    "Las piezas formaron la frase: «Cada intento abre un camino». El mapa quedó completo y señaló un rincón luminoso de la biblioteca. Allí no encontraron un tesoro de monedas, sino un cuaderno vacío para escribir sus propias aventuras.",
+    "Pepito sonrió al recordar que había querido abandonar con la primera pista. Tinkie le explicó que perseverar no significa hacerlo todo de inmediato. Significa avanzar, descansar cuando hace falta y volver a intentarlo."
+  ],
+  "preguntas": [
+    {
+      "enunciado": "¿Por qué Tinkie y Pepito fueron a la biblioteca?",
+      "opciones": [
+        "Porque interpretaron que allí descansaban las historias",
+        "Porque querían comprar un mapa nuevo",
+        "Porque buscaban una caja de monedas"
+      ],
+      "correcta": 0,
+      "explicacion": "La pista hablaba del lugar donde descansan las historias, y ellos pensaron en la biblioteca."
+    },
+    {
+      "enunciado": "¿Qué hicieron cuando las piezas no encajaban?",
+      "opciones": [
+        "Las dejaron tiradas y se marcharon",
+        "Observaron, hicieron una pausa y volvieron a intentarlo",
+        "Pidieron unas piezas completamente nuevas"
+      ],
+      "correcta": 1,
+      "explicacion": "Se dieron tiempo para pensar y probar otra estrategia sin rendirse."
+    },
+    {
+      "enunciado": "¿Qué significa perseverar según Tinkie?",
+      "opciones": [
+        "Terminar siempre a la primera",
+        "No descansar nunca",
+        "Avanzar, descansar si hace falta y volver a intentarlo"
+      ],
+      "correcta": 2,
+      "explicacion": "Perseverar permite hacer pausas y cambiar de estrategia antes de continuar."
+    }
+  ]
+}
