@@ -1,0 +1,76 @@
+name: Generar contenido semanal
+
+on:
+  schedule:
+    - cron: '0 8 * * 0'
+  workflow_dispatch:
+
+concurrency:
+  group: weekly-content-generation
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL || 'claude-sonnet-5' }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Comprobar configuración
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "Falta el secreto ANTHROPIC_API_KEY en Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generar y validar historias
+        run: node scripts/generate-historias.mjs
+
+      - name: Generar y validar lenguaje
+        run: node scripts/generate-lenguaje.mjs
+
+      - name: Crear pull request para revisión adulta
+        env:
+          BRANCH_NAME: contenido-semanal/${{ github.run_id }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH_NAME"
+          git add content/historias content/lenguaje
+
+          if git diff --cached --quiet; then
+            echo "No se generaron cambios."
+            exit 0
+          fi
+
+          git commit -m "content: propuesta semanal de Tinkie"
+          git push --set-upstream origin "$BRANCH_NAME"
+          gh pr create \
+            --base main \
+            --head "$BRANCH_NAME" \
+            --title "📚 Propuesta semanal de contenido" \
+            --body "Contenido generado automáticamente para Tinkie.
+
+          Revisión adulta obligatoria antes de fusionar:
+          - adecuación a la edad;
+          - tono y seguridad infantil;
+          - separación silábica;
+          - respuestas de comprensión;
+          - ausencia de repeticiones o marcas ajenas.
+
+          Al fusionar esta PR, los cuentos aprobados aparecerán en la biblioteca." \
+            --assignee Tsukima \
+            --reviewer Tsukima
