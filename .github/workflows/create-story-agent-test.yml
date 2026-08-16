@@ -1,0 +1,55 @@
+name: Crear prueba real del agente de historias
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/create-story-agent-test.yml
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create-editorial-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Crear una única incidencia editorial
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TEST_TITLE: "[Prueba real] Historia sobre perseverancia"
+        run: |
+          existing="$(gh issue list \
+            --repo "$GITHUB_REPOSITORY" \
+            --state all \
+            --search "$TEST_TITLE in:title" \
+            --json number \
+            --jq 'length')"
+
+          if [ "$existing" -gt 0 ]; then
+            echo "La incidencia de prueba ya existe. No se creará otra."
+            exit 0
+          fi
+
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "$TEST_TITLE" \
+            --assignee "$GITHUB_REPOSITORY_OWNER" \
+            --body "@$GITHUB_REPOSITORY_OWNER, esta es la primera tarea editorial real para el agente **Generador de Historias Tinkie**.
+
+          ## Encargo
+
+          Genera una historia completa siguiendo el archivo \`.github/agents/tinkie-historias.agent.md\`.
+
+          - Tramo de edad: **10-12 años**.
+          - Nivel lector: **avanzado**.
+          - Valor principal: **perseverancia**.
+          - Tema: **Tinkie y Pepito resuelven juntos un pequeño reto de lectura**.
+          - Cantidad: **una historia**.
+
+          ## Resultado esperado
+
+          Guarda únicamente el JSON final en \`content/historias/\`, valida que sea JSON correcto y abre una pull request. No publiques la historia en Supabase ni modifiques la aplicación.
+
+          La pull request debe quedar pendiente de revisión adulta."
