@@ -8,12 +8,13 @@ import {adultsScreen, bindAdultRecordings} from './screens/adults.js?v=5';
 import {gameScreen} from './screens/game.js?v=4';
 import {securityGameScreen} from './screens/security-game.js?v=4';
 import {storyScreen, bindStoryScreen} from './screens/story.js';
+import {onboardingScreen, bindOnboarding} from './screens/onboarding.js';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
 
-const routes = {inicio:homeScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
+const routes = {inicio:homeScreen, bienvenida:onboardingScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
 function parse() {
   const raw = location.hash.slice(1) || 'inicio';
@@ -36,6 +37,7 @@ function openMobileMenu() {
 }
 
 function bindPage() {
+  document.querySelector('#save-settings')?.insertAdjacentHTML('afterend', '<button class="button secondary" id="change-companion" type="button" style="margin-top:.7rem">Cambiar compañero y preferencias</button>');
   document.querySelector('#save-settings')?.addEventListener('click', () => {
     const state = store.get();
     state.profile.name = document.querySelector('#profile-name').value.trim() || 'Explorador';
@@ -53,12 +55,23 @@ function bindPage() {
   });
   bindAdultRecordings();
   bindStoryScreen(toast);
+  bindOnboarding();
+  document.querySelector('#change-companion')?.addEventListener('click', () => {
+    const state = store.get();
+    state.profile.onboardingComplete = false;
+    store.save(state);
+    location.hash = 'bienvenida';
+  });
 }
 
 let renderSequence = 0;
 async function render() {
   const sequence = ++renderSequence;
   const {route, id, params} = parse();
+  if (!store.get().profile.onboardingComplete && route !== 'bienvenida') {
+    location.hash = 'bienvenida';
+    return;
+  }
   const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : route === 'cuento' ? () => storyScreen(id) : routes[route] || homeScreen;
   closeMobileMenu();
   const app = document.querySelector('#app');

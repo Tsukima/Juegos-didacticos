@@ -26,9 +26,11 @@ export function bindStoryScreen(toast) {
     const feedback = document.querySelector('#story-feedback');
     feedback.hidden = false;
     if (correct === questions.length) {
+      const piecesBefore = store.get().puzzle.pieces.length;
       const firstTime = store.complete(`story-${form.dataset.storyId}`, 'story');
+      const puzzlePiece = firstTime && store.get().puzzle.pieces.length > piecesBefore;
       feedback.className = 'feedback success';
-      feedback.innerHTML = `<strong>¡Cuento completado!</strong> Comprendiste las ${correct} preguntas.${firstTime ? ' Ganaste una estrella.' : ' Puedes repetirlo cuando quieras.'}`;
+      feedback.innerHTML = `<strong>¡Cuento completado!</strong> Comprendiste las ${correct} preguntas.${firstTime ? ' Ganaste una estrella.' : ' Puedes repetirlo cuando quieras.'}${puzzlePiece ? ' También descubriste una pieza del rompecabezas.' : ''}`;
       toast('¡Cuento completado!');
     } else {
       feedback.className = 'feedback try';
