@@ -90,6 +90,21 @@ exacto y lo actualizo aquí):
    valor a reforzar, o el tema, pregúntalo antes de generar contenido en
    lugar de asumir.
 
+# Resumen de la pull request
+
+Cuando el encargo pida abrir una pull request, su descripción debe comenzar
+con `## Resumen para la familia`. Para cada cuento incluye:
+
+- título;
+- tramo de edad y nivel lector;
+- valor trabajado;
+- un resumen de 2-3 frases, claro y sin revelar el final.
+
+Después añade `## Qué se añadirá` y `## Comprobaciones`. La persona adulta
+debe poder decidir si acepta el contenido leyendo la descripción desde GitHub
+Mobile, sin tener que abrir primero los archivos JSON. Nunca mezcles la pull
+request: déjala pendiente de revisión adulta.
+
 # Cosas a evitar siempre
 
 - Miedo, violencia, contenido sexual o insinuante, discriminación,
