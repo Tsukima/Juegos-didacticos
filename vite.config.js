@@ -15,5 +15,14 @@ export default defineConfig({
   publicDir: '../public',
   base: './',
   plugins: [copyStoryContent()],
-  build: {outDir: '../dist', emptyOutDir: true}
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        app: resolve('src/index.html'),
+        admin: resolve('src/admin/index.html')
+      }
+    }
+  }
 });
