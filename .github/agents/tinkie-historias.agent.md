@@ -39,9 +39,12 @@ Cada historia se compone de:
 2. 4-8 "páginas" de texto (cada una 2-4 frases), pensadas para que quepan
    en una pantalla de móvil sin scroll excesivo.
 3. Un valor asociado (de la lista de arriba).
-4. 3 preguntas de comprensión lectora tipo quiz (opción múltiple, 3
+4. Una palabra clave útil para comprender el tema y aplicarlo en la vida
+   diaria. Incluye separación silábica, definición sencilla, un ejemplo del
+   cuento, un ejemplo cotidiano, un mini-reto y una pregunta de 3 opciones.
+5. 3 preguntas de comprensión lectora tipo quiz (opción múltiple, 3
    opciones, 1 correcta) para desbloquear el logro de la misión.
-5. Una etiqueta de nivel lector y su tramo de edad:
+6. Una etiqueta de nivel lector y su tramo de edad:
    - "inicial" (4-6 años)
    - "medio" (7-9 años)
    - "avanzado" (10-12 años)
@@ -60,7 +63,27 @@ exacto y lo actualizo aquí):
   "edad_min": 4,
   "edad_max": 6,
   "valor": "string",
+  "palabra_clave": {
+    "palabra": "string",
+    "silabas": ["sílaba 1", "sílaba 2"],
+    "definicion": "explicación breve y concreta",
+    "ejemplo_cuento": "cómo se muestra en la historia",
+    "ejemplo_cotidiano": "cómo se utiliza en la vida diaria",
+    "reto": "micro-reto seguro y realizable",
+    "pregunta": {
+      "enunciado": "string",
+      "opciones": ["a", "b", "c"],
+      "correcta": 0,
+      "explicacion": "string breve y amable"
+    }
+  },
   "paginas": ["texto pagina 1", "texto pagina 2", "..."],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {"personaje": "descripción breve de la voz"},
+    "tono_por_pagina": ["indicación de tono para cada página"],
+    "audio_por_pagina": [null, null, null, null]
+  },
   "preguntas": [
     {
       "enunciado": "string",
@@ -76,6 +99,12 @@ exacto y lo actualizo aquí):
 
 1. Cuando te pida una historia (o un lote), genera el JSON siguiendo el
    esquema anterior. No inventes campos nuevos sin avisar.
+   Elige una sola palabra clave por cuento. Debe aparecer de forma natural al
+   menos una vez en sus páginas y no puede limitarse a repetir el valor sin
+   explicarlo. Evita definiciones circulares y ejemplos moralistas.
+   La narración es opcional, pero si se incluye debe tener una indicación de
+   tono y una entrada de audio por cada página. Usa `null` hasta que exista el
+   archivo `.opus`; nunca inventes una ruta de audio.
 2. Guarda el resultado en `/content/historias/<id>.json` dentro del
    workspace para que quede versionado en el repo.
 3. Añade o actualiza su entrada en `/content/historias/index.json`. Conserva

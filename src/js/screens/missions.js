@@ -1,6 +1,6 @@
 import {allMissions} from '../missions/mission-engine.js';
 import {store} from '../core/store.js';
-import {loadStoryCatalog, escapeHtml} from '../stories/story-service.js';
+import {loadStoryCatalog, loadStory, escapeHtml} from '../stories/story-service.js';
 
 const names = {word:'Palabras', phrase:'Frases', comprehension:'Comprensión', action:'Acción'};
 
@@ -21,5 +21,15 @@ export async function missionsScreen() {
   const storyContent = catalogError
     ? '<article class="card adult-note"><strong>La biblioteca está descansando.</strong><p>Vuelve a intentarlo dentro de un momento.</p></article>'
     : storyCards || '<article class="card empty story-empty"><span>🦜</span><h3>Los primeros cuentos están en camino</h3><p>Tinkie y Pepito están preparando una nueva aventura.</p></article>';
-  return `<p class="eyebrow">Mapa de aventuras</p><h1>Misiones</h1><p class="muted">Elige lo que te apetezca. Puedes repetir cualquier reto.</p><div class="section grid">${missionCards}</div><section class="section stories-section"><div class="section-head"><div><p class="eyebrow">Biblioteca de Tinkie</p><h2>Cuentos</h2><p class="muted">Historias cortas para leer con calma y superar un reto de comprensión.</p></div><span class="stories-mascot" aria-hidden="true">🦜📖</span></div><div class="grid stories-grid">${storyContent}</div></section>`;
+  const completedEntries = stories.filter(story => state.completed.includes(`story-${story.id}`));
+  const completedStories = (await Promise.all(completedEntries.map(story => loadStory(story.id).catch(() => null)))).filter(Boolean);
+  const wordCards = completedStories.map(story => `<article class="dictionary-word">
+    <span class="dictionary-key" aria-hidden="true">🔑</span>
+    <div><h3>${escapeHtml(story.palabra_clave.palabra)}</h3><p class="keyword-syllables">${story.palabra_clave.silabas.map(escapeHtml).join(' · ')}</p><p>${escapeHtml(story.palabra_clave.definicion)}</p><small>Descubierta en «${escapeHtml(story.titulo)}»</small></div>
+  </article>`).join('');
+  const dictionary = `<details class="adventure-dictionary card" ${wordCards ? '' : 'data-empty="true"'}>
+    <summary><span aria-hidden="true">📗</span><span><strong>Diccionario de aventuras</strong><small>${completedStories.length} de ${stories.length} palabras descubiertas</small></span><span class="dictionary-arrow" aria-hidden="true">⌄</span></summary>
+    <div class="dictionary-list">${wordCards || '<div class="empty compact"><strong>Tu primera palabra está esperando.</strong><p>Completa un cuento para guardarla aquí.</p></div>'}</div>
+  </details>`;
+  return `<p class="eyebrow">Mapa de aventuras</p><h1>Misiones</h1><p class="muted">Elige lo que te apetezca. Puedes repetir cualquier reto.</p><div class="section grid">${missionCards}</div><section class="section stories-section"><div class="section-head"><div><p class="eyebrow">Biblioteca de Tinkie</p><h2>Cuentos</h2><p class="muted">Historias cortas para leer con calma y superar un reto de comprensión.</p></div><span class="stories-mascot" aria-hidden="true">🦜📖</span></div><div class="grid stories-grid">${storyContent}</div>${dictionary}</section>`;
 }

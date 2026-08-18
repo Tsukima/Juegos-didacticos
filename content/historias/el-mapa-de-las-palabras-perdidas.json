@@ -5,6 +5,24 @@
   "edad_min": 10,
   "edad_max": 12,
   "valor": "perseverancia",
+  "palabra_clave": {
+    "palabra": "constancia",
+    "silabas": ["cons", "tan", "cia"],
+    "definicion": "Seguir practicando o avanzando, aunque algo necesite tiempo y varios intentos.",
+    "ejemplo_cuento": "Tinkie y Pepito demostraron constancia cuando observaron las piezas y volvieron a intentarlo.",
+    "ejemplo_cotidiano": "Practicar una palabra difícil un poco cada día es actuar con constancia.",
+    "reto": "Elige hoy algo pequeño y vuelve a intentarlo una vez con calma.",
+    "pregunta": {
+      "enunciado": "¿Qué acción demuestra constancia?",
+      "opciones": [
+        "Abandonar en el primer intento",
+        "Practicar un poco y volver a intentarlo",
+        "Ocultar que algo resulta difícil"
+      ],
+      "correcta": 1,
+      "explicacion": "La constancia consiste en continuar paso a paso, incluso cuando necesitamos varios intentos."
+    }
+  },
   "paginas": [
     "Tinkie y Pepito encontraron un mapa dentro de un libro antiguo. Sus caminos estaban dibujados con tinta verde, pero varias palabras habían desaparecido. Sin ellas, era imposible saber dónde terminaba la ruta.",
     "La primera pista decía: «Busca donde las historias descansan». Pepito pensó en abandonar porque la frase le parecía demasiado extraña. Tinkie propuso leerla otra vez, palabra por palabra, sin apresurarse.",
