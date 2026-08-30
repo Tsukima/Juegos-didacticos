@@ -3,13 +3,21 @@ declare(strict_types=1);
 
 const MAX_AUDIO_BYTES = 10485760;
 
-$configPath = '';
+$configPath = is_file(__DIR__ . '/config.php') ? __DIR__ . '/config.php' : '';
+$home = rtrim((string)(getenv('HOME') ?: ($_SERVER['HOME'] ?? '')), '/\\');
+$host = preg_replace('/[^a-z0-9.-]/i', '', (string)($_SERVER['HTTP_HOST'] ?? ''));
+if ($configPath === '' && $home !== '') {
+    foreach ([$home . '/tinkie-private/config.php', $home . '/domains/' . $host . '/tinkie-private/config.php'] as $candidate) {
+        if (is_file($candidate)) { $configPath = $candidate; break; }
+    }
+}
 $searchRoots = array_unique([
     (string)($_SERVER['DOCUMENT_ROOT'] ?? ''),
     __DIR__,
     (string)(realpath(__DIR__) ?: ''),
 ]);
 foreach ($searchRoots as $root) {
+    if ($configPath !== '') break;
     if ($root === '') continue;
     $cursor = rtrim($root, '/\\');
     for ($depth = 0; $depth < 7; $depth++) {
