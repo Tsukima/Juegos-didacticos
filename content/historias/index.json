@@ -13,5 +13,20 @@
     "sinopsis": "Tinkie y Pepito encuentran un mapa incompleto dentro de un libro antiguo. Para recuperar sus palabras deberán leer pistas, probar estrategias y aprender que avanzar también permite hacer pausas.",
     "palabra_clave": "constancia",
     "archivo": "el-mapa-de-las-palabras-perdidas.json"
+  },
+  {
+    "id": "el-faro-de-las-voces-valientes",
+    "titulo": "El faro de las voces valientes",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "confianza",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 2,
+    "genero": "fantasía amable",
+    "tema": "Usar la propia voz con confianza y pedir tiempo cuando sea necesario",
+    "sinopsis": "Tinkie y Pepito encuentran un faro que solo puede encenderse con una voz sincera. Para ayudar a las barcas a regresar, Pepito tendrá que respetar sus pausas y confiar en que su voz merece ser escuchada.",
+    "palabra_clave": "confianza",
+    "archivo": "el-faro-de-las-voces-valientes.json"
   }
 ]

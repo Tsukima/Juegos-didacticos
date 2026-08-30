@@ -1,0 +1,90 @@
+{
+  "id": "el-faro-de-las-voces-valientes",
+  "titulo": "El faro de las voces valientes",
+  "nivel_lector": "avanzado",
+  "edad_min": 10,
+  "edad_max": 12,
+  "valor": "confianza",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 2,
+  "genero": "fantasía amable",
+  "tema": "Usar la propia voz con confianza y pedir tiempo cuando sea necesario",
+  "sinopsis": "Tinkie y Pepito encuentran un faro que solo puede encenderse con una voz sincera. Para ayudar a las barcas a regresar, Pepito tendrá que respetar sus pausas y confiar en que su voz merece ser escuchada.",
+  "palabra_clave": {
+    "palabra": "confianza",
+    "silabas": ["con", "fian", "za"],
+    "definicion": "Sentir que puedes intentarlo, pedir ayuda y aprender, aunque todavía tengas dudas.",
+    "ejemplo_cuento": "Pepito ganó confianza cuando usó su propia voz y se permitió hacer pausas.",
+    "ejemplo_cotidiano": "Levantar la mano para preguntar algo que no entiendes demuestra confianza.",
+    "reto": "Di en voz alta algo que ya sabes hacer y algo nuevo que quieres aprender.",
+    "pregunta": {
+      "enunciado": "¿Qué acción demuestra confianza?",
+      "opciones": [
+        "Fingir que nunca necesitas ayuda",
+        "Evitar todos los retos nuevos",
+        "Intentarlo y pedir ayuda cuando la necesitas"
+      ],
+      "correcta": 2,
+      "explicacion": "Tener confianza no es saberlo todo: también es reconocer cuándo necesitamos apoyo."
+    }
+  },
+  "paginas": [
+    "Tinkie y Pepito llegaron a una isla donde el faro llevaba tres noches apagado. Sin su luz, las pequeñas barcas no sabían cómo regresar al puerto. En la puerta encontraron un cartel: «Este faro se enciende con una voz sincera».",
+    "Pepito intentó decir algo extraordinario, pero las palabras se le enredaron. Tinkie no se rio ni terminó la frase por él. Se quedó a su lado y le dijo: «Tu voz no tiene que sonar perfecta para ser importante».",
+    "Subieron hasta la sala de la lámpara. Allí había tres cristales grises y una inscripción: «Nombra algo que temes, algo que aprendiste y algo que deseas intentar». Pepito respiró despacio antes de responder.",
+    "«Temo equivocarme cuando todos me escuchan», dijo. El primer cristal se volvió azul. «He aprendido que puedo pedir tiempo para pensar». El segundo brilló con una luz verde.",
+    "Para despertar el último cristal, Pepito miró el mar y habló un poco más alto: «Quiero leer una historia completa usando mi propia voz». Su frase no salió de una sola vez, pero la repitió con calma hasta terminarla.",
+    "Los tres cristales iluminaron el faro. Desde el puerto, las barcas respondieron con pequeñas luces. Tinkie celebró el valor de Pepito, no lo rápido que había hablado.",
+    "Pepito comprendió que una voz valiente también puede temblar, hacer pausas y volver a empezar. Esa confianza le ayudó a dejar un nuevo mensaje en la puerta: «Aquí todas las voces merecen tiempo y respeto»."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila",
+      "tinkie": "curiosa, alegre y protectora",
+      "pepito": "serena; gana seguridad poco a poco"
+    },
+    "tono_por_pagina": [
+      "aventura suave y curiosidad",
+      "acompañamiento cálido",
+      "misterio amable",
+      "sinceridad y pausa",
+      "valentía creciente",
+      "alegría contenida",
+      "calma y orgullo"
+    ],
+    "audio_por_pagina": [null, null, null, null, null, null, null]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué hizo Tinkie cuando a Pepito se le enredaron las palabras?",
+      "opciones": [
+        "Terminó la frase por él",
+        "Se quedó a su lado y le dio tiempo",
+        "Le pidió que hablara más rápido"
+      ],
+      "correcta": 1,
+      "explicacion": "Tinkie respetó su ritmo y le recordó que su voz era importante."
+    },
+    {
+      "enunciado": "¿Qué quería intentar Pepito?",
+      "opciones": [
+        "Leer una historia completa con su propia voz",
+        "Navegar solo durante la noche",
+        "Construir un faro nuevo"
+      ],
+      "correcta": 0,
+      "explicacion": "Pepito decidió afrontar un reto lector importante para él."
+    },
+    {
+      "enunciado": "¿Qué descubrió Pepito sobre una voz valiente?",
+      "opciones": [
+        "Que nunca puede equivocarse",
+        "Que siempre debe sonar fuerte",
+        "Que puede temblar, hacer pausas y volver a empezar"
+      ],
+      "correcta": 2,
+      "explicacion": "Ser valiente no significa hacerlo perfecto, sino continuar respetando el propio ritmo."
+    }
+  ]
+}

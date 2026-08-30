@@ -13,6 +13,9 @@ def safe(value, fallback='No indicado'):
 
 def story_html(story):
     keyword = story.get('palabra_clave') or {}
+    keyword_term = keyword.get('palabra') or keyword.get('termino')
+    keyword_daily = keyword.get('ejemplo_cotidiano') or keyword.get('uso_cotidiano')
+    keyword_example = keyword.get('ejemplo_cuento') or keyword.get('ejemplo')
     pages = ''.join(
         f'<h3>Página {index}</h3><p>{safe(page)}</p>'
         for index, page in enumerate(story.get('paginas', []), 1)
@@ -36,10 +39,10 @@ def story_html(story):
         <strong>Valor:</strong> {safe(story.get('valor'))}</p>
         <h2>Resumen</h2>
         <p>{safe(story.get('sinopsis'))}</p>
-        <h2>Palabra clave: {safe(keyword.get('termino'))}</h2>
+        <h2>Palabra clave: {safe(keyword_term)}</h2>
         <p><strong>Significado:</strong> {safe(keyword.get('definicion'))}<br>
-        <strong>Uso diario:</strong> {safe(keyword.get('uso_cotidiano'))}<br>
-        <strong>Ejemplo:</strong> {safe(keyword.get('ejemplo'))}</p>
+        <strong>Uso diario:</strong> {safe(keyword_daily)}<br>
+        <strong>Ejemplo:</strong> {safe(keyword_example)}</p>
         <hr>{pages}
         <h2>Preguntas de comprensión</h2>
         <ol>{''.join(questions)}</ol>

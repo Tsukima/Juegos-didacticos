@@ -27,8 +27,13 @@ export async function loadStory(id) {
     typeof question?.enunciado === 'string' && Array.isArray(question.opciones) && question.opciones.length === 3 &&
     question.opciones.every(option => typeof option === 'string') && Number.isInteger(question.correcta) && question.correcta >= 0 && question.correcta < 3
   );
-  const keyword=story?.palabra_clave;
-  const validKeyword=keyword&&['termino','definicion','uso_cotidiano','ejemplo'].every(field=>typeof keyword[field]==='string'&&keyword[field].trim());
-  if (story?.id!==id||typeof story?.titulo!=='string'||!validPages||!validQuestions||!validKeyword) throw new Error('El archivo del cuento no tiene el formato esperado.');
+  const keyword = story?.palabra_clave;
+  const validKeyword = keyword && typeof keyword.palabra === 'string' && keyword.palabra.trim() &&
+    Array.isArray(keyword.silabas) && keyword.silabas.length >= 2 && keyword.silabas.every(syllable => typeof syllable === 'string' && syllable.trim()) &&
+    ['definicion', 'ejemplo_cuento', 'ejemplo_cotidiano', 'reto'].every(field => typeof keyword[field] === 'string' && keyword[field].trim()) &&
+    typeof keyword.pregunta?.enunciado === 'string' && Array.isArray(keyword.pregunta.opciones) && keyword.pregunta.opciones.length === 3 &&
+    keyword.pregunta.opciones.every(option => typeof option === 'string' && option.trim()) && Number.isInteger(keyword.pregunta.correcta) &&
+    keyword.pregunta.correcta >= 0 && keyword.pregunta.correcta < 3 && typeof keyword.pregunta.explicacion === 'string';
+  if (story?.id !== id || typeof story?.titulo !== 'string' || !validPages || !validQuestions || !validKeyword) throw new Error('El archivo del cuento no tiene el formato esperado.');
   return story;
 }

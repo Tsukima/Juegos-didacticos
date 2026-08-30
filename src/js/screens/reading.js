@@ -15,7 +15,11 @@ async function storyLibrary(state) {
       const completed=state.completed.includes(`story-${story.id}`);
       return `<article class="card story-card"><div class="story-cover" aria-hidden="true">📚</div><div class="mission-meta"><span class="pill">${escapeHtml(story.nivel_lector)}</span><span class="pill warm">${escapeHtml(story.edad_min)}–${escapeHtml(story.edad_max)} años</span></div><h3>${escapeHtml(story.titulo)}</h3><p class="muted">${escapeHtml(story.sinopsis||`Un cuento sobre ${story.valor}.`)}</p><a class="button ${completed?'secondary':''}" href="#cuento/${escapeHtml(story.id)}">${completed?'Leer de nuevo':'Leer cuento'}</a></article>`;
     }).join('');
-    return cards||'<article class="card empty story-empty"><span>🦜</span><h3>Los primeros cuentos están en camino</h3><p>Tinkie y Pepito están preparando una nueva aventura.</p></article>';
+    const completedStories=stories.filter(story=>state.completed.includes(`story-${story.id}`));
+    const words=completedStories.map(story=>`<article class="dictionary-word"><span class="dictionary-key" aria-hidden="true">🔑</span><div><h3>${escapeHtml(story.palabra_clave?.palabra||'Palabra')}</h3><p class="keyword-syllables">${(story.palabra_clave?.silabas||[]).map(escapeHtml).join(' · ')}</p><p>${escapeHtml(story.palabra_clave?.definicion||'')}</p><small>Descubierta en «${escapeHtml(story.titulo)}»</small></div></article>`).join('');
+    const dictionary=`<details class="adventure-dictionary card"><summary><span aria-hidden="true">📗</span><span><strong>Diccionario de aventuras</strong><small>${completedStories.length} de ${stories.length} palabras descubiertas</small></span><span class="dictionary-arrow" aria-hidden="true">⌄</span></summary><div class="dictionary-list">${words||'<div class="empty compact"><strong>Tu primera palabra está esperando.</strong><p>Completa un cuento para guardarla aquí.</p></div>'}</div></details>`;
+    const library=cards||'<article class="card empty story-empty"><span>🦜</span><h3>Los primeros cuentos están en camino</h3><p>Tinkie y Pepito están preparando una nueva aventura.</p></article>';
+    return `${library}${dictionary}`;
   } catch {
     return '<article class="card adult-note"><strong>La biblioteca está descansando.</strong><p>Vuelve a intentarlo dentro de un momento.</p></article>';
   }

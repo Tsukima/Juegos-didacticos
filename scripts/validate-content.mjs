@@ -26,7 +26,12 @@ for (const entry of Array.isArray(catalog)?catalog:[]) {
   });
   for (const field of ['valor','serie','genero','tema','sinopsis']) if (!text(story[field])) failures.push(`${entry.id}: falta ${field}.`);
   if (!Number.isInteger(story.episodio)||story.episodio<1) failures.push(`${entry.id}: episodio no válido.`);
-  for (const field of ['termino','definicion','uso_cotidiano','ejemplo']) if (!text(story.palabra_clave?.[field])) failures.push(`${entry.id}: falta palabra_clave.${field}.`);
+  const keyword=story.palabra_clave;
+  if (!text(keyword?.palabra)) failures.push(`${entry.id}: falta palabra_clave.palabra.`);
+  if (!Array.isArray(keyword?.silabas)||keyword.silabas.length<2||!keyword.silabas.every(text)) failures.push(`${entry.id}: palabra_clave.silabas no es válida.`);
+  for (const field of ['definicion','ejemplo_cuento','ejemplo_cotidiano','reto']) if (!text(keyword?.[field])) failures.push(`${entry.id}: falta palabra_clave.${field}.`);
+  const keywordQuestion=keyword?.pregunta;
+  if (!text(keywordQuestion?.enunciado)||!Array.isArray(keywordQuestion?.opciones)||keywordQuestion.opciones.length!==3||!keywordQuestion.opciones.every(text)||!Number.isInteger(keywordQuestion.correcta)||keywordQuestion.correcta<0||keywordQuestion.correcta>2||!text(keywordQuestion.explicacion)) failures.push(`${entry.id}: la pregunta de la palabra clave no es válida.`);
 }
 
 if (failures.length) {
