@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "validate:content": "node scripts/validate-content.mjs"
   },
   "dependencies": {
     "opus-media-recorder": "0.8.0"

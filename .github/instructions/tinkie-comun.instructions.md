@@ -22,5 +22,5 @@ Si una petición manual no indica tramo, pregunta antes de generar contenido.
 ## Publicación
 
 - Guarda el resultado como JSON versionado en la carpeta correspondiente.
-- Nunca publiques directamente en Supabase.
+- Nunca publiques directamente en una base de datos ni en Hostinger.
 - Todo contenido debe llegar mediante una pull request y quedar pendiente de revisión adulta.

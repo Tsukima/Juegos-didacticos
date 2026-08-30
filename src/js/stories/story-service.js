@@ -27,6 +27,8 @@ export async function loadStory(id) {
     typeof question?.enunciado === 'string' && Array.isArray(question.opciones) && question.opciones.length === 3 &&
     question.opciones.every(option => typeof option === 'string') && Number.isInteger(question.correcta) && question.correcta >= 0 && question.correcta < 3
   );
-  if (story?.id !== id || typeof story?.titulo !== 'string' || !validPages || !validQuestions) throw new Error('El archivo del cuento no tiene el formato esperado.');
+  const keyword=story?.palabra_clave;
+  const validKeyword=keyword&&['termino','definicion','uso_cotidiano','ejemplo'].every(field=>typeof keyword[field]==='string'&&keyword[field].trim());
+  if (story?.id!==id||typeof story?.titulo!=='string'||!validPages||!validQuestions||!validKeyword) throw new Error('El archivo del cuento no tiene el formato esperado.');
   return story;
 }

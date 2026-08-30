@@ -6,6 +6,12 @@
     "edad_min": 10,
     "edad_max": 12,
     "valor": "perseverancia",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 1,
+    "genero": "misterio amable",
+    "tema": "Resolver dificultades de lectura con paciencia",
+    "sinopsis": "Tinkie y Pepito encuentran un mapa incompleto dentro de un libro antiguo. Para recuperar sus palabras deberán leer pistas, probar estrategias y aprender que avanzar también permite hacer pausas.",
+    "palabra_clave": "constancia",
     "archivo": "el-mapa-de-las-palabras-perdidas.json"
   }
 ]

@@ -24,5 +24,7 @@ jobs:
         run: npm ci
       - name: Compilar aplicación
         run: npm run build
+      - name: Validar cuentos y catálogo
+        run: npm run validate:content
       - name: Auditar dependencias
         run: npm audit --audit-level=high

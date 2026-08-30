@@ -5,6 +5,17 @@
   "edad_min": 10,
   "edad_max": 12,
   "valor": "perseverancia",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 1,
+  "genero": "misterio amable",
+  "tema": "Resolver dificultades de lectura con paciencia",
+  "sinopsis": "Tinkie y Pepito encuentran un mapa incompleto dentro de un libro antiguo. Para recuperar sus palabras deberán leer pistas, probar estrategias y aprender que avanzar también permite hacer pausas.",
+  "palabra_clave": {
+    "termino": "constancia",
+    "definicion": "Continuar practicando algo con paciencia, aunque no salga a la primera.",
+    "uso_cotidiano": "Usamos la constancia al practicar una lectura, aprender una habilidad o terminar una tarea poco a poco.",
+    "ejemplo": "Con constancia, Pepito logró leer la pista completa."
+  },
   "paginas": [
     "Tinkie y Pepito encontraron un mapa dentro de un libro antiguo. Sus caminos estaban dibujados con tinta verde, pero varias palabras habían desaparecido. Sin ellas, era imposible saber dónde terminaba la ruta.",
     "La primera pista decía: «Busca donde las historias descansan». Pepito pensó en abandonar porque la frase le parecía demasiado extraña. Tinkie propuso leerla otra vez, palabra por palabra, sin apresurarse.",

@@ -1,18 +1,22 @@
-# Contenido semanal con GitHub Copilot
+# Cuento semanal con GitHub Copilot
 
-El workflow `weekly-content-tasks.yml` se ejecuta los domingos a las 08:00 UTC y también puede iniciarse manualmente.
+El workflow `weekly-content-tasks.yml` se ejecuta cada domingo a las 08:00 UTC (10:00 en España peninsular durante el horario de verano) y también puede iniciarse manualmente con un tema opcional.
 
 ## Funcionamiento
 
-1. GitHub crea dos incidencias semanales sin duplicarlas: Historias y Lenguaje.
-2. Las incidencias quedan asignadas a `Tsukima` y generan una notificación móvil.
-3. El adulto abre cada incidencia, selecciona **Assign to Copilot** y elige el agente indicado.
-4. Copilot prepara los JSON y abre una pull request.
-5. El adulto revisa y acepta o rechaza la propuesta.
-6. Solo el contenido fusionado en `main` queda publicado.
+1. GitHub encarga al agente `Tinkie Historias` un episodio avanzado para 10-12 años.
+2. El agente revisa el catálogo para continuar la serie y evitar repeticiones.
+3. Genera el cuento, la palabra clave, el quiz y actualiza el índice.
+4. Ejecuta `npm run validate:content` y `npm run build`.
+5. Abre una pull request con un resumen familiar y queda pendiente de revisión.
+6. Solo al fusionar la pull request en `main` el contenido puede llegar al despliegue.
 
-## Credenciales
+El workflow nunca publica directamente en MySQL ni en Hostinger.
 
-Este flujo no utiliza claves de Anthropic, OpenAI ni Supabase. Usa únicamente el `GITHUB_TOKEN` temporal proporcionado por GitHub Actions para crear las incidencias.
+## Credencial
 
-GitHub Models no se utiliza porque GitHub retiró completamente ese servicio el 30 de julio de 2026.
+El repositorio necesita el secreto `COPILOT_TASK_TOKEN` con acceso a la API de tareas de Copilot. No usa claves de OpenAI, Anthropic, Supabase ni de Hostinger.
+
+## Ejecución manual
+
+En GitHub: **Actions → Crear contenido semanal con Copilot → Run workflow**. El campo `tema` es opcional; si se deja vacío, el agente escoge el siguiente tema según la variedad del catálogo.
