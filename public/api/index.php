@@ -8,7 +8,21 @@ try {
     switch ($action) {
         case 'health':
             require_method('GET');
-            db()->query('SELECT 1')->fetchColumn();
+            if (!extension_loaded('pdo_mysql')) {
+                json_response(['status' => 'error', 'database' => 'pdo_mysql_unavailable'], 503);
+            }
+            try {
+                db()->query('SELECT 1')->fetchColumn();
+            } catch (PDOException $databaseError) {
+                $code = (int)($databaseError->errorInfo[1] ?? 0);
+                $reason = match ($code) {
+                    1045 => 'credentials_rejected',
+                    1049 => 'database_not_found',
+                    2002, 2003, 2005 => 'host_unreachable',
+                    default => 'connection_failed',
+                };
+                json_response(['status' => 'error', 'database' => $reason, 'code' => $code], 503);
+            }
             $audioDirectory = (string)$config['audio_directory'];
             if (!is_dir($audioDirectory) || !is_writable($audioDirectory)) {
                 json_response(['status' => 'partial', 'database' => 'ok', 'audioStorage' => 'not_writable'], 503);
