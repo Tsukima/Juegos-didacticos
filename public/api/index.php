@@ -16,6 +16,7 @@ try {
             } catch (PDOException $databaseError) {
                 $code = (int)($databaseError->errorInfo[1] ?? 0);
                 $reason = match ($code) {
+                    1044 => 'permission_denied',
                     1045 => 'credentials_rejected',
                     1049 => 'database_not_found',
                     2002, 2003, 2005 => 'host_unreachable',
