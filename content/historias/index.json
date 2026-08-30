@@ -28,5 +28,20 @@
     "sinopsis": "Tinkie y Pepito encuentran un faro que solo puede encenderse con una voz sincera. Para ayudar a las barcas a regresar, Pepito tendrá que respetar sus pausas y confiar en que su voz merece ser escuchada.",
     "palabra_clave": "confianza",
     "archivo": "el-faro-de-las-voces-valientes.json"
+  },
+  {
+    "id": "tinkie-y-el-jardin-de-sentimientos-3",
+    "titulo": "Tinkie y el jardín de sentimientos",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "empatía",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 3,
+    "genero": "fantasía amable",
+    "tema": "Empatía",
+    "sinopsis": "Tinkie y Pepito descubren un jardín mágico donde cada planta representa una emoción. Al explorar, aprenderán a entender sus propios sentimientos y los de los demás, fortaleciendo su conexión emocional.",
+    "palabra_clave": "empatía",
+    "archivo": "tinkie-y-el-jardin-de-sentimientos-3.json"
   }
 ]
