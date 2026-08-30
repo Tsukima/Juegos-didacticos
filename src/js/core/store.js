@@ -1,5 +1,7 @@
 const KEY = 'tinkie-progress-v1';
 const defaults = {
+  _updatedAt:'',
+  _cloudUserId:'',
   stars:0, xp:0, streak:0, lastDay:'', completed:[], sessions:[], readingAttempts:[],
   settings:{sound:true, focus:false, dailyGoal:3, saveAudio:false},
   profile:{name:'Explorador', mascot:'kiwi', adventure:'explorar', encouragement:'calma', onboardingComplete:false},
@@ -15,7 +17,7 @@ export const store = {
       return {...freshDefaults(), ...saved, completed:Array.isArray(saved.completed) ? saved.completed : [], sessions:Array.isArray(saved.sessions) ? saved.sessions : [], readingAttempts:Array.isArray(saved.readingAttempts) ? saved.readingAttempts : [], settings:{...defaults.settings, ...(saved.settings || {})}, profile:{...defaults.profile, ...(saved.profile || {})}, puzzle:{...defaults.puzzle, ...(saved.puzzle || {}), pieces:Array.isArray(saved.puzzle?.pieces) ? saved.puzzle.pieces : []}};
     } catch { return freshDefaults(); }
   },
-  save(data) { localStorage.setItem(KEY, JSON.stringify(data)); window.dispatchEvent(new CustomEvent('progresschange')); },
+  save(data) { localStorage.setItem(KEY, JSON.stringify({...data,_updatedAt:new Date().toISOString()})); window.dispatchEvent(new CustomEvent('progresschange')); },
   complete(id, type) {
     const state = this.get();
     if (state.completed.includes(id)) return false;

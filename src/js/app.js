@@ -13,6 +13,7 @@ import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
+import {setupCloudProgress} from './core/cloud-progress.js';
 
 const routes = {inicio:homeScreen, bienvenida:onboardingScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
@@ -91,6 +92,7 @@ async function render() {
 }
 
 setupPwaInstall(toast);
+setupCloudProgress();
 setupEmailAuth(toast);
 const focus = document.querySelector('#focus-toggle');
 focus.onclick = () => {

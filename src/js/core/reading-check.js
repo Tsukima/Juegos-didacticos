@@ -1,6 +1,6 @@
 import {store} from './store.js?v=4';
 import {startOpusRecording} from './opus-recorder.js';
-import {uploadReadingAudio} from './supabase.js';
+import {uploadReadingAudio} from './hostinger-api.js';
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -46,7 +46,7 @@ export const readingCheckMarkup = (title = 'Muy bien, ahora leámoslo juntos', t
       <strong>${escapeHtml(targetText)}</strong>
     </div>
     <button class="button record-reading" type="button">🎙️ Grabar lectura</button>
-    <p class="recording-hint muted">${savesAudio?'Se guardará como .opus en el espacio privado de Supabase.':'El adulto puede activar el guardado privado desde su panel.'}</p>
+    <p class="recording-hint muted">${savesAudio?'Se guardará como .opus en el espacio familiar privado.':'El adulto puede activar el guardado privado desde su panel.'}</p>
     <div class="reading-result" role="status" aria-live="polite" hidden></div>
   </section>`;
 };

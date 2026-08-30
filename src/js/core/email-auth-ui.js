@@ -7,14 +7,18 @@ import {
   signOutEmailAccount,
   updatePassword
 } from './email-auth.js';
-import {authRedirectType} from './supabase.js';
+import {authRedirectType} from './hostinger-api.js';
 
 const friendlyError = error => {
   const message = (error?.message || '').toLowerCase();
   if (message.includes('invalid login credentials')) return 'El correo o la contraseña no son correctos.';
+  if (message.includes('no son correctos')) return 'El correo o la contraseña no son correctos.';
+  if (message.includes('ya tiene una cuenta')) return 'Este correo ya tiene una cuenta. Prueba a iniciar sesión.';
+  if (message.includes('demasiados intentos')) return 'Has hecho varios intentos. Espera unos minutos antes de continuar.';
+  if (message.includes('caducado') || message.includes('no es válido')) return 'Este enlace ya no es válido. Solicita uno nuevo.';
   if (message.includes('email not confirmed')) return 'Confirma tu correo desde el mensaje que te enviamos.';
   if (message.includes('user already registered')) return 'Este correo ya tiene una cuenta. Prueba a iniciar sesión.';
-  if (message.includes('password should be')) return 'La contraseña debe tener al menos 6 caracteres.';
+  if (message.includes('entre 10') || message.includes('password should be')) return 'La contraseña debe tener al menos 10 caracteres.';
   if (message.includes('rate limit')) return 'Espera un momento antes de volver a intentarlo.';
   return 'No pudimos completar la acción. Revisa la conexión e inténtalo de nuevo.';
 };
@@ -148,6 +152,6 @@ export function setupEmailAuth(toast) {
   });
   getEmailAccount().then(user => {
     paintAccount(user);
-    if (authRedirectType === 'recovery' && user) showRecovery();
+    if (authRedirectType === 'recovery') showRecovery();
   }).catch(() => paintAccount(null));
 }
