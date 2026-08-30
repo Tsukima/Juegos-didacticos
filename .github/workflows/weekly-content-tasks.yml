@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 8 * * 0'
   workflow_dispatch:
+    inputs:
+      tema:
+        description: Tema opcional para el próximo episodio
+        required: false
+        type: string
 
 concurrency:
   group: weekly-content-tasks
@@ -20,6 +25,7 @@ jobs:
         env:
           COPILOT_TASK_TOKEN: ${{ secrets.COPILOT_TASK_TOKEN }}
           REPOSITORY: ${{ github.repository }}
+          REQUESTED_THEME: ${{ inputs.tema }}
         shell: bash
         run: |
           if [ -z "$COPILOT_TASK_TOKEN" ]; then
@@ -31,19 +37,32 @@ jobs:
           Lee y sigue `.github/agents/tinkie-historias.agent.md` y
           `.github/instructions/tinkie-comun.instructions.md`.
 
-          Genera tres historias nuevas para Tinkie: una inicial (4-6), una
-          media (7-9) y una avanzada (10-12). Usa temas y valores diferentes,
-          evita repetir historias existentes, guarda los JSON en
-          `content/historias/` y actualiza `content/historias/index.json`.
-          Valida todos los archivos y no publiques nada en Supabase.
+          Genera un nuevo episodio semanal para Tinkie dirigido a un lector
+          de 11 años (nivel avanzado, 10-12). Lee primero el catálogo y los
+          cuentos existentes para continuar una serie temática con coherencia,
+          alternar géneros y evitar repetir tramas, valores o palabras clave.
+
+          Cada episodio debe incluir `serie`, `episodio`, `genero`, `tema`,
+          `sinopsis` y una `palabra_clave` con término, definición sencilla,
+          uso cotidiano y ejemplo. Guarda el JSON en `content/historias/`,
+          actualiza `content/historias/index.json` y ejecuta
+          `npm run validate:content` y `npm run build`.
+
+          Nunca publiques directamente ni modifiques datos de producción.
 
           Abre una pull request pendiente de revisión adulta. Al principio de
-          su descripción incluye `## Resumen para la familia` y, para cada
-          cuento: título, edad, valor y un resumen de 2-3 frases sin revelar el
-          final. Después incluye `## Qué se añadirá` y las comprobaciones
-          realizadas. No mezcles la pull request.
+          su descripción incluye `## Resumen para la familia`: título, serie y
+          episodio, género, edad, valor, palabra clave y un resumen de 2-3
+          frases sin revelar el final. Después incluye `## Qué se añadirá` y
+          `## Comprobaciones`. No mezcles la pull request.
           PROMPT
           )
+
+          if [ -n "$REQUESTED_THEME" ]; then
+            prompt="$prompt
+
+          Tema solicitado manualmente: $REQUESTED_THEME"
+          fi
 
           jq -n \
             --arg prompt "$prompt" \

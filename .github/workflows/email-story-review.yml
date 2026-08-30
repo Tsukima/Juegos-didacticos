@@ -1,0 +1,47 @@
+name: Enviar cuento por correo
+
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+    paths:
+      - 'content/historias/**.json'
+
+permissions:
+  contents: read
+
+jobs:
+  email-story:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar la propuesta
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Preparar los cuentos nuevos o actualizados
+        id: stories
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        shell: bash
+        run: |
+          git diff --name-only --diff-filter=AM "$BASE_SHA" HEAD -- 'content/historias/*.json' \
+            | grep -v '/index.json$' > story-files.txt || true
+
+          if [ ! -s story-files.txt ]; then
+            echo "No hay cuentos individuales que enviar."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "found=true" >> "$GITHUB_OUTPUT"
+
+      - name: Enviar revisión familiar
+        if: steps.stories.outputs.found == 'true'
+        env:
+          STORY_EMAIL_USER: ${{ secrets.STORY_EMAIL_USER }}
+          STORY_EMAIL_APP_PASSWORD: ${{ secrets.STORY_EMAIL_APP_PASSWORD }}
+          STORY_EMAIL_TO: angelesperniajobs@gmail.com
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: python .github/scripts/email-story-review.py story-files.txt

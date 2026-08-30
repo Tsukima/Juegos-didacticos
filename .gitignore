@@ -1,5 +1,7 @@
 node_modules/
 dist/
+release-hostinger/
+tinkie-hostinger-migration.zip
 .env
 .env.*
 !.env.example

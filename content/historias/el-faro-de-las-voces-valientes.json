@@ -5,6 +5,11 @@
   "edad_min": 10,
   "edad_max": 12,
   "valor": "confianza",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 2,
+  "genero": "fantasía amable",
+  "tema": "Usar la propia voz con confianza y pedir tiempo cuando sea necesario",
+  "sinopsis": "Tinkie y Pepito encuentran un faro que solo puede encenderse con una voz sincera. Para ayudar a las barcas a regresar, Pepito tendrá que respetar sus pausas y confiar en que su voz merece ser escuchada.",
   "palabra_clave": {
     "palabra": "confianza",
     "silabas": ["con", "fian", "za"],

@@ -48,6 +48,7 @@ export async function storyScreen(id) {
 }
 
 export function bindStoryScreen(toast) {
+  document.querySelector('.story-back')?.setAttribute('href', '#lectura?tipo=stories');
   document.querySelector('#keyword-question')?.addEventListener('submit', event => {
     event.preventDefault();
     const form = event.currentTarget;

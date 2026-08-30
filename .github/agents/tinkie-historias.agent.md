@@ -63,6 +63,11 @@ exacto y lo actualizo aquí):
   "edad_min": 4,
   "edad_max": 6,
   "valor": "string",
+  "serie": "string",
+  "episodio": 1,
+  "genero": "aventura | misterio amable | humor | fantasia | vida cotidiana | ciencia ficcion amable",
+  "tema": "string",
+  "sinopsis": "2-3 frases sin revelar el final",
   "palabra_clave": {
     "palabra": "string",
     "silabas": ["sílaba 1", "sílaba 2"],
