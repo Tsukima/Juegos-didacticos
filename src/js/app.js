@@ -106,4 +106,5 @@ document.querySelector('#mobile-menu-backdrop')?.addEventListener('click', close
 addEventListener('keydown', event => {if (event.key === 'Escape') closeMobileMenu()});
 addEventListener('hashchange', render);
 addEventListener('progresschange', () => {document.querySelector('#streak-count').textContent = store.get().streak});
+addEventListener('cloudprogresssynced', render);
 render();
