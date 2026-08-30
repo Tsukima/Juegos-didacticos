@@ -9,9 +9,19 @@ El workflow `weekly-content-tasks.yml` se ejecuta cada domingo a las 08:00 UTC (
 3. Genera el cuento, la palabra clave, el quiz y actualiza el índice.
 4. Ejecuta `npm run validate:content` y `npm run build`.
 5. Abre una pull request con un resumen familiar y queda pendiente de revisión.
-6. Solo al fusionar la pull request en `main` el contenido puede llegar al despliegue.
+6. GitHub envía el cuento completo a `angelesperniajobs@gmail.com`, con un enlace para revisar la pull request.
+7. Solo al fusionar la pull request en `main` el contenido puede llegar al despliegue.
 
 El workflow nunca publica directamente en MySQL ni en Hostinger.
+
+## Correo de revisión
+
+El repositorio necesita dos secretos adicionales en **Settings → Secrets and variables → Actions**:
+
+- `STORY_EMAIL_USER`: la cuenta de Gmail que enviará el mensaje.
+- `STORY_EMAIL_APP_PASSWORD`: una contraseña de aplicación de Google de 16 caracteres, sin espacios.
+
+El correo solo se envía cuando una pull request no borrador añade o modifica un cuento. La contraseña normal de Gmail no debe utilizarse ni escribirse en ningún archivo del repositorio.
 
 ## Credencial
 
