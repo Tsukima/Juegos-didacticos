@@ -6,6 +6,15 @@ $action = (string)($_GET['action'] ?? 'session');
 
 try {
     switch ($action) {
+        case 'health':
+            require_method('GET');
+            db()->query('SELECT 1')->fetchColumn();
+            $audioDirectory = (string)$config['audio_directory'];
+            if (!is_dir($audioDirectory) || !is_writable($audioDirectory)) {
+                json_response(['status' => 'partial', 'database' => 'ok', 'audioStorage' => 'not_writable'], 503);
+            }
+            json_response(['status' => 'ok', 'database' => 'ok', 'audioStorage' => 'ok']);
+
         case 'session':
             require_method('GET');
             $user = null;

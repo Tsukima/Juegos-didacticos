@@ -3,9 +3,23 @@ declare(strict_types=1);
 
 const MAX_AUDIO_BYTES = 10485760;
 
-$configPath = dirname((string)($_SERVER['DOCUMENT_ROOT'] ?? __DIR__)) . '/tinkie-private/config.php';
-if (!is_file($configPath)) {
-    $configPath = dirname(__DIR__, 2) . '/tinkie-private/config.php';
+$configPath = '';
+$searchRoots = array_unique([
+    (string)($_SERVER['DOCUMENT_ROOT'] ?? ''),
+    __DIR__,
+    (string)(realpath(__DIR__) ?: ''),
+]);
+foreach ($searchRoots as $root) {
+    if ($root === '') continue;
+    $cursor = rtrim($root, '/\\');
+    for ($depth = 0; $depth < 7; $depth++) {
+        foreach ([$cursor . '/tinkie-private/config.php', dirname($cursor) . '/tinkie-private/config.php'] as $candidate) {
+            if (is_file($candidate)) { $configPath = $candidate; break 3; }
+        }
+        $parent = dirname($cursor);
+        if ($parent === $cursor) break;
+        $cursor = $parent;
+    }
 }
 if (!is_file($configPath)) {
     json_response(['error' => 'El servidor todavía no está configurado.'], 503);
