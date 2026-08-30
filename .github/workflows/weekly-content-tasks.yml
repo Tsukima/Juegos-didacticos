@@ -1,4 +1,4 @@
-name: Crear contenido semanal con Copilot
+name: Crear contenido semanal con Gemini
 
 on:
   schedule:
@@ -15,64 +15,61 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   create-content:
     runs-on: ubuntu-latest
     steps:
-      - name: Encargar historias y abrir una pull request
+      - name: Descargar el proyecto
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Generar un cuento con Gemini
         env:
-          COPILOT_TASK_TOKEN: ${{ secrets.COPILOT_TASK_TOKEN }}
-          REPOSITORY: ${{ github.repository }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.7-flash' }}
           REQUESTED_THEME: ${{ inputs.tema }}
+        run: node scripts/generate-weekly-story.mjs
+
+      - name: Validar contenido y aplicación
+        run: |
+          npm run validate:content
+          npm run build
+
+      - name: Crear rama y Pull Request
+        id: pull_request
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          if [ -z "$COPILOT_TASK_TOKEN" ]; then
-            echo "Falta el secreto COPILOT_TASK_TOKEN." >&2
-            exit 1
-          fi
+          branch="contenido/cuento-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git config user.name "tinkie-content-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add content/historias/
+          git commit -m "content: añadir cuento semanal"
+          git push origin "$branch"
+          pr_url=$(gh pr create --base main --head "$branch" --title "📚 Nuevo cuento semanal de Tinkie" --body-file generated-pr-body.md)
+          echo "url=$pr_url" >> "$GITHUB_OUTPUT"
+          echo "number=${pr_url##*/}" >> "$GITHUB_OUTPUT"
 
-          prompt=$(cat <<'PROMPT'
-          Lee y sigue `.github/agents/tinkie-historias.agent.md` y
-          `.github/instructions/tinkie-comun.instructions.md`.
-
-          Genera un nuevo episodio semanal para Tinkie dirigido a un lector
-          de 11 años (nivel avanzado, 10-12). Lee primero el catálogo y los
-          cuentos existentes para continuar una serie temática con coherencia,
-          alternar géneros y evitar repetir tramas, valores o palabras clave.
-
-          Cada episodio debe incluir `serie`, `episodio`, `genero`, `tema`,
-          `sinopsis` y una `palabra_clave` con término, definición sencilla,
-          uso cotidiano y ejemplo. Guarda el JSON en `content/historias/`,
-          actualiza `content/historias/index.json` y ejecuta
-          `npm run validate:content` y `npm run build`.
-
-          Nunca publiques directamente ni modifiques datos de producción.
-
-          Abre una pull request pendiente de revisión adulta. Al principio de
-          su descripción incluye `## Resumen para la familia`: título, serie y
-          episodio, género, edad, valor, palabra clave y un resumen de 2-3
-          frases sin revelar el final. Después incluye `## Qué se añadirá` y
-          `## Comprobaciones`. No mezcles la pull request.
-          PROMPT
-          )
-
-          if [ -n "$REQUESTED_THEME" ]; then
-            prompt="$prompt
-
-          Tema solicitado manualmente: $REQUESTED_THEME"
-          fi
-
-          jq -n \
-            --arg prompt "$prompt" \
-            '{prompt: $prompt, base_ref: "main", create_pull_request: true}' \
-            > request.json
-
-          curl --fail-with-body \
-            --request POST \
-            --header "Accept: application/vnd.github+json" \
-            --header "X-GitHub-Api-Version: 2022-11-28" \
-            --header "Authorization: Bearer $COPILOT_TASK_TOKEN" \
-            "https://api.github.com/agents/repos/$REPOSITORY/tasks" \
-            --data-binary @request.json
+      - name: Enviar el cuento por correo
+        env:
+          STORY_EMAIL_USER: ${{ secrets.STORY_EMAIL_USER }}
+          STORY_EMAIL_APP_PASSWORD: ${{ secrets.STORY_EMAIL_APP_PASSWORD }}
+          STORY_EMAIL_TO: angelesperniajobs@gmail.com
+          PR_URL: ${{ steps.pull_request.outputs.url }}
+          PR_NUMBER: ${{ steps.pull_request.outputs.number }}
+        run: python .github/scripts/email-story-review.py story-files.txt
