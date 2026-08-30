@@ -1,0 +1,101 @@
+{
+  "id": "tinkie-y-el-jardin-de-sentimientos-3",
+  "titulo": "Tinkie y el jardín de sentimientos",
+  "nivel_lector": "avanzado",
+  "edad_min": 10,
+  "edad_max": 12,
+  "valor": "empatía",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 3,
+  "genero": "fantasía amable",
+  "tema": "Empatía",
+  "sinopsis": "Tinkie y Pepito descubren un jardín mágico donde cada planta representa una emoción. Al explorar, aprenderán a entender sus propios sentimientos y los de los demás, fortaleciendo su conexión emocional.",
+  "palabra_clave": {
+    "palabra": "empatía",
+    "silabas": [
+      "em",
+      "pa",
+      "ti",
+      "a"
+    ],
+    "definicion": "Comprensión de los sentimientos de otros.",
+    "ejemplo_cuento": "Tinkie mostró empatía al entender que Pepito estaba triste porque su planta no crecía.",
+    "ejemplo_cotidiano": "Cuando ves a un amigo triste y lo consuelas.",
+    "reto": "Piensa en cómo te sientes cuando alguien más está triste y comparte ese sentimiento.",
+    "pregunta": {
+      "enunciado": "¿Qué significa empatía?",
+      "opciones": [
+        "Entender a otros",
+        "Ignorar los sentimientos",
+        "Reírse de otros"
+      ],
+      "correcta": 0,
+      "explicacion": "La empatía nos ayuda a conectar con los demás y ofrecer apoyo."
+    }
+  },
+  "paginas": [
+    "Tinkie y Pepito llegaron a un jardín lleno de flores brillantes. Cada planta representaba un sentimiento diferente: alegría, tristeza, enojo y amor. Quisieron explorar y aprender más sobre cada emoción.",
+    "De pronto, vieron una rosa marchita. Pepito se acercó, pero al verla, sintió que la rosa estaba triste. '¿Cómo puede una planta estar triste?', se preguntó. Tinkie sonrió y le explicó sobre la empatía.",
+    "Tinkie explicó que, así como las plantas necesitan agua y sol, las emociones también necesitan ser comprendidas. 'La rosa necesita que la escuchemos y cuidemos', dijo Tinkie, invitando a Pepito a reflexionar.",
+    "Decidieron cuidar de la rosa. Pepito le habló suavemente, diciendo que todo estaría bien. Al tocar las hojas, sintieron que se llenaban de energía positiva. La rosa comenzó a erguirse, como si respondiera con alegría.",
+    "Mientras ayudaban a la rosa, Tinkie y Pepito se dieron cuenta de sus propios sentimientos. Pepito habló sobre su miedo a fallar. Tinkie lo escuchó y le dijo que todos tienen derecho a sentir lo que sienten.",
+    "Cada planta que cuidaban se volvía más hermosa. Al final, el jardín se llenó de colores vibrantes. Tinkie y Pepito aprendieron que cuidar de las emociones es tan importante como cuidar de las plantas.",
+    "Satisfechos con su trabajo, decidieron volver al jardín de sentimientos siempre que sintieran que necesitaban entender más sobre ellos mismos y los demás. 'La empatía nos conecta', concluyó Tinkie feliz."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "animado",
+      "reflexivo",
+      "didáctico",
+      "esperanzador",
+      "empático",
+      "motivado",
+      "feliz"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué planta encontraron Tinkie y Pepito que estaba marchita?",
+      "opciones": [
+        "Una flor",
+        "Una rosa",
+        "Un árbol"
+      ],
+      "correcta": 1,
+      "explicacion": "Ellos encontraron una rosa marchita que representaba un sentimiento triste."
+    },
+    {
+      "enunciado": "¿Qué emociona aprendieron a cuidar en el jardín?",
+      "opciones": [
+        "Los sentimientos",
+        "El tiempo",
+        "Los colores"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuidar los sentimientos es tan importante como cuidar las plantas en el jardín."
+    },
+    {
+      "enunciado": "¿Qué ayudó a la rosa a sentirse mejor?",
+      "opciones": [
+        "Hablarle a Tinkie",
+        "Dar agua",
+        "Escuchar y cuidar"
+      ],
+      "correcta": 2,
+      "explicacion": "La rosa respondió al cuidado y la empatía que Tinkie y Pepito le brindaron."
+    }
+  ]
+}
