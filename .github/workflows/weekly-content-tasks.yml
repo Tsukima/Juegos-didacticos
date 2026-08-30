@@ -1,4 +1,4 @@
-name: Crear contenido semanal con Gemini
+name: Crear contenido semanal con Magic Loops
 
 on:
   schedule:
@@ -36,10 +36,9 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Generar un cuento con Gemini
+      - name: Generar un cuento con Magic Loops
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.7-flash' }}
+          MAGIC_LOOP_URL: ${{ secrets.MAGIC_LOOP_URL }}
           REQUESTED_THEME: ${{ inputs.tema }}
         run: node scripts/generate-weekly-story.mjs
 
