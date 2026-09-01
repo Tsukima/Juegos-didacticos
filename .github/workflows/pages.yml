@@ -28,3 +28,52 @@ jobs:
         run: npm run validate:content
       - name: Auditar dependencias
         run: npm audit --audit-level=high
+
+  deploy-hostinger:
+    name: Publicar automáticamente en Hostinger
+    needs: validate
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    environment:
+      name: production
+      url: https://aprendeconmigo.angsys.com
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+      - name: Preparar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Compilar versión de producción
+        run: npm run build
+      - name: Comprobar credenciales de Hostinger
+        env:
+          FTP_SERVER: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+        run: |
+          test -n "$FTP_SERVER" || (echo "Falta HOSTINGER_FTP_SERVER" && exit 1)
+          test -n "$FTP_USERNAME" || (echo "Falta HOSTINGER_FTP_USERNAME" && exit 1)
+          test -n "$FTP_PASSWORD" || (echo "Falta HOSTINGER_FTP_PASSWORD" && exit 1)
+      - name: Sincronizar con public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ./
+          state-name: .tinkie-deploy-state.json
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            api/config.php
+            api/audio/**
+            audio/**
+            .well-known/**
