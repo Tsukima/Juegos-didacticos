@@ -4,9 +4,17 @@ import {store} from '../core/store.js';
 
 export function miniStoryScreen(id) {
   const story=miniStories.find(item=>item.id===id)||miniStories[0];
+  const coverByStory={
+    'roki-huevo-luminoso':'images/mini/cuentos/roki-huevo-luminoso.png',
+    'turbo-mapa-colores':'images/mini/cuentos/turbo-mapa-colores.png',
+    'hilito-puente-amable':'images/mini/cuentos/hilito-puente-amable.png',
+    'turbo-carrera-tranquila':'images/mini/cuentos/turbo-carrera-tranquila.png',
+    'tinkie-semáforo-emociones':'images/mini/emociones/semáforo-emociones-kaiju-v2.png'
+  };
+  const cover=coverByStory[story.id];
   const iconsByTopic={dinosaurios:['🌿','🥚','🦜','👂','🐣'],aventuras:['🌲','🗺️','🦕','🌉','⭐'],heroes:['🕸️','🌊','🦕','🐢','⭐'],velocidad:['👟','⚡','🦜','🛑','🏁']};
   const pageIcons=iconsByTopic[story.topic]||iconsByTopic.dinosaurios;
-  return `<div class="mini-world mini-story" data-mini-story="${story.id}"><a class="mini-back" href="#mini-tema/${story.topic}">← Volver al tema</a><p class="mini-label">Cuento pequeño</p><h1>${story.title}</h1><div class="mini-keyword"><span>Palabra nueva</span><strong>${story.syllables.join(' · ')}</strong><button type="button" data-story-speak="${story.keyword}">🔊 Escuchar</button></div><div class="mini-story-pages">${story.pages.map((page,index)=>`<article><span>${index+1}</span><div aria-hidden="true">${pageIcons[index]}</div><p>${page}</p><button type="button" data-story-speak="${page}">🔊 Leer conmigo</button></article>`).join('')}</div><section class="mini-question"><h2>${story.question.text}</h2>${story.question.options.map((option,index)=>`<button type="button" data-mini-answer="${index}">${option}</button>`).join('')}<p role="status" aria-live="polite"></p></section></div>`;
+  return `<div class="mini-world mini-story" data-mini-story="${story.id}"><a class="mini-back" href="#mini-tema/${story.topic}">← Volver al tema</a><p class="mini-label">Cuento pequeño</p><h1>${story.title}</h1>${cover?`<img class="mini-story-cover" src="${cover}" alt="Ilustración de ${story.title}" loading="eager">`:''}<div class="mini-keyword"><span>Palabra nueva</span><strong>${story.syllables.join(' · ')}</strong><button type="button" data-story-speak="${story.keyword}">🔊 Escuchar</button></div><div class="mini-story-pages">${story.pages.map((page,index)=>`<article><span>${index+1}</span><div aria-hidden="true">${pageIcons[index]}</div><p>${page}</p><button type="button" data-story-speak="${page}">🔊 Leer conmigo</button></article>`).join('')}</div><section class="mini-question"><h2>${story.question.text}</h2>${story.question.options.map((option,index)=>`<button type="button" data-mini-answer="${index}">${option}</button>`).join('')}<p role="status" aria-live="polite"></p></section></div>`;
 }
 
 export function bindMiniStory() {

@@ -1,6 +1,6 @@
 import {characters} from './characters.js';
 
-export const companionKeys = ['kiwi', 'coco', 'lumo', 'mia'];
+export const companionKeys = ['kiwi', 'coco', 'lumo', 'mia', 'roki', 'hilito', 'turbo'];
 export const companion = key => characters[companionKeys.includes(key) ? key : 'kiwi'];
 
 export function puzzleMarkup(state, compact = false) {
