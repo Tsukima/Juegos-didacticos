@@ -85,6 +85,12 @@ async function render() {
     location.hash = 'bienvenida';
     return;
   }
+  if (store.get().profile.onboardingComplete && !sessionStorage.getItem('emotion-check-complete') && route !== 'equipo' && route !== 'bienvenida') {
+    sessionStorage.setItem('emotion-check-return', location.hash || (store.get().profile.learningPath==='mini'?'#mini':'#inicio'));
+    sessionStorage.setItem('emotion-check-required','1');
+    location.hash = 'equipo';
+    return;
+  }
   const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : route === 'cuento' ? () => storyScreen(id) : route === 'mini-juego' ? () => miniGameScreen(id) : route === 'mini-cuento' ? () => miniStoryScreen(id) : route === 'mini-sonido' ? () => miniSoundScreen(id) : route === 'mini-tema' ? () => miniThemeScreen(id) : routes[route] || homeScreen;
   closeMobileMenu();
   const app = document.querySelector('#app');
