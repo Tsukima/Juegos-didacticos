@@ -77,6 +77,7 @@ let renderSequence = 0;
 async function render() {
   const sequence = ++renderSequence;
   const {route, id, params} = parse();
+  document.documentElement.dataset.companion = store.get().profile?.mascot || 'kiwi';
   if (!store.get().profile.onboardingComplete && route !== 'bienvenida') {
     location.hash = 'bienvenida';
     return;
