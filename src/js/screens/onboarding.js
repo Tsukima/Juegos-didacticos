@@ -45,6 +45,7 @@ export function bindOnboarding() {
   }));
   shell.querySelectorAll('[data-onboarding-group]').forEach(button => button.addEventListener('click', () => {
     draft[button.dataset.onboardingGroup] = button.dataset.onboardingValue;
+    if (button.dataset.onboardingGroup === 'mascot') document.documentElement.dataset.companion = button.dataset.onboardingValue;
     const step = Number(button.closest('[data-onboarding-step]').dataset.onboardingStep);
     if (step < 3) showStep(step + 1); else finish();
   }));
