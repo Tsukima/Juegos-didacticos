@@ -27,8 +27,8 @@ export function bindMiniGame() {
       const state=store.get(),completed=new Set(state.mini?.completed||[]); completed.add(`word-${word.id}`); state.mini={...(state.mini||{}),completed:[...completed],eggs:completed.size}; store.save(state);
       const reading=root.querySelector('.mini-reading'); reading.hidden=false;
       bindReadingCheck(reading,word.phrase,`mini-${word.id}`);
-      const index=miniWords.findIndex(item=>item.id===word.id),next=miniWords[index+1];
-      reading.insertAdjacentHTML('afterend',`<div class="mini-next-actions"><a class="mini-button" href="${next?`#mini-juego/${next.id}`:'#mini'}">${next?'Siguiente palabra →':'Volver al mapa 🥚'}</a></div>`);
+      const topicWords=miniWords.filter(item=>item.topic===word.topic),index=topicWords.findIndex(item=>item.id===word.id),next=topicWords[index+1];
+      reading.insertAdjacentHTML('afterend',`<div class="mini-next-actions"><a class="mini-button" href="${next?`#mini-juego/${next.id}`:`#mini-tema/${word.topic}`}">${next?'Siguiente palabra →':'Volver al tema 🥚'}</a></div>`);
     } else {
       feedback.innerHTML='<strong>Casi.</strong> Escuchemos otra vez y probemos con calma.';
       feedback.className='mini-feedback try';
