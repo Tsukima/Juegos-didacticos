@@ -4,8 +4,9 @@ const defaults = {
   _cloudUserId:'',
   stars:0, xp:0, streak:0, lastDay:'', completed:[], sessions:[], readingAttempts:[],
   settings:{sound:true, focus:false, dailyGoal:3, saveAudio:false},
-  profile:{name:'Explorador', mascot:'kiwi', adventure:'explorar', encouragement:'calma', onboardingComplete:false},
-  puzzle:{collection:'kiwi-01', pieces:[]}
+  profile:{name:'Explorador', learningPath:'explorer', mascot:'kiwi', adventure:'explorar', encouragement:'calma', onboardingComplete:false},
+  puzzle:{collection:'kiwi-01', pieces:[]},
+  mini:{eggs:0,completed:[]}
 };
 const today = () => new Date().toISOString().slice(0,10);
 const freshDefaults = () => structuredClone(defaults);
@@ -14,7 +15,7 @@ export const store = {
   get() {
     try {
       const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
-      return {...freshDefaults(), ...saved, completed:Array.isArray(saved.completed) ? saved.completed : [], sessions:Array.isArray(saved.sessions) ? saved.sessions : [], readingAttempts:Array.isArray(saved.readingAttempts) ? saved.readingAttempts : [], settings:{...defaults.settings, ...(saved.settings || {})}, profile:{...defaults.profile, ...(saved.profile || {})}, puzzle:{...defaults.puzzle, ...(saved.puzzle || {}), pieces:Array.isArray(saved.puzzle?.pieces) ? saved.puzzle.pieces : []}};
+      return {...freshDefaults(), ...saved, completed:Array.isArray(saved.completed) ? saved.completed : [], sessions:Array.isArray(saved.sessions) ? saved.sessions : [], readingAttempts:Array.isArray(saved.readingAttempts) ? saved.readingAttempts : [], settings:{...defaults.settings, ...(saved.settings || {})}, profile:{...defaults.profile, ...(saved.profile || {})}, puzzle:{...defaults.puzzle, ...(saved.puzzle || {}), pieces:Array.isArray(saved.puzzle?.pieces) ? saved.puzzle.pieces : []}, mini:{...defaults.mini,...(saved.mini||{}),completed:Array.isArray(saved.mini?.completed)?saved.mini.completed:[]}};
     } catch { return freshDefaults(); }
   },
   save(data) { localStorage.setItem(KEY, JSON.stringify({...data,_updatedAt:new Date().toISOString()})); window.dispatchEvent(new CustomEvent('progresschange')); },

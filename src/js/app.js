@@ -9,13 +9,18 @@ import {gameScreen} from './screens/game.js?v=4';
 import {securityGameScreen} from './screens/security-game.js?v=4';
 import {storyScreen, bindStoryScreen} from './screens/story.js';
 import {onboardingScreen, bindOnboarding} from './screens/onboarding.js';
+import {miniScreen} from './screens/mini.js';
+import {miniGameScreen,bindMiniGame} from './screens/mini-game.js';
+import {miniStoryScreen,bindMiniStory} from './screens/mini-story.js';
+import {miniSoundScreen,bindMiniSound} from './screens/mini-sound.js';
+import {miniThemeScreen} from './screens/mini-theme.js';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
 import {setupCloudProgress} from './core/cloud-progress.js';
 
-const routes = {inicio:homeScreen, bienvenida:onboardingScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
+const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
 function parse() {
   const raw = location.hash.slice(1) || 'inicio';
@@ -57,6 +62,9 @@ function bindPage() {
   bindAdultRecordings();
   bindStoryScreen(toast);
   bindOnboarding();
+  bindMiniGame();
+  bindMiniStory();
+  bindMiniSound();
   document.querySelector('#change-companion')?.addEventListener('click', () => {
     const state = store.get();
     state.profile.onboardingComplete = false;
@@ -73,7 +81,7 @@ async function render() {
     location.hash = 'bienvenida';
     return;
   }
-  const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : route === 'cuento' ? () => storyScreen(id) : routes[route] || homeScreen;
+  const view = route === 'jugar' ? () => gameScreen(id) : route === 'reto-seguro' ? () => securityGameScreen(id) : route === 'cuento' ? () => storyScreen(id) : route === 'mini-juego' ? () => miniGameScreen(id) : route === 'mini-cuento' ? () => miniStoryScreen(id) : route === 'mini-sonido' ? () => miniSoundScreen(id) : route === 'mini-tema' ? () => miniThemeScreen(id) : routes[route] || homeScreen;
   closeMobileMenu();
   const app = document.querySelector('#app');
   app.innerHTML = '<div class="card loading-card" role="status">Preparando la aventura…</div>';

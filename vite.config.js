@@ -14,6 +14,7 @@ export default defineConfig({
   root: 'src',
   publicDir: '../public',
   base: './',
+  define: {global: 'globalThis'},
   plugins: [copyStoryContent()],
   build: {outDir: '../dist', emptyOutDir: true}
 });
