@@ -5,7 +5,7 @@ import {readingCheckMarkup,bindReadingCheck} from '../core/reading-check.js';
 
 export function miniGameScreen(id) {
   const word=miniWords.find(item=>item.id===id)||miniWords[0];
-  return `<div class="mini-world mini-activity" data-mini-word="${word.id}"><a class="mini-back" href="#mini">← Volver con Roki</a><p class="mini-label">Misión de sílabas</p><div class="mini-picture" aria-hidden="true">${word.emoji}</div><h1>Construye: ${word.word}</h1><button class="mini-listen" type="button" data-listen="${escapeHtml(word.word)}">🔊 Escuchar: ${word.word}</button><p class="mini-instruction">Toca las dos sílabas en orden.</p><div class="mini-slots" aria-label="Palabra en construcción"><span></span><span></span></div><div class="mini-syllables">${[...word.syllables,word.distractor].map(value=>`<button type="button" data-syllable="${value}">${value}</button>`).join('')}</div><div class="mini-feedback" role="status" aria-live="polite"></div><div class="mini-reading" hidden>${readingCheckMarkup('Ahora leemos con Roki',word.phrase)}</div></div>`;
+  return `<div class="mini-world mini-activity" data-mini-word="${word.id}"><a class="mini-back" href="#mini-tema/${word.topic}">← Volver al tema</a><p class="mini-label">Misión de sílabas</p><div class="mini-picture" aria-hidden="true">${word.emoji}</div><h1>Construye: ${word.word}</h1><button class="mini-listen" type="button" data-listen="${escapeHtml(word.word)}">🔊 Escuchar: ${word.word}</button><p class="mini-instruction">Toca ${word.syllables.length===2?'las dos':`las ${word.syllables.length}`} sílabas en orden.</p><div class="mini-slots" aria-label="Palabra en construcción">${word.syllables.map(()=>'<span></span>').join('')}</div><div class="mini-syllables">${[...word.syllables,word.distractor].map(value=>`<button type="button" data-syllable="${value}">${value}</button>`).join('')}</div><div class="mini-feedback" role="status" aria-live="polite"></div><div class="mini-reading" hidden>${readingCheckMarkup('Ahora leemos con Roki',word.phrase)}</div></div>`;
 }
 
 export function bindMiniGame() {
@@ -15,10 +15,10 @@ export function bindMiniGame() {
   const chosen=[];
   root.querySelector('[data-listen]')?.addEventListener('click',()=>speak(word.word,'kiwi'));
   root.querySelectorAll('[data-syllable]').forEach(button=>button.addEventListener('click',()=>{
-    if (chosen.length>=2) return;
+    if (chosen.length>=word.syllables.length) return;
     chosen.push(button.dataset.syllable); button.disabled=true;
     root.querySelectorAll('.mini-slots span')[chosen.length-1].textContent=button.dataset.syllable;
-    if (chosen.length<2) return;
+    if (chosen.length<word.syllables.length) return;
     const correct=chosen.join('')===word.syllables.join('');
     const feedback=root.querySelector('.mini-feedback');
     if (correct) {

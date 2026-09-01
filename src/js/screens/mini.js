@@ -1,5 +1,5 @@
 import {store} from '../core/store.js';
-import {miniTopics} from '../mini/mini-data.js';
+import {miniTopics,miniTopicGroups} from '../mini/mini-data.js';
 
 export function miniScreen() {
   const state=store.get();
@@ -11,7 +11,7 @@ export function miniScreen() {
     </section>
     <section class="mini-path" aria-label="Tu aventura en tres pasos"><h2>Hoy haremos tres cosas</h2><div><span><b>1</b> Escuchar</span><span><b>2</b> Juntar</span><span><b>3</b> Leer</span></div></section>
     <section class="mini-grid"><article class="mini-card"><span>👂</span><h2>Sonidos</h2><p>Escucha una palabra sin prisa.</p></article><article class="mini-card"><span>🧩</span><h2>Sílabas</h2><p>Une dos piezas para construirla.</p></article><article class="mini-card mini-collection"><span>🥚</span><h2>${eggs} huevos</h2><p>Cada intento descubre algo nuevo.</p></article></section>
-    <section class="mini-section" id="mini-temas"><div class="mini-section-title"><div><span class="mini-label">Unidades para estudiar</span><h2>¿Qué mundo exploramos?</h2></div><strong>${miniTopics.length} temas</strong></div><div class="mini-topic-grid">${miniTopics.map(topic=>{const done=topic.wordIds.filter(id=>completed.includes(`word-${id}`)).length+(completed.includes(`sound-${topic.sound}`)?1:0)+(completed.includes(`story-${topic.story}`)?1:0);return `<a href="#mini-tema/${topic.id}" class="mini-topic-card"><span>${topic.emoji}</span><div><strong>${topic.title}</strong><small>${topic.subtitle}</small><div class="mini-topic-progress"><i style="width:${done/7*100}%"></i></div><em>${done} de 7 actividades</em></div><b>→</b></a>`}).join('')}</div></section>
+    <section class="mini-section" id="mini-temas"><div class="mini-section-title"><div><span class="mini-label">Programa psicopedagógico</span><h2>20 temas para aprender jugando</h2></div><strong>${miniTopics.length} temas</strong></div><p class="mini-program-note">Cada unidad incluye sonido inicial, cinco palabras con sílabas, un cuento comprensivo y una actividad sin pantalla. Duración sugerida: 8–12 minutos.</p>${miniTopicGroups.map(group=>`<section class="mini-topic-group"><header><span>${group.emoji}</span><div><small>Bloque de trabajo</small><h3>${group.title}</h3></div><b>${miniTopics.filter(topic=>topic.group===group.id).length} temas</b></header><div class="mini-topic-grid">${miniTopics.filter(topic=>topic.group===group.id).map(topic=>{const total=topic.wordIds.length+2;const done=topic.wordIds.filter(id=>completed.includes(`word-${id}`)).length+(completed.includes(`sound-${topic.sound}`)?1:0)+(completed.includes(`story-${topic.story}`)?1:0);return `<a href="#mini-tema/${topic.id}" class="mini-topic-card"><span>${topic.emoji}</span><div><strong>${topic.title}</strong><small>${topic.subtitle}</small><div class="mini-topic-progress"><i style="width:${done/total*100}%"></i></div><em>${done} de ${total} actividades</em></div><b>→</b></a>`}).join('')}</div></section>`).join('')}</section>
     <p class="mini-grownup-note">👨‍👩‍👦 Mejor acompañado: un adulto puede escuchar, repetir y celebrar contigo.</p>
   </div>`;
 }
