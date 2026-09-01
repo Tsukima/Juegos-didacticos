@@ -69,6 +69,7 @@ function bindPage() {
     const state = store.get();
     state.profile.onboardingComplete = false;
     store.save(state);
+    sessionStorage.setItem('onboarding-start-step','1');
     location.hash = 'bienvenida';
   });
 }
@@ -104,6 +105,13 @@ setupPwaInstall(toast);
 setupCloudProgress();
 setupEmailAuth(toast);
 const focus = document.querySelector('#focus-toggle');
+document.querySelector('#companion-toggle')?.addEventListener('click', () => {
+  const state = store.get();
+  state.profile.onboardingComplete = false;
+  store.save(state);
+  sessionStorage.setItem('onboarding-start-step','1');
+  location.hash = 'bienvenida';
+});
 focus.onclick = () => {
   const on = !document.body.classList.contains('focus-mode');
   document.body.classList.toggle('focus-mode', on);

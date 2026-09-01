@@ -26,7 +26,8 @@ export function onboardingScreen() {
 export function bindOnboarding() {
   const shell = document.querySelector('.onboarding-shell');
   if (!shell) return;
-  const draft = {learningPath:'explorer',mascot:'kiwi', adventure:'explorar', encouragement:'calma'};
+  const currentProfile=store.get().profile||{};
+  const draft = {learningPath:currentProfile.learningPath||'explorer',mascot:currentProfile.mascot||'kiwi', adventure:currentProfile.adventure||'explorar', encouragement:currentProfile.encouragement||'calma'};
   const showStep = step => {
     shell.querySelectorAll('.onboarding-step').forEach((item, index) => item.classList.toggle('active', index === step));
     shell.querySelectorAll('.onboarding-progress span').forEach((item, index) => item.classList.toggle('active', index <= step));
@@ -39,6 +40,9 @@ export function bindOnboarding() {
     store.save(state);
     location.hash = path==='mini'?'mini':'inicio';
   };
+  const requestedStep=Number(sessionStorage.getItem('onboarding-start-step'));
+  sessionStorage.removeItem('onboarding-start-step');
+  if(requestedStep>=1&&requestedStep<=3) showStep(requestedStep);
   shell.querySelectorAll('[data-learning-path]').forEach(button=>button.addEventListener('click',()=>{
     draft.learningPath=button.dataset.learningPath;
     showStep(1);
@@ -46,6 +50,7 @@ export function bindOnboarding() {
   shell.querySelectorAll('[data-onboarding-group]').forEach(button => button.addEventListener('click', () => {
     draft[button.dataset.onboardingGroup] = button.dataset.onboardingValue;
     if (button.dataset.onboardingGroup === 'mascot') document.documentElement.dataset.companion = button.dataset.onboardingValue;
+    if (button.dataset.onboardingGroup === 'mascot' && requestedStep === 1) { finish(); return; }
     const step = Number(button.closest('[data-onboarding-step]').dataset.onboardingStep);
     if (step < 3) showStep(step + 1); else finish();
   }));
