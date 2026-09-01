@@ -14,13 +14,14 @@ import {miniGameScreen,bindMiniGame} from './screens/mini-game.js';
 import {miniStoryScreen,bindMiniStory} from './screens/mini-story.js';
 import {miniSoundScreen,bindMiniSound} from './screens/mini-sound.js';
 import {miniThemeScreen} from './screens/mini-theme.js';
+import {teamScreen,bindTeam} from './screens/team.js';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
 import {setupCloudProgress} from './core/cloud-progress.js';
 
-const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
+const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, equipo:teamScreen, misiones:missionsScreen, lectura:readingScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
 function parse() {
   const raw = location.hash.slice(1) || 'inicio';
@@ -65,6 +66,7 @@ function bindPage() {
   bindMiniGame();
   bindMiniStory();
   bindMiniSound();
+  bindTeam();
   document.querySelector('#change-companion')?.addEventListener('click', () => {
     const state = store.get();
     state.profile.onboardingComplete = false;
