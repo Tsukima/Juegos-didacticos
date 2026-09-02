@@ -1,4 +1,4 @@
-import {readFile,readdir} from 'node:fs/promises';
+import {access,readFile,readdir} from 'node:fs/promises';
 import {resolve} from 'node:path';
 
 const directory=resolve('content/historias');
@@ -29,6 +29,10 @@ for (const entry of Array.isArray(catalog)?catalog:[]) {
     if (!text(question.enunciado)||!Array.isArray(question.opciones)||question.opciones.length!==3||!question.opciones.every(text)||!Number.isInteger(question.correcta)||question.correcta<0||question.correcta>2||!text(question.explicacion)) failures.push(`${entry.id}: pregunta ${index+1} no válida.`);
   });
   for (const field of ['valor','serie','genero','tema','sinopsis']) if (!text(story[field])) failures.push(`${entry.id}: falta ${field}.`);
+  if(story.imagen){
+    if(!/^images\/[a-z0-9áéíóúñ/_-]+\.(png|jpg)$/i.test(story.imagen)) failures.push(`${entry.id}: ruta de imagen no válida.`);
+    else try{await access(resolve('public',story.imagen));}catch{failures.push(`${entry.id}: no existe la imagen ${story.imagen}.`);}
+  }
   if (!Number.isInteger(story.episodio)||story.episodio<1) failures.push(`${entry.id}: episodio no válido.`);
   const keyword=story.palabra_clave;
   if (!text(keyword?.palabra)) failures.push(`${entry.id}: falta palabra_clave.palabra.`);

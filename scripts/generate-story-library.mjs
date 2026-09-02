@@ -49,6 +49,15 @@ const keywordDetails={
   acuerdo:['Decisión aceptada por dos o más personas.','El acuerdo permitió que ambos jugadores usaran el mando por turnos.','Puedes llegar a un acuerdo para compartir un juego.','Propón un acuerdo sencillo para repartir turnos.'],
   privacidad:['Derecho y cuidado de mantener protegidos nuestros datos personales.','El equipo protegió su privacidad al no compartir la clave.','Cuidar tu nombre completo y tus contraseñas protege tu privacidad.','Nombra a un adulto de confianza al que pedirías ayuda ante un mensaje extraño.']
 };
+const featuredImages={
+  'huevo-dinosaurio':'images/mini/cuentos/roki-huevo-luminoso.png',
+  'nube-emociones':'images/stories/featured/nube-emociones.jpg',
+  'estrella-cercana':'images/stories/featured/estrella-cercana.jpg',
+  'faro-marino':'images/stories/featured/faro-marino.jpg',
+  'formas-ciudad':'images/stories/featured/formas-ciudad.jpg',
+  'portal-seguro':'images/stories/featured/portal-seguro.jpg',
+  'juego-turnos':'images/stories/featured/juego-turnos.jpg'
+};
 
 const ranges=[
   {key:'inicial',level:'inicial',min:6,max:8,start:101,count:20},
@@ -86,7 +95,7 @@ const makeStory=(theme,range,index)=>{
   return {
     id,titulo:title,nivel_lector:range.level,edad_min:range.min,edad_max:range.max,valor:value,
     serie:'Expediciones de Tinkie',episodio:episode,genero:index%3===0?'aventura amable':index%3===1?'misterio educativo':'fantasía educativa',
-    tema:learning.replace(/\.$/,''),sinopsis:`${hero} y Tinkie visitan ${place}, encuentran ${discovery} y practican ${value} para resolver una dificultad con calma.`,
+    tema:learning.replace(/\.$/,''),sinopsis:`${hero} y Tinkie visitan ${place}, encuentran ${discovery} y practican ${value} para resolver una dificultad con calma.`,imagen:featuredImages[slug]||'',
     palabra_clave:{palabra:keyword,silabas:syllables,definicion:definition,ejemplo_cuento:storyExample,ejemplo_cotidiano:dailyExample,reto:challengePrompt,pregunta:makeQuestion(`¿Qué significa «${keyword}»?`,definition,['Una recompensa que aparece sin esfuerzo','Una orden que debe obedecerse sin preguntar'],0,definition)},
     paginas:makePages(theme,hero,range.level),
     narracion:{formato:'audio/ogg; codecs=opus',voces:{narradora:'cálida y tranquila'},tono_por_pagina:makePages(theme,hero,range.level).map((_,page)=>page===0?'curioso':page===makePages(theme,hero,range.level).length-1?'reflexivo':'tranquilo'),audio_por_pagina:makePages(theme,hero,range.level).map(()=>null)},
@@ -109,7 +118,7 @@ for(const story of stories) await writeFile(resolve(directory,`${story.id}.json`
 const existing=[];
 for(const id of existingIds) existing.push(JSON.parse(await readFile(resolve(directory,`${id}.json`),'utf8')));
 const catalog=[...stories,...existing].sort((a,b)=>a.edad_min-b.edad_min||a.episodio-b.episodio).map(story=>({
-  id:story.id,titulo:story.titulo,nivel_lector:story.nivel_lector,edad_min:story.edad_min,edad_max:story.edad_max,valor:story.valor,serie:story.serie,episodio:story.episodio,genero:story.genero,tema:story.tema,sinopsis:story.sinopsis,palabra_clave:story.palabra_clave.palabra,archivo:`${story.id}.json`
+  id:story.id,titulo:story.titulo,nivel_lector:story.nivel_lector,edad_min:story.edad_min,edad_max:story.edad_max,valor:story.valor,serie:story.serie,episodio:story.episodio,genero:story.genero,tema:story.tema,sinopsis:story.sinopsis,palabra_clave:story.palabra_clave.palabra,imagen:story.imagen||'',archivo:`${story.id}.json`
 }));
 await writeFile(resolve(directory,'index.json'),`${JSON.stringify(catalog,null,2)}\n`,'utf8');
 console.log(`Catálogo generado: ${catalog.length} cuentos.`);

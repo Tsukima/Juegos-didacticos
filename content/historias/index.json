@@ -12,6 +12,7 @@
     "tema": "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos",
     "sinopsis": "Roki y Tinkie visitan el valle de los dinosaurios, encuentran un huevo con pequeñas huellas alrededor y practican curiosidad para resolver una dificultad con calma.",
     "palabra_clave": "huella",
+    "imagen": "images/mini/cuentos/roki-huevo-luminoso.png",
     "archivo": "inicial-huevo-dinosaurio.json"
   },
   {
@@ -27,6 +28,7 @@
     "tema": "Planificar permite avanzar con calma y cambiar el camino si hace falta",
     "sinopsis": "Hilito y Tinkie visitan el bosque de los mapas, encuentran un mapa con tres caminos de colores y practican planificación para resolver una dificultad con calma.",
     "palabra_clave": "orientación",
+    "imagen": "",
     "archivo": "inicial-mapa-luminoso.json"
   },
   {
@@ -42,6 +44,7 @@
     "tema": "Ser héroe también significa escuchar y colaborar",
     "sinopsis": "Turbo y Tinkie visitan la plaza de los héroes, encuentran una capa enorme que podían usar entre varios y practican cooperación para resolver una dificultad con calma.",
     "palabra_clave": "cooperación",
+    "imagen": "",
     "archivo": "inicial-capa-compartida.json"
   },
   {
@@ -57,6 +60,7 @@
     "tema": "Hacer una pausa protege el cuerpo y mejora nuestras decisiones",
     "sinopsis": "Pepito y Tinkie visitan el circuito de Turbo, encuentran un semáforo que enseñaba cuándo parar y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "autocontrol",
+    "imagen": "",
     "archivo": "inicial-carrera-pausas.json"
   },
   {
@@ -72,6 +76,7 @@
     "tema": "Escuchar a los demás convierte muchos sonidos en armonía",
     "sinopsis": "Mía y Tinkie visitan el bosque sonoro, encuentran animales preparando un concierto y practican respeto para resolver una dificultad con calma.",
     "palabra_clave": "armonía",
+    "imagen": "",
     "archivo": "inicial-concierto-animales.json"
   },
   {
@@ -87,6 +92,7 @@
     "tema": "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos",
     "sinopsis": "Lumo y Tinkie visitan el taller de Lumo, encuentran un robot que confundía brazos, piernas y manos y practican conocimiento corporal para resolver una dificultad con calma.",
     "palabra_clave": "equilibrio",
+    "imagen": "",
     "archivo": "inicial-robot-cuerpo.json"
   },
   {
@@ -102,6 +108,7 @@
     "tema": "Todas las emociones pueden escucharse sin prisa",
     "sinopsis": "Roki y Tinkie visitan el jardín del cielo, encuentran una nube que cambiaba de color con cada emoción y practican educación emocional para resolver una dificultad con calma.",
     "palabra_clave": "serenidad",
+    "imagen": "images/stories/featured/nube-emociones.jpg",
     "archivo": "inicial-nube-emociones.json"
   },
   {
@@ -117,6 +124,7 @@
     "tema": "Escuchar con atención permite comprender antes de imaginar",
     "sinopsis": "Hilito y Tinkie visitan la casa de Tinkie, encuentran sonidos escondidos en cada habitación y practican atención para resolver una dificultad con calma.",
     "palabra_clave": "atención",
+    "imagen": "",
     "archivo": "inicial-casa-ruidos.json"
   },
   {
@@ -132,6 +140,7 @@
     "tema": "Usar una estrategia hace que una dificultad sea más pequeña",
     "sinopsis": "Turbo y Tinkie visitan la escuela de Tinkie, encuentran un libro con pistas entre sus páginas y practican aprendizaje para resolver una dificultad con calma.",
     "palabra_clave": "estrategia",
+    "imagen": "",
     "archivo": "inicial-biblioteca-pistas.json"
   },
   {
@@ -147,6 +156,7 @@
     "tema": "La naturaleza crece con tiempo, cuidado y paciencia",
     "sinopsis": "Pepito y Tinkie visitan el sendero verde, encuentran una semilla llevada suavemente por el viento y practican cuidado ambiental para resolver una dificultad con calma.",
     "palabra_clave": "paciencia",
+    "imagen": "",
     "archivo": "inicial-semilla-viajera.json"
   },
   {
@@ -162,6 +172,7 @@
     "tema": "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos",
     "sinopsis": "Mía y Tinkie visitan el observatorio de Lumo, encuentran una estrella brillante vista por el telescopio y practican curiosidad científica para resolver una dificultad con calma.",
     "palabra_clave": "perspectiva",
+    "imagen": "images/stories/featured/estrella-cercana.jpg",
     "archivo": "inicial-estrella-cercana.json"
   },
   {
@@ -177,6 +188,7 @@
     "tema": "Las pistas y la calma ayudan cuando perdemos la dirección",
     "sinopsis": "Lumo y Tinkie visitan la bahía tranquila, encuentran un grupo de peces siguiendo una luz y practican orientación para resolver una dificultad con calma.",
     "palabra_clave": "dirección",
+    "imagen": "images/stories/featured/faro-marino.jpg",
     "archivo": "inicial-faro-marino.json"
   },
   {
@@ -192,6 +204,7 @@
     "tema": "La variedad y el respeto hacen más agradable compartir la mesa",
     "sinopsis": "Roki y Tinkie visitan la cocina de Pepito, encuentran una cesta con alimentos de muchos colores y practican hábitos saludables para resolver una dificultad con calma.",
     "palabra_clave": "variedad",
+    "imagen": "",
     "archivo": "inicial-merienda-colores.json"
   },
   {
@@ -207,6 +220,7 @@
     "tema": "Ordenar los pasos facilita llegar a una meta",
     "sinopsis": "Hilito y Tinkie visitan la estación de aventuras, encuentran un tren con vagones desordenados y practican organización para resolver una dificultad con calma.",
     "palabra_clave": "secuencia",
+    "imagen": "",
     "archivo": "inicial-tren-estaciones.json"
   },
   {
@@ -222,6 +236,7 @@
     "tema": "La creatividad aparece cuando probamos más de una posibilidad",
     "sinopsis": "Turbo y Tinkie visitan la ciudad geométrica, encuentran piezas redondas, cuadradas y triangulares y practican creatividad para resolver una dificultad con calma.",
     "palabra_clave": "creatividad",
+    "imagen": "images/stories/featured/formas-ciudad.jpg",
     "archivo": "inicial-formas-ciudad.json"
   },
   {
@@ -237,6 +252,7 @@
     "tema": "Contar con orden ayuda a comparar una cantidad",
     "sinopsis": "Pepito y Tinkie visitan el planeta Contador, encuentran números que saltaban de piedra en piedra y practican razonamiento para resolver una dificultad con calma.",
     "palabra_clave": "cantidad",
+    "imagen": "",
     "archivo": "inicial-planeta-numeros.json"
   },
   {
@@ -252,6 +268,7 @@
     "tema": "Una rutina flexible nos orienta y deja espacio para las pausas",
     "sinopsis": "Mía y Tinkie visitan la torre del reloj, encuentran un reloj con sus momentos del día mezclados y practican autonomía para resolver una dificultad con calma.",
     "palabra_clave": "rutina",
+    "imagen": "",
     "archivo": "inicial-reloj-rutinas.json"
   },
   {
@@ -267,6 +284,7 @@
     "tema": "La higiene es una forma cotidiana de cuidar nuestro cuerpo",
     "sinopsis": "Lumo y Tinkie visitan el laboratorio de burbujas, encuentran burbujas que señalaban los pasos del lavado y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "higiene",
+    "imagen": "",
     "archivo": "inicial-burbujas-viajeras.json"
   },
   {
@@ -282,6 +300,7 @@
     "tema": "Un acuerdo justo permite jugar y disfrutar en compañía",
     "sinopsis": "Roki y Tinkie visitan la sala de videojuegos, encuentran un mando cooperativo para dos jugadores y practican amistad para resolver una dificultad con calma.",
     "palabra_clave": "acuerdo",
+    "imagen": "images/stories/featured/juego-turnos.jpg",
     "archivo": "inicial-juego-turnos.json"
   },
   {
@@ -297,6 +316,7 @@
     "tema": "La privacidad se protege parando y pidiendo ayuda",
     "sinopsis": "Hilito y Tinkie visitan el mundo digital de Tinkie, encuentran un portal que pedía datos personales y practican seguridad digital para resolver una dificultad con calma.",
     "palabra_clave": "privacidad",
+    "imagen": "images/stories/featured/portal-seguro.jpg",
     "archivo": "inicial-portal-seguro.json"
   },
   {
@@ -312,6 +332,7 @@
     "tema": "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos",
     "sinopsis": "Roki y Tinkie visitan el valle de los dinosaurios, encuentran un huevo con pequeñas huellas alrededor y practican curiosidad para resolver una dificultad con calma.",
     "palabra_clave": "huella",
+    "imagen": "images/mini/cuentos/roki-huevo-luminoso.png",
     "archivo": "intermedio-huevo-dinosaurio.json"
   },
   {
@@ -327,6 +348,7 @@
     "tema": "Planificar permite avanzar con calma y cambiar el camino si hace falta",
     "sinopsis": "Hilito y Tinkie visitan el bosque de los mapas, encuentran un mapa con tres caminos de colores y practican planificación para resolver una dificultad con calma.",
     "palabra_clave": "orientación",
+    "imagen": "",
     "archivo": "intermedio-mapa-luminoso.json"
   },
   {
@@ -342,6 +364,7 @@
     "tema": "Ser héroe también significa escuchar y colaborar",
     "sinopsis": "Turbo y Tinkie visitan la plaza de los héroes, encuentran una capa enorme que podían usar entre varios y practican cooperación para resolver una dificultad con calma.",
     "palabra_clave": "cooperación",
+    "imagen": "",
     "archivo": "intermedio-capa-compartida.json"
   },
   {
@@ -357,6 +380,7 @@
     "tema": "Hacer una pausa protege el cuerpo y mejora nuestras decisiones",
     "sinopsis": "Pepito y Tinkie visitan el circuito de Turbo, encuentran un semáforo que enseñaba cuándo parar y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "autocontrol",
+    "imagen": "",
     "archivo": "intermedio-carrera-pausas.json"
   },
   {
@@ -372,6 +396,7 @@
     "tema": "Escuchar a los demás convierte muchos sonidos en armonía",
     "sinopsis": "Mía y Tinkie visitan el bosque sonoro, encuentran animales preparando un concierto y practican respeto para resolver una dificultad con calma.",
     "palabra_clave": "armonía",
+    "imagen": "",
     "archivo": "intermedio-concierto-animales.json"
   },
   {
@@ -387,6 +412,7 @@
     "tema": "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos",
     "sinopsis": "Lumo y Tinkie visitan el taller de Lumo, encuentran un robot que confundía brazos, piernas y manos y practican conocimiento corporal para resolver una dificultad con calma.",
     "palabra_clave": "equilibrio",
+    "imagen": "",
     "archivo": "intermedio-robot-cuerpo.json"
   },
   {
@@ -402,6 +428,7 @@
     "tema": "Todas las emociones pueden escucharse sin prisa",
     "sinopsis": "Roki y Tinkie visitan el jardín del cielo, encuentran una nube que cambiaba de color con cada emoción y practican educación emocional para resolver una dificultad con calma.",
     "palabra_clave": "serenidad",
+    "imagen": "images/stories/featured/nube-emociones.jpg",
     "archivo": "intermedio-nube-emociones.json"
   },
   {
@@ -417,6 +444,7 @@
     "tema": "Escuchar con atención permite comprender antes de imaginar",
     "sinopsis": "Hilito y Tinkie visitan la casa de Tinkie, encuentran sonidos escondidos en cada habitación y practican atención para resolver una dificultad con calma.",
     "palabra_clave": "atención",
+    "imagen": "",
     "archivo": "intermedio-casa-ruidos.json"
   },
   {
@@ -432,6 +460,7 @@
     "tema": "Usar una estrategia hace que una dificultad sea más pequeña",
     "sinopsis": "Turbo y Tinkie visitan la escuela de Tinkie, encuentran un libro con pistas entre sus páginas y practican aprendizaje para resolver una dificultad con calma.",
     "palabra_clave": "estrategia",
+    "imagen": "",
     "archivo": "intermedio-biblioteca-pistas.json"
   },
   {
@@ -447,6 +476,7 @@
     "tema": "La naturaleza crece con tiempo, cuidado y paciencia",
     "sinopsis": "Pepito y Tinkie visitan el sendero verde, encuentran una semilla llevada suavemente por el viento y practican cuidado ambiental para resolver una dificultad con calma.",
     "palabra_clave": "paciencia",
+    "imagen": "",
     "archivo": "intermedio-semilla-viajera.json"
   },
   {
@@ -462,6 +492,7 @@
     "tema": "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos",
     "sinopsis": "Mía y Tinkie visitan el observatorio de Lumo, encuentran una estrella brillante vista por el telescopio y practican curiosidad científica para resolver una dificultad con calma.",
     "palabra_clave": "perspectiva",
+    "imagen": "images/stories/featured/estrella-cercana.jpg",
     "archivo": "intermedio-estrella-cercana.json"
   },
   {
@@ -477,6 +508,7 @@
     "tema": "Las pistas y la calma ayudan cuando perdemos la dirección",
     "sinopsis": "Lumo y Tinkie visitan la bahía tranquila, encuentran un grupo de peces siguiendo una luz y practican orientación para resolver una dificultad con calma.",
     "palabra_clave": "dirección",
+    "imagen": "images/stories/featured/faro-marino.jpg",
     "archivo": "intermedio-faro-marino.json"
   },
   {
@@ -492,6 +524,7 @@
     "tema": "La variedad y el respeto hacen más agradable compartir la mesa",
     "sinopsis": "Roki y Tinkie visitan la cocina de Pepito, encuentran una cesta con alimentos de muchos colores y practican hábitos saludables para resolver una dificultad con calma.",
     "palabra_clave": "variedad",
+    "imagen": "",
     "archivo": "intermedio-merienda-colores.json"
   },
   {
@@ -507,6 +540,7 @@
     "tema": "Ordenar los pasos facilita llegar a una meta",
     "sinopsis": "Hilito y Tinkie visitan la estación de aventuras, encuentran un tren con vagones desordenados y practican organización para resolver una dificultad con calma.",
     "palabra_clave": "secuencia",
+    "imagen": "",
     "archivo": "intermedio-tren-estaciones.json"
   },
   {
@@ -522,6 +556,7 @@
     "tema": "La creatividad aparece cuando probamos más de una posibilidad",
     "sinopsis": "Turbo y Tinkie visitan la ciudad geométrica, encuentran piezas redondas, cuadradas y triangulares y practican creatividad para resolver una dificultad con calma.",
     "palabra_clave": "creatividad",
+    "imagen": "images/stories/featured/formas-ciudad.jpg",
     "archivo": "intermedio-formas-ciudad.json"
   },
   {
@@ -537,6 +572,7 @@
     "tema": "Contar con orden ayuda a comparar una cantidad",
     "sinopsis": "Pepito y Tinkie visitan el planeta Contador, encuentran números que saltaban de piedra en piedra y practican razonamiento para resolver una dificultad con calma.",
     "palabra_clave": "cantidad",
+    "imagen": "",
     "archivo": "intermedio-planeta-numeros.json"
   },
   {
@@ -552,6 +588,7 @@
     "tema": "Una rutina flexible nos orienta y deja espacio para las pausas",
     "sinopsis": "Mía y Tinkie visitan la torre del reloj, encuentran un reloj con sus momentos del día mezclados y practican autonomía para resolver una dificultad con calma.",
     "palabra_clave": "rutina",
+    "imagen": "",
     "archivo": "intermedio-reloj-rutinas.json"
   },
   {
@@ -567,6 +604,7 @@
     "tema": "La higiene es una forma cotidiana de cuidar nuestro cuerpo",
     "sinopsis": "Lumo y Tinkie visitan el laboratorio de burbujas, encuentran burbujas que señalaban los pasos del lavado y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "higiene",
+    "imagen": "",
     "archivo": "intermedio-burbujas-viajeras.json"
   },
   {
@@ -582,6 +620,7 @@
     "tema": "Un acuerdo justo permite jugar y disfrutar en compañía",
     "sinopsis": "Roki y Tinkie visitan la sala de videojuegos, encuentran un mando cooperativo para dos jugadores y practican amistad para resolver una dificultad con calma.",
     "palabra_clave": "acuerdo",
+    "imagen": "images/stories/featured/juego-turnos.jpg",
     "archivo": "intermedio-juego-turnos.json"
   },
   {
@@ -597,6 +636,7 @@
     "tema": "La privacidad se protege parando y pidiendo ayuda",
     "sinopsis": "Hilito y Tinkie visitan el mundo digital de Tinkie, encuentran un portal que pedía datos personales y practican seguridad digital para resolver una dificultad con calma.",
     "palabra_clave": "privacidad",
+    "imagen": "images/stories/featured/portal-seguro.jpg",
     "archivo": "intermedio-portal-seguro.json"
   },
   {
@@ -612,6 +652,7 @@
     "tema": "Resolver dificultades de lectura con paciencia",
     "sinopsis": "Tinkie y Pepito encuentran un mapa incompleto dentro de un libro antiguo. Para recuperar sus palabras deberán leer pistas, probar estrategias y aprender que avanzar también permite hacer pausas.",
     "palabra_clave": "constancia",
+    "imagen": "",
     "archivo": "el-mapa-de-las-palabras-perdidas.json"
   },
   {
@@ -627,6 +668,7 @@
     "tema": "Usar la propia voz con confianza y pedir tiempo cuando sea necesario",
     "sinopsis": "Tinkie y Pepito encuentran un faro que solo puede encenderse con una voz sincera. Para ayudar a las barcas a regresar, Pepito tendrá que respetar sus pausas y confiar en que su voz merece ser escuchada.",
     "palabra_clave": "confianza",
+    "imagen": "",
     "archivo": "el-faro-de-las-voces-valientes.json"
   },
   {
@@ -642,6 +684,7 @@
     "tema": "Empatía",
     "sinopsis": "Tinkie y Pepito descubren un jardín mágico donde cada planta representa una emoción. Al explorar, aprenderán a entender sus propios sentimientos y los de los demás, fortaleciendo su conexión emocional.",
     "palabra_clave": "empatía",
+    "imagen": "",
     "archivo": "tinkie-y-el-jardin-de-sentimientos-3.json"
   },
   {
@@ -657,6 +700,7 @@
     "tema": "Hacer una pausa protege el cuerpo y mejora nuestras decisiones",
     "sinopsis": "Roki y Tinkie visitan el circuito de Turbo, encuentran un semáforo que enseñaba cuándo parar y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "autocontrol",
+    "imagen": "",
     "archivo": "avanzado-carrera-pausas.json"
   },
   {
@@ -672,6 +716,7 @@
     "tema": "Escuchar a los demás convierte muchos sonidos en armonía",
     "sinopsis": "Hilito y Tinkie visitan el bosque sonoro, encuentran animales preparando un concierto y practican respeto para resolver una dificultad con calma.",
     "palabra_clave": "armonía",
+    "imagen": "",
     "archivo": "avanzado-concierto-animales.json"
   },
   {
@@ -687,6 +732,7 @@
     "tema": "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos",
     "sinopsis": "Turbo y Tinkie visitan el taller de Lumo, encuentran un robot que confundía brazos, piernas y manos y practican conocimiento corporal para resolver una dificultad con calma.",
     "palabra_clave": "equilibrio",
+    "imagen": "",
     "archivo": "avanzado-robot-cuerpo.json"
   },
   {
@@ -702,6 +748,7 @@
     "tema": "Todas las emociones pueden escucharse sin prisa",
     "sinopsis": "Pepito y Tinkie visitan el jardín del cielo, encuentran una nube que cambiaba de color con cada emoción y practican educación emocional para resolver una dificultad con calma.",
     "palabra_clave": "serenidad",
+    "imagen": "images/stories/featured/nube-emociones.jpg",
     "archivo": "avanzado-nube-emociones.json"
   },
   {
@@ -717,6 +764,7 @@
     "tema": "Escuchar con atención permite comprender antes de imaginar",
     "sinopsis": "Mía y Tinkie visitan la casa de Tinkie, encuentran sonidos escondidos en cada habitación y practican atención para resolver una dificultad con calma.",
     "palabra_clave": "atención",
+    "imagen": "",
     "archivo": "avanzado-casa-ruidos.json"
   },
   {
@@ -732,6 +780,7 @@
     "tema": "Usar una estrategia hace que una dificultad sea más pequeña",
     "sinopsis": "Lumo y Tinkie visitan la escuela de Tinkie, encuentran un libro con pistas entre sus páginas y practican aprendizaje para resolver una dificultad con calma.",
     "palabra_clave": "estrategia",
+    "imagen": "",
     "archivo": "avanzado-biblioteca-pistas.json"
   },
   {
@@ -747,6 +796,7 @@
     "tema": "La naturaleza crece con tiempo, cuidado y paciencia",
     "sinopsis": "Roki y Tinkie visitan el sendero verde, encuentran una semilla llevada suavemente por el viento y practican cuidado ambiental para resolver una dificultad con calma.",
     "palabra_clave": "paciencia",
+    "imagen": "",
     "archivo": "avanzado-semilla-viajera.json"
   },
   {
@@ -762,6 +812,7 @@
     "tema": "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos",
     "sinopsis": "Hilito y Tinkie visitan el observatorio de Lumo, encuentran una estrella brillante vista por el telescopio y practican curiosidad científica para resolver una dificultad con calma.",
     "palabra_clave": "perspectiva",
+    "imagen": "images/stories/featured/estrella-cercana.jpg",
     "archivo": "avanzado-estrella-cercana.json"
   },
   {
@@ -777,6 +828,7 @@
     "tema": "Las pistas y la calma ayudan cuando perdemos la dirección",
     "sinopsis": "Turbo y Tinkie visitan la bahía tranquila, encuentran un grupo de peces siguiendo una luz y practican orientación para resolver una dificultad con calma.",
     "palabra_clave": "dirección",
+    "imagen": "images/stories/featured/faro-marino.jpg",
     "archivo": "avanzado-faro-marino.json"
   },
   {
@@ -792,6 +844,7 @@
     "tema": "La variedad y el respeto hacen más agradable compartir la mesa",
     "sinopsis": "Pepito y Tinkie visitan la cocina de Pepito, encuentran una cesta con alimentos de muchos colores y practican hábitos saludables para resolver una dificultad con calma.",
     "palabra_clave": "variedad",
+    "imagen": "",
     "archivo": "avanzado-merienda-colores.json"
   },
   {
@@ -807,6 +860,7 @@
     "tema": "Ordenar los pasos facilita llegar a una meta",
     "sinopsis": "Mía y Tinkie visitan la estación de aventuras, encuentran un tren con vagones desordenados y practican organización para resolver una dificultad con calma.",
     "palabra_clave": "secuencia",
+    "imagen": "",
     "archivo": "avanzado-tren-estaciones.json"
   },
   {
@@ -822,6 +876,7 @@
     "tema": "La creatividad aparece cuando probamos más de una posibilidad",
     "sinopsis": "Lumo y Tinkie visitan la ciudad geométrica, encuentran piezas redondas, cuadradas y triangulares y practican creatividad para resolver una dificultad con calma.",
     "palabra_clave": "creatividad",
+    "imagen": "images/stories/featured/formas-ciudad.jpg",
     "archivo": "avanzado-formas-ciudad.json"
   },
   {
@@ -837,6 +892,7 @@
     "tema": "Contar con orden ayuda a comparar una cantidad",
     "sinopsis": "Roki y Tinkie visitan el planeta Contador, encuentran números que saltaban de piedra en piedra y practican razonamiento para resolver una dificultad con calma.",
     "palabra_clave": "cantidad",
+    "imagen": "",
     "archivo": "avanzado-planeta-numeros.json"
   },
   {
@@ -852,6 +908,7 @@
     "tema": "Una rutina flexible nos orienta y deja espacio para las pausas",
     "sinopsis": "Hilito y Tinkie visitan la torre del reloj, encuentran un reloj con sus momentos del día mezclados y practican autonomía para resolver una dificultad con calma.",
     "palabra_clave": "rutina",
+    "imagen": "",
     "archivo": "avanzado-reloj-rutinas.json"
   },
   {
@@ -867,6 +924,7 @@
     "tema": "La higiene es una forma cotidiana de cuidar nuestro cuerpo",
     "sinopsis": "Turbo y Tinkie visitan el laboratorio de burbujas, encuentran burbujas que señalaban los pasos del lavado y practican autocuidado para resolver una dificultad con calma.",
     "palabra_clave": "higiene",
+    "imagen": "",
     "archivo": "avanzado-burbujas-viajeras.json"
   },
   {
@@ -882,6 +940,7 @@
     "tema": "Un acuerdo justo permite jugar y disfrutar en compañía",
     "sinopsis": "Pepito y Tinkie visitan la sala de videojuegos, encuentran un mando cooperativo para dos jugadores y practican amistad para resolver una dificultad con calma.",
     "palabra_clave": "acuerdo",
+    "imagen": "images/stories/featured/juego-turnos.jpg",
     "archivo": "avanzado-juego-turnos.json"
   },
   {
@@ -897,6 +956,7 @@
     "tema": "La privacidad se protege parando y pidiendo ayuda",
     "sinopsis": "Mía y Tinkie visitan el mundo digital de Tinkie, encuentran un portal que pedía datos personales y practican seguridad digital para resolver una dificultad con calma.",
     "palabra_clave": "privacidad",
+    "imagen": "images/stories/featured/portal-seguro.jpg",
     "archivo": "avanzado-portal-seguro.json"
   }
 ]
