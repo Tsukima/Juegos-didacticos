@@ -1,10 +1,14 @@
 import {miniStories,miniTopics} from '../src/js/mini/mini-data.js';
+import {allMissions,bridgeMissionCount} from '../src/js/missions/mission-engine.js';
 
 const problems=[];
 const storyIds=new Set();
 
 if(miniTopics.length!==20) problems.push(`Se esperaban 20 temas y hay ${miniTopics.length}.`);
 if(miniStories.length!==200) problems.push(`Se esperaban 200 cuentos y hay ${miniStories.length}.`);
+if(bridgeMissionCount!==40) problems.push(`Se esperaban 40 misiones puente y hay ${bridgeMissionCount}.`);
+if(allMissions.filter(mission=>mission.type==='word').length!==90) problems.push('La biblioteca normal debe tener 90 misiones de palabras.');
+if(new Set(allMissions.map(mission=>mission.id)).size!==allMissions.length) problems.push('Hay identificadores de misión duplicados.');
 
 for(const topic of miniTopics){
   const stories=miniStories.filter(story=>story.topic===topic.id);
@@ -25,4 +29,4 @@ if(problems.length){
   process.exit(1);
 }
 
-console.log(`Biblioteca Mini válida: ${miniStories.length} cuentos, 10 por cada uno de los ${miniTopics.length} temas.`);
+console.log(`Contenido conectado válido: ${miniStories.length} cuentos Mini y ${allMissions.length} misiones normales, incluidas ${bridgeMissionCount} misiones puente.`);

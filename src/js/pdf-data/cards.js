@@ -8,7 +8,11 @@ export const wordCards = [
   ['valiente','va-lien-te'],['calma','cal-ma'],['pausa','pau-sa'],['seguro','se-gu-ro'],['mensaje','men-sa-je'],
   ['clave','cla-ve'],['adulto','a-dul-to'],['bloquear','blo-que-ar'],['reportar','re-por-tar'],['cuidar','cui-dar'],
   ['escuchar','es-cu-char'],['intentar','in-ten-tar'],['aprender','a-pren-der'],['sonreír','son-re-ír'],['compartir','com-par-tir'],
-  ['aventura','a-ven-tu-ra'],['tesoro','te-so-ro'],['misión','mi-sión'],['estrella','es-tre-lla'],['campeón','cam-pe-ón']
+  ['aventura','a-ven-tu-ra'],['tesoro','te-so-ro'],['misión','mi-sión'],['estrella','es-tre-lla'],['campeón','cam-pe-ón'],
+  ['dinosaurio','di-no-sau-rio'],['volcán','vol-cán'],['cueva','cue-va'],['huella','hue-lla'],['mapa','ma-pa'],
+  ['puente','puen-te'],['brújula','brú-ju-la'],['héroe','hé-ro-e'],['escudo','es-cu-do'],['velocidad','ve-lo-ci-dad'],
+  ['semáforo','se-má-fo-ro'],['emoción','e-mo-ción'],['alegría','a-le-grí-a'],['paciencia','pa-cien-cia'],['curiosidad','cu-rio-si-dad'],
+  ['planeta','pla-ne-ta'],['océano','o-cé-a-no'],['naturaleza','na-tu-ra-le-za'],['amistad','a-mis-tad'],['privacidad','pri-va-ci-dad']
 ].map(([word,syllables],i)=>({id:`w${i+1}`,word,syllables,level:i<10?1:i<20?2:3}));
 
 export const phraseCards = [
