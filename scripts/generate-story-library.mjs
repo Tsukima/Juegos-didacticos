@@ -58,6 +58,21 @@ const featuredImages={
   'portal-seguro':'images/stories/featured/portal-seguro.jpg',
   'juego-turnos':'images/stories/featured/juego-turnos.jpg'
 };
+const initialOnlyImages={
+  'mapa-luminoso':'images/stories/initial/mapa-luminoso.jpg',
+  'capa-compartida':'images/stories/initial/capa-compartida.jpg',
+  'carrera-pausas':'images/stories/initial/carrera-pausas.jpg',
+  'concierto-animales':'images/stories/initial/concierto-animales.jpg',
+  'robot-cuerpo':'images/stories/initial/robot-cuerpo.jpg',
+  'casa-ruidos':'images/stories/initial/casa-ruidos.jpg',
+  'biblioteca-pistas':'images/stories/initial/biblioteca-pistas.jpg',
+  'semilla-viajera':'images/stories/initial/semilla-viajera.jpg',
+  'merienda-colores':'images/stories/initial/merienda-colores.jpg',
+  'tren-estaciones':'images/stories/initial/tren-estaciones.jpg',
+  'planeta-numeros':'images/stories/initial/planeta-numeros.jpg',
+  'reloj-rutinas':'images/stories/initial/reloj-rutinas.jpg',
+  'burbujas-viajeras':'images/stories/initial/burbujas-viajeras.jpg'
+};
 
 const ranges=[
   {key:'inicial',level:'inicial',min:6,max:8,start:101,count:20},
@@ -95,7 +110,7 @@ const makeStory=(theme,range,index)=>{
   return {
     id,titulo:title,nivel_lector:range.level,edad_min:range.min,edad_max:range.max,valor:value,
     serie:'Expediciones de Tinkie',episodio:episode,genero:index%3===0?'aventura amable':index%3===1?'misterio educativo':'fantasía educativa',
-    tema:learning.replace(/\.$/,''),sinopsis:`${hero} y Tinkie visitan ${place}, encuentran ${discovery} y practican ${value} para resolver una dificultad con calma.`,imagen:featuredImages[slug]||'',
+    tema:learning.replace(/\.$/,''),sinopsis:`${hero} y Tinkie visitan ${place}, encuentran ${discovery} y practican ${value} para resolver una dificultad con calma.`,imagen:featuredImages[slug]||(range.key==='inicial'?initialOnlyImages[slug]||'':''),
     palabra_clave:{palabra:keyword,silabas:syllables,definicion:definition,ejemplo_cuento:storyExample,ejemplo_cotidiano:dailyExample,reto:challengePrompt,pregunta:makeQuestion(`¿Qué significa «${keyword}»?`,definition,['Una recompensa que aparece sin esfuerzo','Una orden que debe obedecerse sin preguntar'],0,definition)},
     paginas:makePages(theme,hero,range.level),
     narracion:{formato:'audio/ogg; codecs=opus',voces:{narradora:'cálida y tranquila'},tono_por_pagina:makePages(theme,hero,range.level).map((_,page)=>page===0?'curioso':page===makePages(theme,hero,range.level).length-1?'reflexivo':'tranquilo'),audio_por_pagina:makePages(theme,hero,range.level).map(()=>null)},
