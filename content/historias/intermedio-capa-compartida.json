@@ -1,0 +1,102 @@
+{
+  "id": "intermedio-capa-compartida",
+  "titulo": "La capa que ayudaba a todos",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "cooperación",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 203,
+  "genero": "fantasía educativa",
+  "tema": "Ser héroe también significa escuchar y colaborar",
+  "sinopsis": "Turbo y Tinkie visitan la plaza de los héroes, encuentran una capa enorme que podían usar entre varios y practican cooperación para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "cooperación",
+    "silabas": [
+      "co",
+      "o",
+      "pe",
+      "ra",
+      "ción"
+    ],
+    "definicion": "Acción de trabajar con otras personas para alcanzar una meta común.",
+    "ejemplo_cuento": "Mover la caja fue posible gracias a la cooperación de todo el equipo.",
+    "ejemplo_cotidiano": "Cooperas cuando repartes una tarea y cumples tu parte.",
+    "reto": "Ayuda hoy en una tarea pequeña y reconoce la aportación de otra persona.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «cooperación»?",
+      "opciones": [
+        "Acción de trabajar con otras personas para alcanzar una meta común.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Acción de trabajar con otras personas para alcanzar una meta común."
+    }
+  },
+  "paginas": [
+    "Turbo y Tinkie llegaron a la plaza de los héroes. Allí encontraron una capa enorme que podían usar entre varios.",
+    "Una caja pesada bloqueaba la entrada. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Turbo recordó la palabra «cooperación» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Sostuvieron la capa como red y movieron la caja en equipo. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Ser héroe también significa escuchar y colaborar. Turbo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una capa",
+        "un cepillo",
+        "una taza"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron una capa enorme que podían usar entre varios."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Sostuvieron la capa como red y movieron la caja en equipo",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Ser héroe también significa escuchar y colaborar"
+      ],
+      "correcta": 2,
+      "explicacion": "Ser héroe también significa escuchar y colaborar."
+    }
+  ]
+}

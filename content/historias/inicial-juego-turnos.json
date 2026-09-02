@@ -1,0 +1,97 @@
+{
+  "id": "inicial-juego-turnos",
+  "titulo": "El mando de los buenos turnos",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "amistad",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 119,
+  "genero": "aventura amable",
+  "tema": "Un acuerdo justo permite jugar y disfrutar en compañía",
+  "sinopsis": "Roki y Tinkie visitan la sala de videojuegos, encuentran un mando cooperativo para dos jugadores y practican amistad para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "acuerdo",
+    "silabas": [
+      "a",
+      "cuer",
+      "do"
+    ],
+    "definicion": "Decisión aceptada por dos o más personas.",
+    "ejemplo_cuento": "El acuerdo permitió que ambos jugadores usaran el mando por turnos.",
+    "ejemplo_cotidiano": "Puedes llegar a un acuerdo para compartir un juego.",
+    "reto": "Propón un acuerdo sencillo para repartir turnos.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «acuerdo»?",
+      "opciones": [
+        "Decisión aceptada por dos o más personas.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Decisión aceptada por dos o más personas."
+    }
+  },
+  "paginas": [
+    "Roki y Tinkie llegaron a la sala de videojuegos. Allí encontraron un mando cooperativo para dos jugadores.",
+    "Los dos querían controlar el mismo personaje. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Roki recordó la palabra «acuerdo» y la repitió despacio.",
+    "Crearon un acuerdo para alternar y ayudarse en cada nivel. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Un acuerdo justo permite jugar y disfrutar en compañía. Roki decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un mando",
+        "una escoba",
+        "una maceta"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un mando cooperativo para dos jugadores."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Crearon un acuerdo para alternar y ayudarse en cada nivel",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Un acuerdo justo permite jugar y disfrutar en compañía"
+      ],
+      "correcta": 2,
+      "explicacion": "Un acuerdo justo permite jugar y disfrutar en compañía."
+    }
+  ]
+}

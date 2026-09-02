@@ -1,0 +1,101 @@
+{
+  "id": "intermedio-estrella-cercana",
+  "titulo": "La estrella que parecía cercana",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "curiosidad científica",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 211,
+  "genero": "misterio educativo",
+  "tema": "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos",
+  "sinopsis": "Mía y Tinkie visitan el observatorio de Lumo, encuentran una estrella brillante vista por el telescopio y practican curiosidad científica para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "perspectiva",
+    "silabas": [
+      "pers",
+      "pec",
+      "ti",
+      "va"
+    ],
+    "definicion": "Forma particular de observar o comprender una situación.",
+    "ejemplo_cuento": "El telescopio cambió la perspectiva que tenían de la estrella.",
+    "ejemplo_cotidiano": "Escuchar otra opinión puede darte una perspectiva diferente.",
+    "reto": "Mira un objeto desde dos lugares y explica qué cambia.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «perspectiva»?",
+      "opciones": [
+        "Forma particular de observar o comprender una situación.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Forma particular de observar o comprender una situación."
+    }
+  },
+  "paginas": [
+    "Mía y Tinkie llegaron al observatorio de Lumo. Allí encontraron una estrella brillante vista por el telescopio.",
+    "Parecía pequeña aunque sabían que era enorme. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Mía recordó la palabra «perspectiva» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Compararon distancias y anotaron nuevas preguntas. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos. Mía decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una estrella",
+        "una galleta",
+        "una llave"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron una estrella brillante vista por el telescopio."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Compararon distancias y anotaron nuevas preguntas",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos"
+      ],
+      "correcta": 2,
+      "explicacion": "Cambiar de perspectiva nos ayuda a comprender mejor lo que vemos."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "inicial-mapa-luminoso",
+  "titulo": "El mapa de las tres rutas",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "planificación",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 102,
+  "genero": "misterio educativo",
+  "tema": "Planificar permite avanzar con calma y cambiar el camino si hace falta",
+  "sinopsis": "Hilito y Tinkie visitan el bosque de los mapas, encuentran un mapa con tres caminos de colores y practican planificación para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "orientación",
+    "silabas": [
+      "o",
+      "rien",
+      "ta",
+      "ción"
+    ],
+    "definicion": "Capacidad de reconocer dónde estamos y hacia dónde debemos ir.",
+    "ejemplo_cuento": "El mapa ayudó al equipo a mantener la orientación durante el recorrido.",
+    "ejemplo_cotidiano": "Usas la orientación cuando sigues señales para llegar a un lugar.",
+    "reto": "Describe un camino sencillo usando derecha, izquierda y adelante.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «orientación»?",
+      "opciones": [
+        "Capacidad de reconocer dónde estamos y hacia dónde debemos ir.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de reconocer dónde estamos y hacia dónde debemos ir."
+    }
+  },
+  "paginas": [
+    "Hilito y Tinkie llegaron al bosque de los mapas. Allí encontraron un mapa con tres caminos de colores.",
+    "Todos querían elegir un camino diferente. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Hilito recordó la palabra «orientación» y la repitió despacio.",
+    "Compararon las señales y marcaron juntos una ruta segura. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Planificar permite avanzar con calma y cambiar el camino si hace falta. Hilito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un mapa",
+        "una cuchara",
+        "una almohada"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un mapa con tres caminos de colores."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Compararon las señales y marcaron juntos una ruta segura",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Planificar permite avanzar con calma y cambiar el camino si hace falta"
+      ],
+      "correcta": 2,
+      "explicacion": "Planificar permite avanzar con calma y cambiar el camino si hace falta."
+    }
+  ]
+}

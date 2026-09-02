@@ -1,0 +1,100 @@
+{
+  "id": "intermedio-casa-ruidos",
+  "titulo": "La casa de los ruidos pequeños",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "atención",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 208,
+  "genero": "misterio educativo",
+  "tema": "Escuchar con atención permite comprender antes de imaginar",
+  "sinopsis": "Hilito y Tinkie visitan la casa de Tinkie, encuentran sonidos escondidos en cada habitación y practican atención para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "atención",
+    "silabas": [
+      "a",
+      "ten",
+      "ción"
+    ],
+    "definicion": "Capacidad de concentrarse en una señal o tarea durante un momento.",
+    "ejemplo_cuento": "La atención permitió descubrir que el ruido venía de la ventana.",
+    "ejemplo_cotidiano": "Usas la atención cuando escuchas una instrucción corta antes de comenzar.",
+    "reto": "Escucha durante diez segundos y nombra dos sonidos.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «atención»?",
+      "opciones": [
+        "Capacidad de concentrarse en una señal o tarea durante un momento.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de concentrarse en una señal o tarea durante un momento."
+    }
+  },
+  "paginas": [
+    "Hilito y Tinkie llegaron a la casa de Tinkie. Allí encontraron sonidos escondidos en cada habitación.",
+    "Un sonido desconocido inquietaba a los amigos. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Hilito recordó la palabra «atención» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Pararon, escucharon y descubrieron una ventana movida por el viento. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Escuchar con atención permite comprender antes de imaginar. Hilito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una ventana",
+        "un cohete",
+        "un patín"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron sonidos escondidos en cada habitación."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Pararon, escucharon y descubrieron una ventana movida por el viento",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Escuchar con atención permite comprender antes de imaginar"
+      ],
+      "correcta": 2,
+      "explicacion": "Escuchar con atención permite comprender antes de imaginar."
+    }
+  ]
+}

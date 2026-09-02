@@ -1,0 +1,96 @@
+{
+  "id": "inicial-huevo-dinosaurio",
+  "titulo": "El huevo que hacía toc toc",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "curiosidad",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 101,
+  "genero": "aventura amable",
+  "tema": "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos",
+  "sinopsis": "Roki y Tinkie visitan el valle de los dinosaurios, encuentran un huevo con pequeñas huellas alrededor y practican curiosidad para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "huella",
+    "silabas": [
+      "hue",
+      "lla"
+    ],
+    "definicion": "Marca que deja una persona, un animal o un objeto al pasar.",
+    "ejemplo_cuento": "Las pequeñas huellas indicaban que alguien había caminado alrededor del huevo.",
+    "ejemplo_cotidiano": "Puedes ver huellas de zapatos después de pisar arena mojada.",
+    "reto": "Busca una huella segura y cuenta qué crees que la dejó.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «huella»?",
+      "opciones": [
+        "Marca que deja una persona, un animal o un objeto al pasar.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Marca que deja una persona, un animal o un objeto al pasar."
+    }
+  },
+  "paginas": [
+    "Roki y Tinkie llegaron al valle de los dinosaurios. Allí encontraron un huevo con pequeñas huellas alrededor.",
+    "No sabían quién cuidaba el huevo. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Roki recordó la palabra «huella» y la repitió despacio.",
+    "Observaron las huellas y avisaron a la cuidadora del valle. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos. Roki decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una huella",
+        "una corona",
+        "un tambor"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un huevo con pequeñas huellas alrededor."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Observaron las huellas y avisaron a la cuidadora del valle",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos"
+      ],
+      "correcta": 2,
+      "explicacion": "Mirar con atención ayuda a descubrir sin tocar lo que no conocemos."
+    }
+  ]
+}

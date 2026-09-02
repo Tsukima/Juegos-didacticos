@@ -1,0 +1,100 @@
+{
+  "id": "intermedio-semilla-viajera",
+  "titulo": "La semilla que buscaba hogar",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "cuidado ambiental",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 210,
+  "genero": "aventura amable",
+  "tema": "La naturaleza crece con tiempo, cuidado y paciencia",
+  "sinopsis": "Pepito y Tinkie visitan el sendero verde, encuentran una semilla llevada suavemente por el viento y practican cuidado ambiental para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "paciencia",
+    "silabas": [
+      "pa",
+      "cien",
+      "cia"
+    ],
+    "definicion": "Capacidad de esperar y continuar sin apresurarse.",
+    "ejemplo_cuento": "El equipo tuvo paciencia mientras buscaba el mejor lugar para la semilla.",
+    "ejemplo_cotidiano": "Practicas paciencia cuando das tiempo a algo que todavía está creciendo.",
+    "reto": "Espera un minuto observando algo y cuenta qué cambios notas.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «paciencia»?",
+      "opciones": [
+        "Capacidad de esperar y continuar sin apresurarse.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de esperar y continuar sin apresurarse."
+    }
+  },
+  "paginas": [
+    "Pepito y Tinkie llegaron al sendero verde. Allí encontraron una semilla llevada suavemente por el viento.",
+    "No encontraban un lugar seguro para plantarla. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Pepito recordó la palabra «paciencia» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Buscaron tierra, luz y agua antes de preparar su nuevo hogar. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "La naturaleza crece con tiempo, cuidado y paciencia. Pepito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una semilla",
+        "una moneda",
+        "una pelota"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron una semilla llevada suavemente por el viento."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Buscaron tierra, luz y agua antes de preparar su nuevo hogar",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "La naturaleza crece con tiempo, cuidado y paciencia"
+      ],
+      "correcta": 2,
+      "explicacion": "La naturaleza crece con tiempo, cuidado y paciencia."
+    }
+  ]
+}

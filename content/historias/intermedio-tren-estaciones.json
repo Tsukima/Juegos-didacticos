@@ -1,0 +1,100 @@
+{
+  "id": "intermedio-tren-estaciones",
+  "titulo": "El tren de las cuatro estaciones",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "organización",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 214,
+  "genero": "misterio educativo",
+  "tema": "Ordenar los pasos facilita llegar a una meta",
+  "sinopsis": "Hilito y Tinkie visitan la estación de aventuras, encuentran un tren con vagones desordenados y practican organización para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "secuencia",
+    "silabas": [
+      "se",
+      "cuen",
+      "cia"
+    ],
+    "definicion": "Conjunto de pasos colocados en un orden.",
+    "ejemplo_cuento": "La secuencia correcta permitió ordenar las estaciones del tren.",
+    "ejemplo_cotidiano": "Seguir una receta requiere respetar una secuencia.",
+    "reto": "Ordena tres acciones que haces al comenzar el día.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «secuencia»?",
+      "opciones": [
+        "Conjunto de pasos colocados en un orden.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Conjunto de pasos colocados en un orden."
+    }
+  },
+  "paginas": [
+    "Hilito y Tinkie llegaron a la estación de aventuras. Allí encontraron un tren con vagones desordenados.",
+    "Las paradas aparecían en el orden equivocado. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Hilito recordó la palabra «secuencia» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Leyeron el recorrido y colocaron las estaciones en secuencia. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Ordenar los pasos facilita llegar a una meta. Hilito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un tren",
+        "una planta",
+        "un delfín"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un tren con vagones desordenados."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Leyeron el recorrido y colocaron las estaciones en secuencia",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Ordenar los pasos facilita llegar a una meta"
+      ],
+      "correcta": 2,
+      "explicacion": "Ordenar los pasos facilita llegar a una meta."
+    }
+  ]
+}

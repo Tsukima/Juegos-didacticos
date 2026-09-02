@@ -1,0 +1,101 @@
+{
+  "id": "intermedio-concierto-animales",
+  "titulo": "El concierto del bosque",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "respeto",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 205,
+  "genero": "misterio educativo",
+  "tema": "Escuchar a los demás convierte muchos sonidos en armonía",
+  "sinopsis": "Mía y Tinkie visitan el bosque sonoro, encuentran animales preparando un concierto y practican respeto para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "armonía",
+    "silabas": [
+      "ar",
+      "mo",
+      "ní",
+      "a"
+    ],
+    "definicion": "Equilibrio agradable entre sonidos, ideas o personas.",
+    "ejemplo_cuento": "Los animales lograron armonía cuando escucharon cada instrumento por turnos.",
+    "ejemplo_cotidiano": "Hay armonía cuando un grupo se escucha y trabaja sin tapar la voz de nadie.",
+    "reto": "Escucha tres sonidos cercanos y descríbelos por separado.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «armonía»?",
+      "opciones": [
+        "Equilibrio agradable entre sonidos, ideas o personas.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Equilibrio agradable entre sonidos, ideas o personas."
+    }
+  },
+  "paginas": [
+    "Mía y Tinkie llegaron al bosque sonoro. Allí encontraron animales preparando un concierto.",
+    "Cada animal tocaba al mismo tiempo y no podían escucharse. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Mía recordó la palabra «armonía» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Organizaron turnos y dejaron un momento para cada sonido. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Escuchar a los demás convierte muchos sonidos en armonía. Mía decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un concierto",
+        "una carrera",
+        "una receta"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron animales preparando un concierto."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Organizaron turnos y dejaron un momento para cada sonido",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Escuchar a los demás convierte muchos sonidos en armonía"
+      ],
+      "correcta": 2,
+      "explicacion": "Escuchar a los demás convierte muchos sonidos en armonía."
+    }
+  ]
+}

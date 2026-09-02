@@ -1,0 +1,101 @@
+{
+  "id": "intermedio-portal-seguro",
+  "titulo": "El portal de la clave secreta",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "seguridad digital",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 220,
+  "genero": "misterio educativo",
+  "tema": "La privacidad se protege parando y pidiendo ayuda",
+  "sinopsis": "Hilito y Tinkie visitan el mundo digital de Tinkie, encuentran un portal que pedía datos personales y practican seguridad digital para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "privacidad",
+    "silabas": [
+      "pri",
+      "va",
+      "ci",
+      "dad"
+    ],
+    "definicion": "Derecho y cuidado de mantener protegidos nuestros datos personales.",
+    "ejemplo_cuento": "El equipo protegió su privacidad al no compartir la clave.",
+    "ejemplo_cotidiano": "Cuidar tu nombre completo y tus contraseñas protege tu privacidad.",
+    "reto": "Nombra a un adulto de confianza al que pedirías ayuda ante un mensaje extraño.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «privacidad»?",
+      "opciones": [
+        "Derecho y cuidado de mantener protegidos nuestros datos personales.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Derecho y cuidado de mantener protegidos nuestros datos personales."
+    }
+  },
+  "paginas": [
+    "Hilito y Tinkie llegaron al mundo digital de Tinkie. Allí encontraron un portal que pedía datos personales.",
+    "Un premio brillante intentaba apresurarlos. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Hilito recordó la palabra «privacidad» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Cerraron el mensaje y consultaron a un adulto de confianza. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "La privacidad se protege parando y pidiendo ayuda. Hilito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un portal",
+        "una cometa",
+        "un bocadillo"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un portal que pedía datos personales."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Cerraron el mensaje y consultaron a un adulto de confianza",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "La privacidad se protege parando y pidiendo ayuda"
+      ],
+      "correcta": 2,
+      "explicacion": "La privacidad se protege parando y pidiendo ayuda."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "inicial-reloj-rutinas",
+  "titulo": "El reloj que olvidó la mañana",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "autonomía",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 117,
+  "genero": "misterio educativo",
+  "tema": "Una rutina flexible nos orienta y deja espacio para las pausas",
+  "sinopsis": "Mía y Tinkie visitan la torre del reloj, encuentran un reloj con sus momentos del día mezclados y practican autonomía para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "rutina",
+    "silabas": [
+      "ru",
+      "ti",
+      "na"
+    ],
+    "definicion": "Conjunto de acciones que solemos realizar en un orden conocido.",
+    "ejemplo_cuento": "Ordenar los momentos del día ayudó al reloj a recuperar su rutina.",
+    "ejemplo_cotidiano": "Preparar la mochila cada tarde puede formar parte de una rutina.",
+    "reto": "Elige tres pasos de tu rutina y colócalos en orden.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «rutina»?",
+      "opciones": [
+        "Conjunto de acciones que solemos realizar en un orden conocido.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Conjunto de acciones que solemos realizar en un orden conocido."
+    }
+  },
+  "paginas": [
+    "Mía y Tinkie llegaron a la torre del reloj. Allí encontraron un reloj con sus momentos del día mezclados.",
+    "La mañana aparecía después de la noche. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Mía recordó la palabra «rutina» y la repitió despacio.",
+    "Ordenaron despertar, asearse, aprender, jugar y descansar. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Una rutina flexible nos orienta y deja espacio para las pausas. Mía decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un reloj",
+        "una montaña",
+        "un pulpo"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un reloj con sus momentos del día mezclados."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Ordenaron despertar, asearse, aprender, jugar y descansar",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Una rutina flexible nos orienta y deja espacio para las pausas"
+      ],
+      "correcta": 2,
+      "explicacion": "Una rutina flexible nos orienta y deja espacio para las pausas."
+    }
+  ]
+}

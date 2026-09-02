@@ -1,0 +1,100 @@
+{
+  "id": "intermedio-burbujas-viajeras",
+  "titulo": "Las burbujas viajeras",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "autocuidado",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 218,
+  "genero": "fantasía educativa",
+  "tema": "La higiene es una forma cotidiana de cuidar nuestro cuerpo",
+  "sinopsis": "Lumo y Tinkie visitan el laboratorio de burbujas, encuentran burbujas que señalaban los pasos del lavado y practican autocuidado para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "higiene",
+    "silabas": [
+      "hi",
+      "gie",
+      "ne"
+    ],
+    "definicion": "Hábitos que mantienen limpios y cuidados el cuerpo y los espacios.",
+    "ejemplo_cuento": "Las burbujas recordaron al equipo los pasos de higiene de manos.",
+    "ejemplo_cotidiano": "Lavarse las manos antes de comer es un hábito de higiene.",
+    "reto": "Explica en orden cómo te lavas las manos.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «higiene»?",
+      "opciones": [
+        "Hábitos que mantienen limpios y cuidados el cuerpo y los espacios.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Hábitos que mantienen limpios y cuidados el cuerpo y los espacios."
+    }
+  },
+  "paginas": [
+    "Lumo y Tinkie llegaron al laboratorio de burbujas. Allí encontraron burbujas que señalaban los pasos del lavado.",
+    "Algunos pasos estaban escondidos. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Lumo recordó la palabra «higiene» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Recordaron agua, jabón, frotar, aclarar y secar. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "La higiene es una forma cotidiana de cuidar nuestro cuerpo. Lumo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "jabón",
+        "arena",
+        "pintura"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron burbujas que señalaban los pasos del lavado."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Recordaron agua, jabón, frotar, aclarar y secar",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "La higiene es una forma cotidiana de cuidar nuestro cuerpo"
+      ],
+      "correcta": 2,
+      "explicacion": "La higiene es una forma cotidiana de cuidar nuestro cuerpo."
+    }
+  ]
+}

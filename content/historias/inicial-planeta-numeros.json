@@ -1,0 +1,97 @@
+{
+  "id": "inicial-planeta-numeros",
+  "titulo": "El planeta de los números saltarines",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "razonamiento",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 116,
+  "genero": "aventura amable",
+  "tema": "Contar con orden ayuda a comparar una cantidad",
+  "sinopsis": "Pepito y Tinkie visitan el planeta Contador, encuentran números que saltaban de piedra en piedra y practican razonamiento para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "cantidad",
+    "silabas": [
+      "can",
+      "ti",
+      "dad"
+    ],
+    "definicion": "Número de elementos que hay en un grupo.",
+    "ejemplo_cuento": "Contaron uno a uno para comparar la cantidad de piedras.",
+    "ejemplo_cotidiano": "Puedes conocer una cantidad contando cada objeto una sola vez.",
+    "reto": "Agrupa cinco objetos y comprueba la cantidad señalándolos.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «cantidad»?",
+      "opciones": [
+        "Número de elementos que hay en un grupo.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Número de elementos que hay en un grupo."
+    }
+  },
+  "paginas": [
+    "Pepito y Tinkie llegaron al planeta Contador. Allí encontraron números que saltaban de piedra en piedra.",
+    "Dos grupos no sabían cuál tenía más elementos. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Pepito recordó la palabra «cantidad» y la repitió despacio.",
+    "Contaron señalando uno a uno y compararon las cantidades. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Contar con orden ayuda a comparar una cantidad. Pepito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "cinco piedras",
+        "una sola pluma",
+        "ningún objeto"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron números que saltaban de piedra en piedra."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Contaron señalando uno a uno y compararon las cantidades",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Contar con orden ayuda a comparar una cantidad"
+      ],
+      "correcta": 2,
+      "explicacion": "Contar con orden ayuda a comparar una cantidad."
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "inicial-faro-marino",
+  "titulo": "El faro de los peces viajeros",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "orientación",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 112,
+  "genero": "fantasía educativa",
+  "tema": "Las pistas y la calma ayudan cuando perdemos la dirección",
+  "sinopsis": "Lumo y Tinkie visitan la bahía tranquila, encuentran un grupo de peces siguiendo una luz y practican orientación para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "dirección",
+    "silabas": [
+      "di",
+      "rec",
+      "ción"
+    ],
+    "definicion": "Camino o rumbo que seguimos para llegar a un lugar.",
+    "ejemplo_cuento": "Las boyas ayudaron a los peces a recuperar la dirección.",
+    "ejemplo_cotidiano": "Una flecha puede indicar la dirección correcta.",
+    "reto": "Da una indicación usando las palabras adelante y derecha.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «dirección»?",
+      "opciones": [
+        "Camino o rumbo que seguimos para llegar a un lugar.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Camino o rumbo que seguimos para llegar a un lugar."
+    }
+  },
+  "paginas": [
+    "Lumo y Tinkie llegaron a la bahía tranquila. Allí encontraron un grupo de peces siguiendo una luz.",
+    "Una nube cubrió el faro y perdieron la dirección. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Lumo recordó la palabra «dirección» y la repitió despacio.",
+    "Usaron las boyas como pistas hasta que volvió la luz. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Las pistas y la calma ayudan cuando perdemos la dirección. Lumo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un faro",
+        "un columpio",
+        "un lápiz"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un grupo de peces siguiendo una luz."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Usaron las boyas como pistas hasta que volvió la luz",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Las pistas y la calma ayudan cuando perdemos la dirección"
+      ],
+      "correcta": 2,
+      "explicacion": "Las pistas y la calma ayudan cuando perdemos la dirección."
+    }
+  ]
+}

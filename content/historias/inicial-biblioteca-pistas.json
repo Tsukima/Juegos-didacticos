@@ -1,0 +1,98 @@
+{
+  "id": "inicial-biblioteca-pistas",
+  "titulo": "La biblioteca de las pistas",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "aprendizaje",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 109,
+  "genero": "fantasía educativa",
+  "tema": "Usar una estrategia hace que una dificultad sea más pequeña",
+  "sinopsis": "Turbo y Tinkie visitan la escuela de Tinkie, encuentran un libro con pistas entre sus páginas y practican aprendizaje para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "estrategia",
+    "silabas": [
+      "es",
+      "tra",
+      "te",
+      "gia"
+    ],
+    "definicion": "Plan o conjunto de pasos pensado para resolver una dificultad.",
+    "ejemplo_cuento": "Separar la palabra en sílabas fue una estrategia de lectura.",
+    "ejemplo_cotidiano": "Puedes usar una estrategia al dividir una tarea grande en pasos pequeños.",
+    "reto": "Elige una tarea y escribe o di sus dos primeros pasos.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «estrategia»?",
+      "opciones": [
+        "Plan o conjunto de pasos pensado para resolver una dificultad.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Plan o conjunto de pasos pensado para resolver una dificultad."
+    }
+  },
+  "paginas": [
+    "Turbo y Tinkie llegaron a la escuela de Tinkie. Allí encontraron un libro con pistas entre sus páginas.",
+    "Una palabra larga detenía la lectura. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Turbo recordó la palabra «estrategia» y la repitió despacio.",
+    "La separaron en sílabas, pidieron una pista y volvieron a leer. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Usar una estrategia hace que una dificultad sea más pequeña. Turbo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un libro",
+        "un casco",
+        "una pala"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un libro con pistas entre sus páginas."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "La separaron en sílabas, pidieron una pista y volvieron a leer",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Usar una estrategia hace que una dificultad sea más pequeña"
+      ],
+      "correcta": 2,
+      "explicacion": "Usar una estrategia hace que una dificultad sea más pequeña."
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "inicial-formas-ciudad",
+  "titulo": "La ciudad de las formas",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "creatividad",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 115,
+  "genero": "fantasía educativa",
+  "tema": "La creatividad aparece cuando probamos más de una posibilidad",
+  "sinopsis": "Turbo y Tinkie visitan la ciudad geométrica, encuentran piezas redondas, cuadradas y triangulares y practican creatividad para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "creatividad",
+    "silabas": [
+      "cre",
+      "a",
+      "ti",
+      "vi",
+      "dad"
+    ],
+    "definicion": "Capacidad de imaginar y probar ideas nuevas.",
+    "ejemplo_cuento": "La creatividad ayudó a construir el puente con varias formas.",
+    "ejemplo_cotidiano": "Usas creatividad cuando encuentras más de una manera de dibujar o construir algo.",
+    "reto": "Inventa dos usos seguros para una caja vacía.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «creatividad»?",
+      "opciones": [
+        "Capacidad de imaginar y probar ideas nuevas.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de imaginar y probar ideas nuevas."
+    }
+  },
+  "paginas": [
+    "Turbo y Tinkie llegaron a la ciudad geométrica. Allí encontraron piezas redondas, cuadradas y triangulares.",
+    "Faltaba un puente para unir dos barrios. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Turbo recordó la palabra «creatividad» y la repitió despacio.",
+    "Combinaron distintas formas hasta construir un puente firme. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "La creatividad aparece cuando probamos más de una posibilidad. Turbo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un triángulo",
+        "una zanahoria",
+        "un reloj"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron piezas redondas, cuadradas y triangulares."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Combinaron distintas formas hasta construir un puente firme",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "La creatividad aparece cuando probamos más de una posibilidad"
+      ],
+      "correcta": 2,
+      "explicacion": "La creatividad aparece cuando probamos más de una posibilidad."
+    }
+  ]
+}

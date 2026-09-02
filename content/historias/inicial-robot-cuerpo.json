@@ -1,0 +1,98 @@
+{
+  "id": "inicial-robot-cuerpo",
+  "titulo": "El robot que aprendió a moverse",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "conocimiento corporal",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 106,
+  "genero": "fantasía educativa",
+  "tema": "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos",
+  "sinopsis": "Lumo y Tinkie visitan el taller de Lumo, encuentran un robot que confundía brazos, piernas y manos y practican conocimiento corporal para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "equilibrio",
+    "silabas": [
+      "e",
+      "qui",
+      "li",
+      "brio"
+    ],
+    "definicion": "Capacidad de mantener estabilidad al mover el cuerpo o tomar decisiones.",
+    "ejemplo_cuento": "El robot practicó equilibrio mientras aprendía la secuencia de movimientos.",
+    "ejemplo_cotidiano": "Usas el equilibrio al caminar despacio sobre una línea.",
+    "reto": "Camina cinco pasos lentos sobre una línea imaginaria.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «equilibrio»?",
+      "opciones": [
+        "Capacidad de mantener estabilidad al mover el cuerpo o tomar decisiones.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de mantener estabilidad al mover el cuerpo o tomar decisiones."
+    }
+  },
+  "paginas": [
+    "Lumo y Tinkie llegaron al taller de Lumo. Allí encontraron un robot que confundía brazos, piernas y manos.",
+    "El robot no podía seguir una secuencia de movimientos. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Lumo recordó la palabra «equilibrio» y la repitió despacio.",
+    "Nombraron cada parte y practicaron despacio frente a un espejo. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos. Lumo decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un robot",
+        "un pez",
+        "una nube"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un robot que confundía brazos, piernas y manos."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Nombraron cada parte y practicaron despacio frente a un espejo",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos"
+      ],
+      "correcta": 2,
+      "explicacion": "Conocer el cuerpo ayuda a movernos y expresar lo que necesitamos."
+    }
+  ]
+}

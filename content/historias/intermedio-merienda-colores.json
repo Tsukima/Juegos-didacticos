@@ -1,0 +1,100 @@
+{
+  "id": "intermedio-merienda-colores",
+  "titulo": "La merienda de cinco colores",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "hábitos saludables",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 213,
+  "genero": "aventura amable",
+  "tema": "La variedad y el respeto hacen más agradable compartir la mesa",
+  "sinopsis": "Roki y Tinkie visitan la cocina de Pepito, encuentran una cesta con alimentos de muchos colores y practican hábitos saludables para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "variedad",
+    "silabas": [
+      "va",
+      "rie",
+      "dad"
+    ],
+    "definicion": "Conjunto de cosas diferentes entre sí.",
+    "ejemplo_cuento": "La cesta ofrecía variedad de colores y alimentos.",
+    "ejemplo_cotidiano": "Hay variedad cuando eliges objetos de distintos tamaños o colores.",
+    "reto": "Encuentra tres objetos diferentes y explica en qué cambian.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «variedad»?",
+      "opciones": [
+        "Conjunto de cosas diferentes entre sí.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Conjunto de cosas diferentes entre sí."
+    }
+  },
+  "paginas": [
+    "Roki y Tinkie llegaron a la cocina de Pepito. Allí encontraron una cesta con alimentos de muchos colores.",
+    "Querían preparar una merienda que todos pudieran disfrutar. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Roki recordó la palabra «variedad» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Preguntaron por gustos y necesidades antes de elegir juntos. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "La variedad y el respeto hacen más agradable compartir la mesa. Roki decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una cesta",
+        "un tren",
+        "un paraguas"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron una cesta con alimentos de muchos colores."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Preguntaron por gustos y necesidades antes de elegir juntos",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "La variedad y el respeto hacen más agradable compartir la mesa"
+      ],
+      "correcta": 2,
+      "explicacion": "La variedad y el respeto hacen más agradable compartir la mesa."
+    }
+  ]
+}

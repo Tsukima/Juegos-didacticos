@@ -1,0 +1,101 @@
+{
+  "id": "intermedio-carrera-pausas",
+  "titulo": "La carrera de las pausas",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "autocuidado",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 204,
+  "genero": "aventura amable",
+  "tema": "Hacer una pausa protege el cuerpo y mejora nuestras decisiones",
+  "sinopsis": "Pepito y Tinkie visitan el circuito de Turbo, encuentran un semáforo que enseñaba cuándo parar y practican autocuidado para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "autocontrol",
+    "silabas": [
+      "au",
+      "to",
+      "con",
+      "trol"
+    ],
+    "definicion": "Capacidad de detener un impulso y elegir una acción segura.",
+    "ejemplo_cuento": "Turbo mostró autocontrol al esperar la luz verde antes de correr.",
+    "ejemplo_cotidiano": "Practicas autocontrol cuando esperas tu turno aunque tengas muchas ganas de empezar.",
+    "reto": "Haz una pausa, respira dos veces y elige tu siguiente paso.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «autocontrol»?",
+      "opciones": [
+        "Capacidad de detener un impulso y elegir una acción segura.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Capacidad de detener un impulso y elegir una acción segura."
+    }
+  },
+  "paginas": [
+    "Pepito y Tinkie llegaron al circuito de Turbo. Allí encontraron un semáforo que enseñaba cuándo parar.",
+    "Turbo quería correr antes de mirar la luz. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Pepito recordó la palabra «autocontrol» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Respiraron, esperaron el verde y recorrieron la pista por turnos. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Hacer una pausa protege el cuerpo y mejora nuestras decisiones. Pepito decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "un semáforo",
+        "un libro",
+        "un barco"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron un semáforo que enseñaba cuándo parar."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Respiraron, esperaron el verde y recorrieron la pista por turnos",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Hacer una pausa protege el cuerpo y mejora nuestras decisiones"
+      ],
+      "correcta": 2,
+      "explicacion": "Hacer una pausa protege el cuerpo y mejora nuestras decisiones."
+    }
+  ]
+}

@@ -8,9 +8,10 @@ function missionList(type,state) {
   return allMissions.filter(m=>m.type===type).map(m=>`<article class="card mission-card ${m.data.source==='mini'?'bridge-mission':''}"><div class="mission-meta"><span class="pill">${m.duration} min</span>${m.data.source==='mini'?'<span class="pill mini-pill">🦕 Puente Mini</span>':''}${state.completed.includes(m.id)?'<span class="pill warm">✓ Superada</span>':''}</div><h3>${m.data.emoji||''} ${m.title}</h3><p class="muted">${type==='word'?(m.data.source==='mini'?`${m.data.syllables.replaceAll('-',' · ')} · ${m.data.phrase}`:m.data.word):type==='phrase'?m.data.text:type==='action'?m.data.text:m.data.question}</p>${m.data.topic?`<small class="mission-topic">Tema: ${m.data.topic}</small>`:''}<a class="button ${state.completed.includes(m.id)?'secondary':''}" href="#jugar/${m.id}">${state.completed.includes(m.id)?'Repetir':'Empezar'}</a></article>`).join('');
 }
 
-async function storyLibrary(state) {
+async function storyLibrary(state,ageRange='6-8') {
   try {
-    const stories=await loadStoryCatalog();
+    const allStories=await loadStoryCatalog();
+    const stories=ageRange==='all'?allStories:allStories.filter(story=>`${story.edad_min}-${story.edad_max}`===ageRange);
     const cards=stories.map(story=>{
       const completed=state.completed.includes(`story-${story.id}`);
       return `<article class="card story-card"><div class="story-cover" aria-hidden="true">📚</div><div class="mission-meta"><span class="pill">${escapeHtml(story.nivel_lector)}</span><span class="pill warm">${escapeHtml(story.edad_min)}–${escapeHtml(story.edad_max)} años</span></div><h3>${escapeHtml(story.titulo)}</h3><p class="muted">${escapeHtml(story.sinopsis||`Un cuento sobre ${story.valor}.`)}</p><a class="button ${completed?'secondary':''}" href="#cuento/${escapeHtml(story.id)}">${completed?'Leer de nuevo':'Leer cuento'}</a></article>`;
@@ -29,11 +30,14 @@ export async function readingScreen(params={}) {
   const type=params.tipo||'word';
   const state=store.get();
   const isStories=type==='stories';
-  const content=isStories?await storyLibrary(state):missionList(type,state);
+  const allowedRanges=['6-8','8-10','10-12','all'];
+  const ageRange=allowedRanges.includes(params.edad)?params.edad:'6-8';
+  const content=isStories?await storyLibrary(state,ageRange):missionList(type,state);
   const tabs=types.map(([key,name])=>`<a class="button ${type===key?'':'secondary'} small" href="#lectura?tipo=${key}" ${type===key?'aria-current="page"':''}>${key==='stories'?'📚 ':''}${name}</a>`).join('');
   const bridgeNote=type==='word'?`<aside class="mini-bridge-note"><span aria-hidden="true">🦕→🦜</span><div><strong>Mini también crece contigo</strong><p>Encontrarás palabras de Mini Aventuras adaptadas como misiones normales de lectura.</p></div></aside>`:'';
+  const ageTabs=[['6-8','6–8 años'],['8-10','8–10 años'],['10-12','10–12 años'],['all','Todos']].map(([key,label])=>`<a class="story-age-tab ${ageRange===key?'active':''}" href="#lectura?tipo=stories&edad=${key}" ${ageRange===key?'aria-current="page"':''}>${label}${key!=='all'?'<small>20 cuentos</small>':'<small>60 cuentos</small>'}</a>`).join('');
   const body=isStories
-    ? `<section class="section stories-section"><div class="section-head"><div><p class="eyebrow">Biblioteca de Tinkie</p><h2>Cuentos</h2><p class="muted">Historias para leer con calma, descubrir palabras y superar retos de comprensión.</p></div><span class="stories-mascot" aria-hidden="true">🦜📖</span></div><div class="grid stories-grid">${content}</div></section>`
+    ? `<section class="section stories-section"><div class="section-head"><div><p class="eyebrow">Biblioteca de Tinkie</p><h2>Cuentos por edad</h2><p class="muted">Historias para leer con calma, descubrir palabras y superar retos de comprensión.</p></div><span class="stories-mascot" aria-hidden="true">🦜📖</span></div><nav class="story-age-tabs" aria-label="Rangos de edad">${ageTabs}</nav><div class="grid stories-grid">${content}</div></section>`
     : `${bridgeNote}<section class="section grid">${content}</section>`;
   return `<p class="eyebrow">Biblioteca</p><h1>Lectura</h1><p class="muted">Practica con retos cortos o elige una aventura de la biblioteca de Tinkie.</p><nav class="actions reading-tabs" aria-label="Tipos de lectura">${tabs}</nav>${body}`;
 }

@@ -1,0 +1,101 @@
+{
+  "id": "intermedio-nube-emociones",
+  "titulo": "La nube de muchos colores",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "educación emocional",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 207,
+  "genero": "aventura amable",
+  "tema": "Todas las emociones pueden escucharse sin prisa",
+  "sinopsis": "Roki y Tinkie visitan el jardín del cielo, encuentran una nube que cambiaba de color con cada emoción y practican educación emocional para resolver una dificultad con calma.",
+  "palabra_clave": {
+    "palabra": "serenidad",
+    "silabas": [
+      "se",
+      "re",
+      "ni",
+      "dad"
+    ],
+    "definicion": "Estado de calma que ayuda a pensar con claridad.",
+    "ejemplo_cuento": "La nube recuperó la serenidad al nombrar lo que sentía.",
+    "ejemplo_cotidiano": "Puedes buscar serenidad respirando y hablando con alguien de confianza.",
+    "reto": "Respira lentamente y nombra cómo te sientes ahora.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «serenidad»?",
+      "opciones": [
+        "Estado de calma que ayuda a pensar con claridad.",
+        "Una recompensa que aparece sin esfuerzo",
+        "Una orden que debe obedecerse sin preguntar"
+      ],
+      "correcta": 0,
+      "explicacion": "Estado de calma que ayuda a pensar con claridad."
+    }
+  },
+  "paginas": [
+    "Roki y Tinkie llegaron al jardín del cielo. Allí encontraron una nube que cambiaba de color con cada emoción.",
+    "La nube no sabía explicar por qué se sentía diferente. Los amigos se detuvieron para observar antes de actuar.",
+    "Tinkie propuso escuchar todas las ideas. Roki recordó la palabra «serenidad» y la repitió despacio.",
+    "Antes de continuar, hicieron un plan con dos opciones. Eligieron la más tranquila y dejaron preparada una alternativa.",
+    "Usaron el semáforo emocional para nombrar y compartir cada sensación. Cada paso fue pequeño, claro y seguro.",
+    "Al terminar, comprobaron juntos el resultado y celebraron el esfuerzo de todo el equipo.",
+    "Todas las emociones pueden escucharse sin prisa. Roki decidió usar este aprendizaje en su próxima aventura."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué pista importante observaron?",
+      "opciones": [
+        "una nube",
+        "una bicicleta",
+        "un bocadillo"
+      ],
+      "correcta": 0,
+      "explicacion": "La historia cuenta que encontraron una nube que cambiaba de color con cada emoción."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Actuaron sin escuchar a nadie",
+        "Usaron el semáforo emocional para nombrar y compartir cada sensación",
+        "Abandonaron la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "Esa acción les permitió resolver la dificultad juntos."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje se llevaron?",
+      "opciones": [
+        "Ganar siempre es lo único importante",
+        "Pedir ayuda hace más difícil una misión",
+        "Todas las emociones pueden escucharse sin prisa"
+      ],
+      "correcta": 2,
+      "explicacion": "Todas las emociones pueden escucharse sin prisa."
+    }
+  ]
+}
