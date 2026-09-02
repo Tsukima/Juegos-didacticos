@@ -1,4 +1,4 @@
-import {characters} from '../characters/characters.js';
+import {characters,characterPortrait} from '../characters/characters.js';
 import {companionKeys} from '../characters/companions.js';
 import {store} from '../core/store.js';
 
@@ -11,7 +11,7 @@ const encouragements = [
   ['celebrar','🎉','Celebrando mucho'], ['pistas','💡','Dándome pistas']
 ];
 
-const choices = (items, group) => `<div class="onboarding-choices">${items.map(([value, emoji, label]) => `<button type="button" class="onboarding-choice" data-onboarding-group="${group}" data-onboarding-value="${value}"><span>${emoji}</span><strong>${label}</strong></button>`).join('')}</div>`;
+const choices = (items, group) => `<div class="onboarding-choices">${items.map(([value, visual, label]) => `<button type="button" class="onboarding-choice" data-onboarding-group="${group}" data-onboarding-value="${value}"><span class="onboarding-choice-visual">${group==='mascot'?characterPortrait(value, 'onboarding-character-image'):visual}</span><strong>${label}</strong></button>`).join('')}</div>`;
 
 export function onboardingScreen() {
   const mascots = companionKeys.map(key => [key, characters[key].emoji, characters[key].name]);
