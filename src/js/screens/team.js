@@ -1,4 +1,4 @@
-import {characters,characterPortrait} from '../characters/characters.js';
+import {characters} from '../characters/characters.js';
 import {store} from '../core/store.js';
 
 const moods=[
@@ -17,7 +17,7 @@ const stories={
   turbo:{origin:'Turbo quería llegar siempre primero, hasta que descubrió que frenar y mirar también forma parte de la aventura.',reason:'Está en el equipo para canalizar la energía, moverse con seguridad y celebrar el autocontrol.'}
 };
 
-const card=key=>{const character=characters[key],story=stories[key];return `<article class="team-character" data-team-character="${key}"><div class="team-character-icon">${characterPortrait(key, 'team-character-image')}</div><div><span>${character.role}</span><h3>${character.name}</h3><p><strong>Su historia:</strong> ${story.origin}</p><p><strong>Su misión:</strong> ${story.reason}</p><button class="button secondary small" type="button" data-pick-companion="${key}">Elegir a ${character.name}</button></div></article>`};
+const card=key=>{const character=characters[key],story=stories[key];return `<article class="team-character" data-team-character="${key}"><div class="team-character-icon" aria-hidden="true">${character.emoji}</div><div><span>${character.role}</span><h3>${character.name}</h3><p><strong>Su historia:</strong> ${story.origin}</p><p><strong>Su misión:</strong> ${story.reason}</p><button class="button secondary small" type="button" data-pick-companion="${key}">Elegir a ${character.name}</button></div></article>`};
 
 export function teamScreen(){
   const state=store.get(),selected=state.profile?.currentEmotion;
@@ -29,7 +29,7 @@ export function teamScreen(){
     <p class="team-adult-note">Para la persona adulta: este semáforo facilita una conversación breve sobre el estado emocional. No sustituye una valoración profesional.</p></div>`;
 }
 
-function resultMarkup(mood){return `<div><strong>${mood.message}</strong><span>Compañeros recomendados:</span><div>${mood.companions.map(key=>`<button type="button" data-pick-companion="${key}">${characterPortrait(key, 'recommendation-character-image')} ${characters[key].name}</button>`).join('')}</div></div>`}
+function resultMarkup(mood){return `<div><strong>${mood.message}</strong><span>Compañeros recomendados:</span><div>${mood.companions.map(key=>`<button type="button" data-pick-companion="${key}">${characters[key].emoji} ${characters[key].name}</button>`).join('')}</div></div>`}
 
 export function bindTeam(){
   const root=document.querySelector('.team-world'); if(!root)return;
