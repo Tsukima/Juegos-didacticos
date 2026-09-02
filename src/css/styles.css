@@ -58,6 +58,7 @@ body.focus-mode:before{opacity:.2}.focus-mode .world-glow{display:none}.focus-mo
   .sidebar{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;gap:0;overflow:visible!important;padding:.3rem .25rem calc(.3rem + env(safe-area-inset-bottom))!important}
   .sidebar>a{display:flex!important;min-width:0!important;width:auto!important;flex:none!important;padding:.25rem .1rem!important;overflow:hidden;text-overflow:ellipsis}
   .sidebar>a.nav-secondary{display:none!important}
+  .sidebar>a[data-route="equipo"],.sidebar>a[data-route="logros"]{display:none!important}
   .mobile-more-toggle{display:flex;border:0;background:transparent;color:var(--muted);font:inherit;font-size:.68rem;font-weight:800;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:.25rem .1rem;border-radius:14px}
   .mobile-more-toggle>span{height:30px;display:grid;place-items:center;font-size:1.25rem;letter-spacing:.08em}.mobile-more-toggle.active{background:var(--mint);color:var(--teal)}
   .mobile-menu-backdrop{position:fixed;display:block;inset:0;border:0;background:rgba(8,40,35,.35);z-index:58;opacity:0;visibility:hidden;transition:.2s;backdrop-filter:blur(2px)}
@@ -66,6 +67,7 @@ body.focus-mode:before{opacity:.2}.focus-mode .world-glow{display:none}.focus-mo
   .mobile-more-menu>a{display:grid;grid-template-columns:46px 1fr;gap:.75rem;align-items:center;padding:.75rem;border-radius:16px;color:var(--ink);text-decoration:none}.mobile-more-menu>a:hover,.mobile-more-menu>a.active{background:var(--mint);color:var(--teal)}.mobile-more-menu>a>span{font-size:1.5rem;text-align:center}.mobile-more-menu>a div{display:grid}.mobile-more-menu small{color:var(--muted);font-size:.78rem}
   .mobile-menu-open .mobile-menu-backdrop,.mobile-menu-open .mobile-more-menu{opacity:1;visibility:visible;transform:none}
   .mobile-menu-open{overflow:hidden}
+  .icon-button span[aria-hidden="true"]{display:inline}
 }
 @media(max-width:600px){
   main{padding:1.25rem 14px calc(112px + env(safe-area-inset-bottom))}.grid,.grid.two,.badge-grid,.stat-row{grid-template-columns:1fr}.card{border-radius:20px}.hero{min-height:500px;border-radius:24px}.game-shell{width:100%}.recording-item{padding:.8rem}.recording-item audio{width:100%}

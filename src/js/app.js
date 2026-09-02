@@ -103,7 +103,7 @@ async function render() {
     if (link.dataset.route === route) link.setAttribute('aria-current', 'page');
     else link.removeAttribute('aria-current');
   });
-  document.querySelector('#mobile-more-toggle')?.classList.toggle('active', ['valores','seguridad','adultos'].includes(route));
+  document.querySelector('#mobile-more-toggle')?.classList.toggle('active', ['equipo','logros','valores','seguridad','adultos'].includes(route));
   document.querySelector('#streak-count').textContent = store.get().streak;
   app.focus({preventScroll:true});
   bindPage();
