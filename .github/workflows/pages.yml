@@ -26,6 +26,8 @@ jobs:
         run: npm run build
       - name: Validar cuentos y catálogo
         run: npm run validate:content
+      - name: Validar biblioteca Mini
+        run: npm run validate:mini
       - name: Auditar dependencias
         run: npm audit --audit-level=high
 

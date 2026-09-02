@@ -129,6 +129,37 @@ const baseMeta={
 };
 for(const topic of miniTopics.slice(0,4)){const [group,objective,skill,observe]=baseMeta[topic.id];Object.assign(topic,{group,objective,skill,observe});}
 
+const miniStoryFrames=[
+  {slug:'pista',title:word=>`La pista de ${word}`,opening:'buscan una pista escondida',closing:'observando con mucha atención'},
+  {slug:'orden',title:word=>`${word} va primero`,opening:'ordenan dos pistas para empezar',closing:'recordando qué ocurrió primero'},
+  {slug:'sonido',title:word=>`El sonido de ${word}`,opening:'escuchan los sonidos del lugar',closing:'escuchando cada sílaba con calma'},
+  {slug:'equipo',title:word=>`Un equipo para ${word}`,opening:'preparan una misión en equipo',closing:'ayudándose y respetando sus turnos'},
+  {slug:'pausa',title:word=>`La pausa de ${word}`,opening:'se detienen antes de continuar',closing:'respirando y avanzando sin prisa'},
+  {slug:'construccion',title:word=>`Construimos ${word}`,opening:'construyen una palabra pieza a pieza',closing:'uniendo las sílabas en orden'},
+  {slug:'pregunta',title:word=>`La pregunta sobre ${word}`,opening:'encuentran una pregunta curiosa',closing:'preguntando cuando necesitan ayuda'},
+  {slug:'comparacion',title:word=>`${word} y su pareja`,opening:'comparan dos pistas diferentes',closing:'mirando en qué se parecen y se diferencian'},
+  {slug:'repaso',title:word=>`La misión final de ${word}`,opening:'regresan para completar el gran repaso',closing:'celebrando todo lo que aprendieron'}
+];
+const miniStoryCompanions=['Roki','Hilito','Turbo','Tinkie','Pepito','Lumo','Mía','Roki','Tinkie'];
+for(const topic of miniTopics){
+  const words=topic.wordIds.map(id=>miniWords.find(word=>word.id===id));
+  miniStoryFrames.forEach((frame,index)=>{
+    const first=words[index%words.length],second=words[(index+2)%words.length],companion=miniStoryCompanions[index];
+    const team=companion==='Tinkie'?'Tinkie y Roki':`${companion} y Tinkie`;
+    miniStories.push({
+      id:`${topic.id}-${frame.slug}-${index+2}`,topic:topic.id,title:frame.title(first.word),emoji:first.emoji,keyword:first.word,syllables:first.syllables,level:index<3?'inicial':index<7?'medio':'repaso',
+      pages:[
+        `${team} ${frame.opening} en ${topic.title.toLowerCase()}.`,
+        `La primera pista es ${first.word}. ${first.phrase}`,
+        `Después encuentran ${second.word}. ${second.phrase}`,
+        `${companion} separa ${first.word} en sílabas: ${first.syllables.join(', ')}. Tinkie escucha y repite.`,
+        `Los amigos terminan ${frame.closing}. Ya pueden contar lo que descubrieron.`
+      ],
+      question:{text:'¿Cuál fue la primera palabra de la misión?',options:[first.word,second.word],correct:0}
+    });
+  });
+}
+
 export const miniTopicGroups=[
   {id:'aventura',title:'Aventuras que motivan',emoji:'🚀'},
   {id:'mundo',title:'Descubro el mundo',emoji:'🌍'},
