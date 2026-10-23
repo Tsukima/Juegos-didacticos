@@ -1,4 +1,4 @@
-name: Crear contenido semanal con Magic Loops
+name: Crear y publicar contenido semanal
 
 on:
   schedule:
@@ -16,7 +16,6 @@ concurrency:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   create-content:
@@ -25,50 +24,33 @@ jobs:
       - name: Descargar el proyecto
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
-
       - name: Preparar Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
       - name: Instalar dependencias
         run: npm ci
-
-      - name: Generar un cuento con Magic Loops
+      - name: Crear un cuento sin servicios externos
         env:
-          MAGIC_LOOP_URL: ${{ secrets.MAGIC_LOOP_URL }}
           REQUESTED_THEME: ${{ inputs.tema }}
         run: node scripts/generate-weekly-story.mjs
-
       - name: Validar contenido y aplicación
         run: |
           npm run validate:content
+          npm run validate:mini
           npm run build
-
-      - name: Crear rama y Pull Request
-        id: pull_request
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Guardar en main y activar el despliegue
         shell: bash
         run: |
-          branch="contenido/cuento-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git config user.name "tinkie-content-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git switch -c "$branch"
           git add content/historias/
-          git commit -m "content: añadir cuento semanal"
-          git push origin "$branch"
-          pr_url=$(gh pr create --base main --head "$branch" --title "📚 Nuevo cuento semanal de Tinkie" --body-file generated-pr-body.md)
-          echo "url=$pr_url" >> "$GITHUB_OUTPUT"
-          echo "number=${pr_url##*/}" >> "$GITHUB_OUTPUT"
-
-      - name: Enviar el cuento por correo
-        env:
-          STORY_EMAIL_USER: ${{ secrets.STORY_EMAIL_USER }}
-          STORY_EMAIL_APP_PASSWORD: ${{ secrets.STORY_EMAIL_APP_PASSWORD }}
-          STORY_EMAIL_TO: angelesperniajobs@gmail.com
-          PR_URL: ${{ steps.pull_request.outputs.url }}
-          PR_NUMBER: ${{ steps.pull_request.outputs.number }}
-        run: python .github/scripts/email-story-review.py story-files.txt
+          if git diff --cached --quiet; then
+            echo "No hay contenido nuevo que guardar."
+            exit 0
+          fi
+          git commit -m "content: añadir cuento semanal automático"
+          git push origin HEAD:main

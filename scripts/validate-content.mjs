@@ -10,7 +10,7 @@ const text=value=>typeof value==='string'&&value.trim().length>0;
 const ranges=new Map([['6-8','inicial'],['8-10','intermedio'],['10-12','avanzado']]);
 const rangeCounts=new Map([...ranges.keys()].map(key=>[key,0]));
 
-if (!Array.isArray(catalog)||catalog.length!==60) failures.push(`El catálogo debe contener 60 cuentos y contiene ${catalog.length}.`);
+if (!Array.isArray(catalog)||catalog.length<60) failures.push(`El catálogo debe contener al menos 60 cuentos y contiene ${catalog.length}.`);
 
 for (const entry of Array.isArray(catalog)?catalog:[]) {
   if (!text(entry.id)||!/^[a-z0-9-]+$/.test(entry.id)) failures.push('Hay un id de catálogo no válido.');
@@ -42,7 +42,7 @@ for (const entry of Array.isArray(catalog)?catalog:[]) {
   if (!text(keywordQuestion?.enunciado)||!Array.isArray(keywordQuestion?.opciones)||keywordQuestion.opciones.length!==3||!keywordQuestion.opciones.every(text)||!Number.isInteger(keywordQuestion.correcta)||keywordQuestion.correcta<0||keywordQuestion.correcta>2||!text(keywordQuestion.explicacion)) failures.push(`${entry.id}: la pregunta de la palabra clave no es válida.`);
 }
 
-for(const [range,count] of rangeCounts) if(count!==20) failures.push(`El rango ${range} debe tener 20 cuentos y tiene ${count}.`);
+for(const [range,count] of rangeCounts) if(count<20) failures.push(`El rango ${range} debe tener al menos 20 cuentos y tiene ${count}.`);
 
 if (failures.length) {
   console.error(failures.map(item=>`- ${item}`).join('\n'));
