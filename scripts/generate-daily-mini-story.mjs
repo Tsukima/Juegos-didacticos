@@ -17,16 +17,38 @@ const plans=[
   ['El hilo de la respiración','🧵','respirar',['Hilito imaginó un hilo que subía al tomar aire.','Después vio cómo bajaba al soltarlo lentamente.','Repitió el recorrido hasta sentirse preparado para continuar.'],'La respiración lenta puede acompañarnos cuando necesitamos regularnos.','Sube un dedo al inhalar y bájalo al exhalar. Repite tres veces sin forzar.'],
   ['La mochila de las preocupaciones','🎒','ayuda',['Lumo llevaba una mochila que parecía muy pesada.','Contó a Tinkie qué pensamiento guardaba dentro.','Al compartirlo, encontró ayuda y la mochila pesó menos.'],'Hablar con una persona segura puede hacer más llevadera una preocupación.','Nombra una persona adulta de confianza a quien puedas pedir ayuda hoy.']
 ];
-if(catalog.some(item=>item.fecha===madridDate)){
-  console.log(`El minicuento de ${madridDate} ya existe.`);
-  process.exit(0);
-}
 const dayNumber=Math.floor(new Date(`${madridDate}T12:00:00Z`).getTime()/86400000);
 const [title,emoji,keyword,pages,reflection,activity]=plans[dayNumber%plans.length];
 const id=`mini-diario-${madridDate}`;
 const story={id,fecha:madridDate,titulo:title,emoji,palabra_clave:keyword,paginas:pages,reflexion:reflection,actividad_regulacion:activity,duracion_minutos:4};
 const filename=`${id}.json`;
-await writeFile(resolve(directory,filename),`${JSON.stringify(story,null,2)}\n`,'utf8');
-catalog.unshift({id,fecha:madridDate,titulo:title,emoji,archivo:filename});
-await writeFile(indexPath,`${JSON.stringify(catalog,null,2)}\n`,'utf8');
-console.log(`Minicuento diario creado: ${title} (${madridDate}).`);
+if(catalog.some(item=>item.fecha===madridDate))console.log(`El minicuento de ${madridDate} ya existe.`);
+else{
+  await writeFile(resolve(directory,filename),`${JSON.stringify(story,null,2)}\n`,'utf8');
+  catalog.unshift({id,fecha:madridDate,titulo:title,emoji,archivo:filename});
+  await writeFile(indexPath,`${JSON.stringify(catalog,null,2)}\n`,'utf8');
+  console.log(`Minicuento diario creado: ${title} (${madridDate}).`);
+}
+
+const explorerDirectory=resolve('content/explorador-diarios');
+const explorerIndexPath=resolve(explorerDirectory,'index.json');
+await mkdir(explorerDirectory,{recursive:true});
+let explorerCatalog=[];
+try{explorerCatalog=JSON.parse(await readFile(explorerIndexPath,'utf8'));}catch{}
+if(explorerCatalog.some(item=>item.fecha===madridDate))console.log(`El cuento Explorador de ${madridDate} ya existe.`);
+else{
+  const explorerId=`explorador-diario-${madridDate}`;
+  const explorerPages=[
+    `${pages[0]} Antes de reaccionar, el equipo observó los detalles y trató de comprender qué estaba ocurriendo en su cuerpo y a su alrededor.`,
+    `${pages[1]} Tinkie recordó que una pausa no elimina lo que sentimos, pero puede darnos espacio para elegir el siguiente paso.`,
+    `Los compañeros compartieron distintas ideas sin juzgarlas. Compararon qué opción era segura, cuál podían intentar primero y a quién pedirían ayuda si la necesitaban.`,
+    `${pages[2]} El cambio no ocurrió de golpe: prestaron atención a pequeñas señales y ajustaron su estrategia con paciencia.`,
+    `Al finalizar, conversaron sobre la palabra «${keyword}». Comprendieron que regularse no significa ocultar una emoción, sino reconocerla y responder con cuidado.`
+  ];
+  const explorerStory={id:explorerId,fecha:madridDate,titulo:title,emoji,edad_min:8,edad_max:12,palabra_clave:keyword,paginas:explorerPages,reflexion:reflection,actividad_regulacion:activity,preguntas:['¿Qué señal ayudó a los personajes a comprender lo que necesitaban?','¿Qué estrategia podrías utilizar en una situación parecida?'],duracion_minutos:8};
+  const explorerFilename=`${explorerId}.json`;
+  await writeFile(resolve(explorerDirectory,explorerFilename),`${JSON.stringify(explorerStory,null,2)}\n`,'utf8');
+  explorerCatalog.unshift({id:explorerId,fecha:madridDate,titulo:title,emoji,edad_min:8,edad_max:12,archivo:explorerFilename});
+  await writeFile(explorerIndexPath,`${JSON.stringify(explorerCatalog,null,2)}\n`,'utf8');
+  console.log(`Cuento diario Explorador creado: ${title} (${madridDate}).`);
+}

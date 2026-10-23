@@ -4,7 +4,7 @@ El workflow `weekly-content-tasks.yml` publica contenido a las 10:00 de Madrid, 
 
 ## Funcionamiento
 
-1. Todos los días crea un minicuento con reflexión y una actividad de regulación.
+1. Todos los días crea un minicuento para Mini y una versión más extensa para Explorador (8–12 años), ambas con reflexión y actividad de regulación.
 2. Los lunes y jueves crea además un cuento largo; el rango de edad rota para mantener equilibrada la biblioteca.
 3. Los miércoles publica una edición de cómic formada por tres capítulos.
 4. El contenido parte de bibliotecas educativas revisadas y no llama a Magic Loops ni a otra IA externa.

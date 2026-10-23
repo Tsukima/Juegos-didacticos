@@ -74,6 +74,7 @@ jobs:
         run: |
           npm run validate:content
           npm run validate:mini
+          node scripts/validate-daily-content.mjs
           node scripts/validate-comics.mjs
           npm run build
       - name: Guardar en main y activar el despliegue

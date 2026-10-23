@@ -16,13 +16,14 @@ import {miniSoundScreen,bindMiniSound} from './screens/mini-sound.js';
 import {miniThemeScreen} from './screens/mini-theme.js';
 import {teamScreen,bindTeam} from './screens/team.js';
 import {comicsScreen,comicChapterScreen} from './screens/comics.js';
+import {dailyExplorerScreen} from './screens/daily-explorer.js';
 import {store} from './core/store.js';
 import {toast} from './core/utils.js';
 import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
 import {setupCloudProgress} from './core/cloud-progress.js';
 
-const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, 'mini-diario':miniDailyScreen, equipo:teamScreen, misiones:missionsScreen, lectura:readingScreen, comics:comicsScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
+const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, 'mini-diario':miniDailyScreen, 'cuento-diario':dailyExplorerScreen, equipo:teamScreen, misiones:missionsScreen, lectura:readingScreen, comics:comicsScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
 function parse() {
   const raw = location.hash.slice(1) || 'inicio';
