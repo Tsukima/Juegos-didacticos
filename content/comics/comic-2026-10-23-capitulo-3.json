@@ -1,0 +1,33 @@
+{
+  "id": "comic-2026-10-23-capitulo-3",
+  "fecha": "2026-10-23",
+  "coleccion": "La carrera de los caminos tranquilos",
+  "edicion": 1,
+  "capitulo": 3,
+  "titulo": "La meta compartida",
+  "valor": "autorregulación",
+  "sinopsis": "Todos encuentran una manera propia de llegar a la meta.",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Cada compañero elige una velocidad cómoda.",
+      "alt": "Escena 1 de La meta compartida."
+    },
+    {
+      "numero": 2,
+      "texto": "Nadie queda atrás ni pierde la carrera.",
+      "alt": "Escena 2 de La meta compartida."
+    },
+    {
+      "numero": 3,
+      "texto": "Celebran las pausas que les ayudaron.",
+      "alt": "Escena 3 de La meta compartida."
+    },
+    {
+      "numero": 4,
+      "texto": "La copa dice: escuchar tu cuerpo es una victoria.",
+      "alt": "Escena 4 de La meta compartida."
+    }
+  ],
+  "reflexion": "¿Dónde viste autorregulación durante los tres capítulos?"
+}

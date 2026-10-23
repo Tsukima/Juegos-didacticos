@@ -1,0 +1,33 @@
+{
+  "id": "comic-2026-10-23-capitulo-1",
+  "fecha": "2026-10-23",
+  "coleccion": "La carrera de los caminos tranquilos",
+  "edicion": 1,
+  "capitulo": 1,
+  "titulo": "Motores preparados",
+  "valor": "autorregulación",
+  "sinopsis": "Turbo invita al equipo a una carrera donde también cuenta saber parar.",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Los vehículos llegan a la línea de salida.",
+      "alt": "Escena 1 de Motores preparados."
+    },
+    {
+      "numero": 2,
+      "texto": "Un semáforo muestra colores desconocidos.",
+      "alt": "Escena 2 de Motores preparados."
+    },
+    {
+      "numero": 3,
+      "texto": "Mio propone descubrir qué significa cada luz.",
+      "alt": "Escena 3 de Motores preparados."
+    },
+    {
+      "numero": 4,
+      "texto": "La primera pista dice: respirar también es avanzar.",
+      "alt": "Escena 4 de Motores preparados."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}

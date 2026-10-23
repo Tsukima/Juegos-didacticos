@@ -1,0 +1,103 @@
+{
+  "id": "semanal-puente-luminoso-221",
+  "titulo": "El puente de las luces tranquilas · Episodio 221",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "atención",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 221,
+  "genero": "aventura educativa",
+  "tema": "Observar con atención ayuda a decidir con calma",
+  "sinopsis": "Goliat y Tinkie visitan el valle luminoso, resuelven una dificultad con calma y practican atención.",
+  "imagen": "",
+  "palabra_clave": {
+    "palabra": "patrón",
+    "silabas": [
+      "pa",
+      "trón"
+    ],
+    "definicion": "Orden que se repite y permite anticipar lo que viene.",
+    "ejemplo_cuento": "Goliat usó «patrón» para explicar una idea importante.",
+    "ejemplo_cotidiano": "Puedes practicar patrón durante una tarea o un juego acompañado.",
+    "reto": "Busca hoy una ocasión segura para practicar patrón.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «patrón»?",
+      "opciones": [
+        "Orden que se repite y permite anticipar lo que viene.",
+        "Hacer todo con prisa",
+        "Evitar escuchar"
+      ],
+      "correcta": 0,
+      "explicacion": "Orden que se repite y permite anticipar lo que viene."
+    }
+  },
+  "paginas": [
+    "Goliat y Tinkie llegaron a el valle luminoso. Allí descubrieron un puente cuyas luces se encendían al escuchar. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "Varias luces parpadeaban sin orden. Antes de actuar, respiraron y observaron lo que ocurría. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Tinkie escuchó todas las ideas. Goliat recordó la palabra «patrón» y explicó por qué podía ayudarles. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "El equipo imaginó dos soluciones. Revisaron cuál era más tranquila, clara y segura antes de escoger. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Observaron el patrón y cruzaron por turnos. Cada paso pequeño permitió descubrir una pista nueva. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Al terminar, celebraron el esfuerzo. Observar con atención ayuda a decidir con calma. Goliat guardó el aprendizaje para otra aventura. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "De regreso, Goliat escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar atención en casa, en clase y durante el próximo reto."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué descubrieron al comenzar?",
+      "opciones": [
+        "un puente cuyas luces se encendían al escuchar",
+        "Una carrera sin reglas",
+        "Un premio inesperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Descubrieron un puente cuyas luces se encendían al escuchar."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Sin mirar",
+        "observaron el patrón y cruzaron por turnos",
+        "Abandonando la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo observaron el patrón y cruzaron por turnos."
+    },
+    {
+      "enunciado": "¿Qué aprendieron?",
+      "opciones": [
+        "Que siempre hay que competir",
+        "Que escuchar no sirve",
+        "Observar con atención ayuda a decidir con calma"
+      ],
+      "correcta": 2,
+      "explicacion": "Observar con atención ayuda a decidir con calma"
+    }
+  ]
+}

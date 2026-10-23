@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "id": "comic-2026-10-23-capitulo-1",
+    "fecha": "2026-10-23",
+    "coleccion": "La carrera de los caminos tranquilos",
+    "edicion": 1,
+    "capitulo": 1,
+    "titulo": "Motores preparados",
+    "valor": "autorregulación",
+    "sinopsis": "Turbo invita al equipo a una carrera donde también cuenta saber parar.",
+    "archivo": "comic-2026-10-23-capitulo-1.json"
+  },
+  {
+    "id": "comic-2026-10-23-capitulo-2",
+    "fecha": "2026-10-23",
+    "coleccion": "La carrera de los caminos tranquilos",
+    "edicion": 1,
+    "capitulo": 2,
+    "titulo": "La curva de la paciencia",
+    "valor": "autorregulación",
+    "sinopsis": "Una curva difícil enseña a elegir el ritmo adecuado.",
+    "archivo": "comic-2026-10-23-capitulo-2.json"
+  },
+  {
+    "id": "comic-2026-10-23-capitulo-3",
+    "fecha": "2026-10-23",
+    "coleccion": "La carrera de los caminos tranquilos",
+    "edicion": 1,
+    "capitulo": 3,
+    "titulo": "La meta compartida",
+    "valor": "autorregulación",
+    "sinopsis": "Todos encuentran una manera propia de llegar a la meta.",
+    "archivo": "comic-2026-10-23-capitulo-3.json"
+  }
+]

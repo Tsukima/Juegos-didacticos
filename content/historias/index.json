@@ -656,6 +656,22 @@
     "archivo": "intermedio-portal-seguro.json"
   },
   {
+    "id": "semanal-puente-luminoso-221",
+    "titulo": "El puente de las luces tranquilas · Episodio 221",
+    "nivel_lector": "intermedio",
+    "edad_min": 8,
+    "edad_max": 10,
+    "valor": "atención",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 221,
+    "genero": "aventura educativa",
+    "tema": "Observar con atención ayuda a decidir con calma",
+    "sinopsis": "Goliat y Tinkie visitan el valle luminoso, resuelven una dificultad con calma y practican atención.",
+    "palabra_clave": "patrón",
+    "imagen": "",
+    "archivo": "semanal-puente-luminoso-221.json"
+  },
+  {
     "id": "el-mapa-de-las-palabras-perdidas",
     "titulo": "El mapa de las palabras perdidas",
     "nivel_lector": "avanzado",
@@ -974,5 +990,21 @@
     "palabra_clave": "privacidad",
     "imagen": "images/stories/featured/portal-seguro.jpg",
     "archivo": "avanzado-portal-seguro.json"
+  },
+  {
+    "id": "semanal-semillas-viajeras-222",
+    "titulo": "Las semillas viajeras · Episodio 222",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "paciencia",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 222,
+    "genero": "aventura educativa",
+    "tema": "Cada ser vivo necesita tiempo y cuidado para crecer",
+    "sinopsis": "Bruno y Tinkie visitan el jardín del cielo, resuelven una dificultad con calma y practican paciencia.",
+    "palabra_clave": "germinar",
+    "imagen": "",
+    "archivo": "semanal-semillas-viajeras-222.json"
   }
 ]
