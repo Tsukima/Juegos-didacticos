@@ -29,3 +29,12 @@ export async function bindMiniDaily(){
     root.innerHTML=`<div class="mini-section-title"><div><span class="mini-label">Minicuento del día · ${escapeHtml(story.fecha)}</span><h2>${escapeHtml(story.emoji)} ${escapeHtml(story.titulo)}</h2></div><strong>${escapeHtml(story.duracion_minutos)} min</strong></div><div class="mini-daily-pages">${story.paginas.map((page,index)=>`<p><b>${index+1}</b>${escapeHtml(page)}</p>`).join('')}</div><div class="mini-daily-tools"><article><small>Para conversar</small><strong>${escapeHtml(story.reflexion)}</strong></article><article><small>Regulación para hoy</small><strong>${escapeHtml(story.actividad_regulacion)}</strong></article></div>`;
   }catch{root.innerHTML='<h2>Minicuento del día</h2><p>No pudimos cargarlo ahora. Puedes volver a intentarlo en unos minutos.</p>';}
 }
+
+export async function miniDailyScreen(){
+  try{
+    const catalog=await fetch('content/mini-diarios/index.json',{cache:'no-store'}).then(response=>response.ok?response.json():Promise.reject());
+    if(!catalog.length)return '<div class="mini-world"><a class="mini-back" href="#inicio">← Volver al inicio</a><section class="mini-section"><h1>Minicuento de hoy</h1><p>La primera historia breve llegará en la próxima publicación.</p></section></div>';
+    const story=await fetch(`content/mini-diarios/${encodeURIComponent(catalog[0].archivo)}`,{cache:'no-store'}).then(response=>response.ok?response.json():Promise.reject());
+    return `<div class="mini-world"><a class="mini-back" href="#inicio">← Volver al inicio</a><section class="mini-section mini-daily"><div class="mini-section-title"><div><span class="mini-label">Minicuento de hoy · ${escapeHtml(story.fecha)}</span><h1>${escapeHtml(story.emoji)} ${escapeHtml(story.titulo)}</h1></div><strong>${escapeHtml(story.duracion_minutos)} min</strong></div><div class="mini-daily-pages">${story.paginas.map((page,index)=>`<p><b>${index+1}</b>${escapeHtml(page)}</p>`).join('')}</div><div class="mini-daily-tools"><article><small>Para conversar</small><strong>${escapeHtml(story.reflexion)}</strong></article><article><small>Regulación para hoy</small><strong>${escapeHtml(story.actividad_regulacion)}</strong></article></div><div class="mini-next-actions"><a class="mini-button" href="#mini">Explorar Mini Aventuras →</a></div></section></div>`;
+  }catch{return '<div class="card adult-note"><strong>No pudimos cargar el minicuento.</strong><p>Vuelve a intentarlo dentro de un momento.</p></div>';}
+}

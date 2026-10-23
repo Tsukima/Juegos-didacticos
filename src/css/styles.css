@@ -58,6 +58,7 @@ body.focus-mode:before{opacity:.2}.focus-mode .world-glow{display:none}.focus-mo
   .sidebar{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;gap:0;overflow:visible!important;padding:.3rem .25rem calc(.3rem + env(safe-area-inset-bottom))!important}
   .sidebar>a{display:flex!important;min-width:0!important;width:auto!important;flex:none!important;padding:.25rem .1rem!important;overflow:hidden;text-overflow:ellipsis}
   .sidebar>a.nav-secondary{display:none!important}
+  .sidebar>a[data-route="comics"]{display:none!important}
   .sidebar>a[data-route="equipo"],.sidebar>a[data-route="logros"]{display:none!important}
   .mobile-more-toggle{display:flex;border:0;background:transparent;color:var(--muted);font:inherit;font-size:.68rem;font-weight:800;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:.25rem .1rem;border-radius:14px}
   .mobile-more-toggle>span{height:30px;display:grid;place-items:center;font-size:1.25rem;letter-spacing:.08em}.mobile-more-toggle.active{background:var(--mint);color:var(--teal)}

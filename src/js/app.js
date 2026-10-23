@@ -9,7 +9,7 @@ import {gameScreen} from './screens/game.js?v=4';
 import {securityGameScreen} from './screens/security-game.js?v=4';
 import {storyScreen, bindStoryScreen} from './screens/story.js';
 import {onboardingScreen, bindOnboarding} from './screens/onboarding.js';
-import {miniScreen,bindMiniDaily} from './screens/mini.js';
+import {miniScreen,miniDailyScreen,bindMiniDaily} from './screens/mini.js';
 import {miniGameScreen,bindMiniGame} from './screens/mini-game.js';
 import {miniStoryScreen,bindMiniStory} from './screens/mini-story.js';
 import {miniSoundScreen,bindMiniSound} from './screens/mini-sound.js';
@@ -22,7 +22,7 @@ import {setupPwaInstall} from './core/pwa.js';
 import {setupEmailAuth} from './core/email-auth-ui.js';
 import {setupCloudProgress} from './core/cloud-progress.js';
 
-const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, equipo:teamScreen, misiones:missionsScreen, lectura:readingScreen, comics:comicsScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
+const routes = {inicio:homeScreen, bienvenida:onboardingScreen, mini:miniScreen, 'mini-temas':miniScreen, 'mini-diario':miniDailyScreen, equipo:teamScreen, misiones:missionsScreen, lectura:readingScreen, comics:comicsScreen, logros:achievementsScreen, valores:valuesScreen, seguridad:securityScreen, adultos:adultsScreen};
 
 function parse() {
   const raw = location.hash.slice(1) || 'inicio';
