@@ -7,26 +7,47 @@
   "titulo": "La meta compartida",
   "valor": "autorregulación",
   "sinopsis": "Todos encuentran una manera propia de llegar a la meta.",
+  "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-3.png",
   "paneles": [
     {
       "numero": 1,
-      "texto": "Cada compañero elige una velocidad cómoda.",
+      "texto": "La última ruta brilla frente al equipo y, a lo lejos, aparece la meta.",
       "alt": "Escena 1 de La meta compartida."
     },
     {
       "numero": 2,
-      "texto": "Nadie queda atrás ni pierde la carrera.",
+      "texto": "Cada compañero elige una velocidad cómoda para su cuerpo y su vehículo.",
       "alt": "Escena 2 de La meta compartida."
     },
     {
       "numero": 3,
-      "texto": "Celebran las pausas que les ayudaron.",
+      "texto": "Turbo observa a Mio y reduce la velocidad para acompañarla.",
       "alt": "Escena 3 de La meta compartida."
     },
     {
       "numero": 4,
-      "texto": "La copa dice: escuchar tu cuerpo es una victoria.",
+      "texto": "Ante un pequeño desnivel, todos comparten ideas y se ayudan a superarlo.",
       "alt": "Escena 4 de La meta compartida."
+    },
+    {
+      "numero": 5,
+      "texto": "El grupo comprueba que nadie se ha quedado atrás y continúa unido.",
+      "alt": "Los amigos avanzan juntos por el tramo final."
+    },
+    {
+      "numero": 6,
+      "texto": "Cruzan la meta al mismo tiempo, celebrando el esfuerzo y no la velocidad.",
+      "alt": "Todo el equipo atraviesa unido la línea de llegada."
+    },
+    {
+      "numero": 7,
+      "texto": "Tinkie recuerda las pausas, las respiraciones y las decisiones que les ayudaron.",
+      "alt": "Los amigos descansan y conversan alegremente junto a la pista."
+    },
+    {
+      "numero": 8,
+      "texto": "La copa compartida les enseña que escuchar el cuerpo también es una victoria.",
+      "alt": "El equipo celebra alrededor de una copa con un corazón."
     }
   ],
   "reflexion": "¿Dónde viste autorregulación durante los tres capítulos?"

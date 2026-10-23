@@ -33,8 +33,10 @@ const issue=catalog.length+1;
 const entries=[];
 for(let index=0;index<3;index++){
   const [title,summary,panels]=arc.chapters[index];
+  const transitions=['El equipo observa una señal nueva antes de continuar.','Cada compañero comparte una idea y escucha las demás.','Hacen una pausa breve para comprobar cómo se sienten.','La siguiente pista aparece cuando avanzan juntos.'];
+  const expandedPanels=panels.flatMap((text,panel)=>[text,transitions[panel]]);
   const id=`comic-${date}-capitulo-${index+1}`;
-  const story={id,fecha:date,coleccion:arc.title,edicion:issue,capitulo:index+1,titulo:title,valor:arc.value,sinopsis:summary,paneles:panels.map((texto,panel)=>({numero:panel+1,texto,alt:`Escena ${panel+1} de ${title}.`})),reflexion:index===2?`¿Dónde viste ${arc.value} durante los tres capítulos?`:'¿Qué crees que ocurrirá en el siguiente capítulo?'};
+  const story={id,fecha:date,coleccion:arc.title,edicion:issue,capitulo:index+1,titulo:title,valor:arc.value,sinopsis:summary,imagen:'',paneles:expandedPanels.map((texto,panel)=>({numero:panel+1,texto,alt:`Escena ${panel+1} de ${title}.`})),reflexion:index===2?`¿Dónde viste ${arc.value} durante los tres capítulos?`:'¿Qué crees que ocurrirá en el siguiente capítulo?'};
   const filename=`${id}.json`;
   if(!dryRun)await writeFile(resolve(directory,filename),`${JSON.stringify(story,null,2)}\n`,'utf8');
   entries.push({id,fecha:date,coleccion:arc.title,edicion:issue,capitulo:index+1,titulo:title,valor:arc.value,sinopsis:summary,archivo:filename});

@@ -7,6 +7,7 @@
   "titulo": "Motores preparados",
   "valor": "autorregulación",
   "sinopsis": "Turbo invita al equipo a una carrera donde también cuenta saber parar.",
+  "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-1.png",
   "paneles": [
     {
       "numero": 1,
@@ -27,6 +28,26 @@
       "numero": 4,
       "texto": "La primera pista dice: respirar también es avanzar.",
       "alt": "Escena 4 de Motores preparados."
+    },
+    {
+      "numero": 5,
+      "texto": "Mio observa cada luz con atención y descubre que ninguna obliga a correr.",
+      "alt": "Mio estudia el semáforo con una lupa."
+    },
+    {
+      "numero": 6,
+      "texto": "Tinkie invita al equipo a aflojar las manos y apoyar bien los pies.",
+      "alt": "Tinkie guía una pausa tranquila antes de comenzar."
+    },
+    {
+      "numero": 7,
+      "texto": "Todos toman aire lentamente y notan cómo cambia la tensión de sus cuerpos.",
+      "alt": "El equipo respira unido dentro de sus vehículos."
+    },
+    {
+      "numero": 8,
+      "texto": "Una huella luminosa aparece junto a la pista y señala la primera ruta.",
+      "alt": "Los amigos descubren una pista luminosa junto al circuito."
     }
   ],
   "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"

@@ -7,26 +7,47 @@
   "titulo": "La curva de la paciencia",
   "valor": "autorregulación",
   "sinopsis": "Una curva difícil enseña a elegir el ritmo adecuado.",
+  "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-2.png",
   "paneles": [
     {
       "numero": 1,
-      "texto": "Turbo nota que su motor va demasiado rápido.",
+      "texto": "El equipo comienza a recorrer la pista y se acerca a una curva marcada con amarillo.",
       "alt": "Escena 1 de La curva de la paciencia."
     },
     {
       "numero": 2,
-      "texto": "Bruno acompaña una respiración lenta.",
+      "texto": "Turbo nota que su motor y su cuerpo van demasiado rápido.",
       "alt": "Escena 2 de La curva de la paciencia."
     },
     {
       "numero": 3,
-      "texto": "El equipo cruza la curva sin competir.",
+      "texto": "Bruno se coloca en un lugar seguro y le propone detenerse un momento.",
       "alt": "Escena 3 de La curva de la paciencia."
     },
     {
       "numero": 4,
-      "texto": "Una bandera amarilla revela el último camino.",
+      "texto": "Bruno muestra una respiración lenta: tomar aire, hacer una pausa y soltarlo.",
       "alt": "Escena 4 de La curva de la paciencia."
+    },
+    {
+      "numero": 5,
+      "texto": "Turbo afloja las manos, respira y siente que puede volver a elegir su velocidad.",
+      "alt": "Turbo respira con los ojos cerrados y relaja su postura."
+    },
+    {
+      "numero": 6,
+      "texto": "Los demás esperan sin presionarlo y preparan juntos una ruta cómoda.",
+      "alt": "Los amigos esperan y señalan una trayectoria segura."
+    },
+    {
+      "numero": 7,
+      "texto": "El equipo atraviesa la curva a su propio ritmo, sin competir ni dejar a nadie atrás.",
+      "alt": "Todos recorren la curva manteniendo una distancia segura."
+    },
+    {
+      "numero": 8,
+      "texto": "Al otro lado, una bandera amarilla revela el camino que conduce hacia la meta.",
+      "alt": "El equipo encuentra una bandera amarilla y el último camino."
     }
   ],
   "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"

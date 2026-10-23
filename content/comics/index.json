@@ -8,6 +8,7 @@
     "titulo": "Motores preparados",
     "valor": "autorregulación",
     "sinopsis": "Turbo invita al equipo a una carrera donde también cuenta saber parar.",
+    "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-1.png",
     "archivo": "comic-2026-10-23-capitulo-1.json"
   },
   {
@@ -19,6 +20,7 @@
     "titulo": "La curva de la paciencia",
     "valor": "autorregulación",
     "sinopsis": "Una curva difícil enseña a elegir el ritmo adecuado.",
+    "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-2.png",
     "archivo": "comic-2026-10-23-capitulo-2.json"
   },
   {
@@ -30,6 +32,7 @@
     "titulo": "La meta compartida",
     "valor": "autorregulación",
     "sinopsis": "Todos encuentran una manera propia de llegar a la meta.",
+    "imagen": "images/comics/carrera-caminos-tranquilos/capitulo-3.png",
     "archivo": "comic-2026-10-23-capitulo-3.json"
   }
 ]

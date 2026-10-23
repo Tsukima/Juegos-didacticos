@@ -1,4 +1,4 @@
-import {readFile} from 'node:fs/promises';
+import {access,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
 
 const directory=resolve('content/comics');
@@ -11,8 +11,9 @@ for(const item of catalog){
   try{
     const comic=JSON.parse(await readFile(resolve(directory,item.archivo),'utf8'));
     if(comic.id!==item.id||comic.capitulo!==item.capitulo)errors.push(`${item.archivo} no coincide con el índice.`);
-    if(!Array.isArray(comic.paneles)||comic.paneles.length<4)errors.push(`${item.id} necesita al menos cuatro viñetas.`);
+    if(!Array.isArray(comic.paneles)||comic.paneles.length<8)errors.push(`${item.id} necesita al menos ocho viñetas.`);
     if(!comic.reflexion)errors.push(`${item.id} necesita una reflexión.`);
+    if(comic.imagen)try{await access(resolve('public',comic.imagen));}catch{errors.push(`${item.id}: falta la ilustración ${comic.imagen}.`);}
   }catch{errors.push(`No se pudo leer ${item.archivo}.`);}
 }
 const dates=new Set(catalog.map(item=>item.fecha));
