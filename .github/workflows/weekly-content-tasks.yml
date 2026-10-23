@@ -38,6 +38,11 @@ jobs:
           else
             echo "long_stories=false" >> "$GITHUB_OUTPUT"
           fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$weekday" == "3" ]]; then
+            echo "comics=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "comics=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Descargar el proyecto
         if: steps.clock.outputs.publish == 'true'
         uses: actions/checkout@v4
@@ -56,19 +61,20 @@ jobs:
       - name: Crear el minicuento del día
         if: steps.clock.outputs.publish == 'true'
         run: node scripts/generate-daily-mini-story.mjs
-      - name: Crear cuentos largos para todas las edades
+      - name: Crear un cuento largo
         if: steps.clock.outputs.publish == 'true' && steps.clock.outputs.long_stories == 'true'
         env:
           STORY_LENGTH: long
-        run: |
-          node scripts/generate-weekly-story.mjs
-          node scripts/generate-weekly-story.mjs
-          node scripts/generate-weekly-story.mjs
+        run: node scripts/generate-weekly-story.mjs
+      - name: Crear tres capítulos de cómic
+        if: steps.clock.outputs.publish == 'true' && steps.clock.outputs.comics == 'true'
+        run: node scripts/generate-weekly-comic.mjs
       - name: Validar contenido y aplicación
         if: steps.clock.outputs.publish == 'true'
         run: |
           npm run validate:content
           npm run validate:mini
+          node scripts/validate-comics.mjs
           npm run build
       - name: Guardar en main y activar el despliegue
         if: steps.clock.outputs.publish == 'true'
