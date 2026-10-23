@@ -1,17 +1,14 @@
-name: Crear y publicar contenido semanal
+name: Publicar cuentos programados
 
 on:
   schedule:
-    - cron: '0 8 * * 0'
+    # Se prueban ambas horas UTC; el paso horario conserva las 10:00 de Madrid con horario de verano e invierno.
+    - cron: '0 8 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
-    inputs:
-      tema:
-        description: Tema opcional para el próximo episodio
-        required: false
-        type: string
 
 concurrency:
-  group: weekly-content-tasks
+  group: scheduled-content
   cancel-in-progress: false
 
 permissions:
@@ -21,36 +18,68 @@ jobs:
   create-content:
     runs-on: ubuntu-latest
     steps:
+      - name: Comprobar las 10:00 en Madrid
+        id: clock
+        shell: bash
+        env:
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          offset=$(TZ=Europe/Madrid date +%z)
+          weekday=$(TZ=Europe/Madrid date +%u)
+          expected_schedule="0 9 * * *"
+          [[ "$offset" == "+0200" ]] && expected_schedule="0 8 * * *"
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$EVENT_SCHEDULE" == "$expected_schedule" ]]; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "$weekday" == "1" || "$weekday" == "4" ]]; then
+            echo "long_stories=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "long_stories=false" >> "$GITHUB_OUTPUT"
+          fi
       - name: Descargar el proyecto
+        if: steps.clock.outputs.publish == 'true'
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
       - name: Preparar Node
+        if: steps.clock.outputs.publish == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
       - name: Instalar dependencias
+        if: steps.clock.outputs.publish == 'true'
         run: npm ci
-      - name: Crear un cuento sin servicios externos
+      - name: Crear el minicuento del día
+        if: steps.clock.outputs.publish == 'true'
+        run: node scripts/generate-daily-mini-story.mjs
+      - name: Crear cuentos largos para todas las edades
+        if: steps.clock.outputs.publish == 'true' && steps.clock.outputs.long_stories == 'true'
         env:
-          REQUESTED_THEME: ${{ inputs.tema }}
-        run: node scripts/generate-weekly-story.mjs
+          STORY_LENGTH: long
+        run: |
+          node scripts/generate-weekly-story.mjs
+          node scripts/generate-weekly-story.mjs
+          node scripts/generate-weekly-story.mjs
       - name: Validar contenido y aplicación
+        if: steps.clock.outputs.publish == 'true'
         run: |
           npm run validate:content
           npm run validate:mini
           npm run build
       - name: Guardar en main y activar el despliegue
+        if: steps.clock.outputs.publish == 'true'
         shell: bash
         run: |
           git config user.name "tinkie-content-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add content/historias/
+          git add content/
           if git diff --cached --quiet; then
             echo "No hay contenido nuevo que guardar."
             exit 0
           fi
-          git commit -m "content: añadir cuento semanal automático"
+          git commit -m "content: publicar cuentos programados"
           git push origin HEAD:main

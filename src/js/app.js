@@ -9,7 +9,7 @@ import {gameScreen} from './screens/game.js?v=4';
 import {securityGameScreen} from './screens/security-game.js?v=4';
 import {storyScreen, bindStoryScreen} from './screens/story.js';
 import {onboardingScreen, bindOnboarding} from './screens/onboarding.js';
-import {miniScreen} from './screens/mini.js';
+import {miniScreen,bindMiniDaily} from './screens/mini.js';
 import {miniGameScreen,bindMiniGame} from './screens/mini-game.js';
 import {miniStoryScreen,bindMiniStory} from './screens/mini-story.js';
 import {miniSoundScreen,bindMiniSound} from './screens/mini-sound.js';
@@ -66,6 +66,7 @@ function bindPage() {
   bindMiniGame();
   bindMiniStory();
   bindMiniSound();
+  bindMiniDaily();
   bindTeam();
   document.querySelector('#change-companion')?.addEventListener('click', () => {
     const state = store.get();

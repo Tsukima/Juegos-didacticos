@@ -28,7 +28,7 @@ const [slug,title,place,discovery,problem,solution,value,word,syllables,definiti
 const id=`semanal-${slug}-${episode}`;
 if(catalog.some(item=>item.id===id)) throw new Error(`El cuento ${id} ya existe.`);
 const cap=value=>value.charAt(0).toUpperCase()+value.slice(1);
-const pages=[
+let pages=[
   `${hero} y Tinkie llegaron a ${place}. Allí descubrieron ${discovery}.`,
   `${cap(problem)}. Antes de actuar, respiraron y observaron lo que ocurría.`,
   `Tinkie escuchó todas las ideas. ${hero} recordó la palabra «${word}» y explicó por qué podía ayudarles.`,
@@ -37,6 +37,11 @@ const pages=[
   `Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado.`,
   `Al terminar, celebraron el esfuerzo. ${learning}. ${hero} guardó el aprendizaje para otra aventura.`
 ];
+if(process.env.STORY_LENGTH==='long'){
+  const details=level==='inicial'?'Conversaron con frases claras y repitieron la pista más importante.':level==='intermedio'?'Compararon lo que ya sabían con la nueva pista y explicaron sus razones.':'Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.';
+  pages=pages.map((page,index)=>`${page} ${index%2===0?details:'Cada integrante aportó una observación diferente y el grupo la recibió con respeto.'}`);
+  pages.push(`De regreso, ${hero} escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar ${value} en casa, en clase y durante el próximo reto.`);
+}
 const q=(enunciado,opciones,correcta,explicacion)=>({enunciado,opciones,correcta,explicacion});
 const story={id,titulo:`${title} · Episodio ${episode}`,nivel_lector:level,edad_min:min,edad_max:max,valor:value,serie:'Expediciones de Tinkie',episodio:episode,genero:'aventura educativa',tema:process.env.REQUESTED_THEME?.trim()||learning,sinopsis:`${hero} y Tinkie visitan ${place}, resuelven una dificultad con calma y practican ${value}.`,imagen:'',palabra_clave:{palabra:word,silabas:syllables,definicion:definition,ejemplo_cuento:`${hero} usó «${word}» para explicar una idea importante.`,ejemplo_cotidiano:`Puedes practicar ${word} durante una tarea o un juego acompañado.`,reto:`Busca hoy una ocasión segura para practicar ${word}.`,pregunta:q(`¿Qué significa «${word}»?`,[definition,'Hacer todo con prisa','Evitar escuchar'],0,definition)},paginas:pages,narracion:{formato:'audio/ogg; codecs=opus',voces:{narradora:'cálida y tranquila'},tono_por_pagina:pages.map((_,i)=>i===0?'curioso':i===pages.length-1?'reflexivo':'tranquilo'),audio_por_pagina:pages.map(()=>null)},preguntas:[q('¿Qué descubrieron al comenzar?',[discovery,'Una carrera sin reglas','Un premio inesperado'],0,`Descubrieron ${discovery}.`),q('¿Cómo avanzó el equipo?',['Sin mirar',solution,'Abandonando la misión'],1,`El equipo ${solution}.`),q('¿Qué aprendieron?',['Que siempre hay que competir','Que escuchar no sirve',learning],2,learning)]};
 if(dryRun){console.log(`Prueba correcta: «${story.titulo}» (${min}-${max} años).`);process.exit(0);}

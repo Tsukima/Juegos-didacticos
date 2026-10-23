@@ -1,5 +1,7 @@
 import {miniStories,miniTopics} from '../src/js/mini/mini-data.js';
 import {allMissions,bridgeMissionCount} from '../src/js/missions/mission-engine.js';
+import {readFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
 
 const problems=[];
 const storyIds=new Set();
@@ -24,9 +26,23 @@ for(const story of miniStories){
   if(!Number.isInteger(story.question?.correct)||story.question.correct<0||story.question.correct>1) problems.push(`${story.id} tiene una respuesta correcta inválida.`);
 }
 
+const dailyDirectory=resolve('content/mini-diarios');
+const dailyCatalog=JSON.parse(await readFile(resolve(dailyDirectory,'index.json'),'utf8'));
+const dailyIds=new Set();
+for(const item of dailyCatalog){
+  if(dailyIds.has(item.id)) problems.push(`ID diario duplicado: ${item.id}.`);
+  dailyIds.add(item.id);
+  try{
+    const story=JSON.parse(await readFile(resolve(dailyDirectory,item.archivo),'utf8'));
+    if(story.id!==item.id||story.fecha!==item.fecha||!story.titulo) problems.push(`${item.archivo} no coincide con el índice diario.`);
+    if(!Array.isArray(story.paginas)||story.paginas.length<3) problems.push(`${item.id} necesita al menos 3 páginas.`);
+    if(!story.reflexion||!story.actividad_regulacion) problems.push(`${item.id} necesita reflexión y actividad de regulación.`);
+  }catch{problems.push(`No se pudo leer ${item.archivo}.`);}
+}
+
 if(problems.length){
   console.error(problems.join('\n'));
   process.exit(1);
 }
 
-console.log(`Contenido conectado válido: ${miniStories.length} cuentos Mini y ${allMissions.length} misiones normales, incluidas ${bridgeMissionCount} misiones puente.`);
+console.log(`Contenido conectado válido: ${miniStories.length} cuentos Mini, ${dailyCatalog.length} minicuentos diarios y ${allMissions.length} misiones normales.`);
