@@ -48,6 +48,22 @@
     "archivo": "inicial-capa-compartida.json"
   },
   {
+    "id": "episodio-103-brujula-de-las-preguntas",
+    "titulo": "Lía y la brújula de las preguntas",
+    "nivel_lector": "inicial",
+    "edad_min": 6,
+    "edad_max": 8,
+    "valor": "curiosidad y colaboración",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 103,
+    "genero": "aventura educativa",
+    "tema": "Preguntar, observar y colaborar ayuda a encontrar soluciones.",
+    "sinopsis": "Lía, Nico y Brizna encuentran una brújula mágica que solo señala el camino cuando formulan buenas preguntas. Para llegar al Jardín de las Ideas deben reparar un puente incompleto observando, investigando y trabajando en equipo.",
+    "palabra_clave": "investigar",
+    "imagen": "",
+    "archivo": "episodio-103-brujula-de-las-preguntas.json"
+  },
+  {
     "id": "inicial-carrera-pausas",
     "titulo": "La carrera de las pausas",
     "nivel_lector": "inicial",

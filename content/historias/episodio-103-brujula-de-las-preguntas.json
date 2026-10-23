@@ -1,0 +1,79 @@
+{
+  "id": "episodio-103-brujula-de-las-preguntas",
+  "titulo": "Lía y la brújula de las preguntas",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "curiosidad y colaboración",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 103,
+  "genero": "aventura educativa",
+  "tema": "Preguntar, observar y colaborar ayuda a encontrar soluciones.",
+  "sinopsis": "Lía, Nico y Brizna encuentran una brújula mágica que solo señala el camino cuando formulan buenas preguntas. Para llegar al Jardín de las Ideas deben reparar un puente incompleto observando, investigando y trabajando en equipo.",
+  "imagen": null,
+  "palabra_clave": {
+    "palabra": "investigar",
+    "silabas": ["in", "ves", "ti", "gar"],
+    "definicion": "Buscar información y observar con atención para comprender algo.",
+    "ejemplo_cuento": "Lía y Nico decidieron investigar por qué faltaba una pieza del puente.",
+    "ejemplo_cotidiano": "Investigas cuando buscas pistas para resolver una pregunta.",
+    "reto": "Formula una pregunta y di qué pista observarías para intentar responderla.",
+    "pregunta": {
+      "enunciado": "¿Qué significa investigar?",
+      "opciones": [
+        "Buscar información y observar con atención para comprender algo.",
+        "Elegir una respuesta sin mirar las pistas.",
+        "Caminar muy rápido sin detenerse."
+      ],
+      "correcta": 0,
+      "explicacion": "Investigar significa buscar información y observar con atención para comprender algo."
+    }
+  },
+  "paginas": [
+    "Bajo el árbol más antiguo del Bosque de las Ideas, Lía buscaba una bellota azul. Nico encontró una pequeña brújula dorada entre las hojas.",
+    "La brújula no señalaba el norte. Su aguja giraba hasta detenerse cada vez que alguien hacía una buena pregunta.",
+    "Brizna iluminó un mapa con tres símbolos: una pregunta, una lupa y una semilla. Lía preguntó adónde llevaba cada camino y la brújula brilló.",
+    "Los amigos siguieron el sendero hasta un arroyo. Allí había un puente de piedras, pero faltaba una pieza en el centro.",
+    "La tortuga sabia les preguntó qué materiales tenían y cómo podían probarlos sin hacerse daño. Lía y Nico investigaron los troncos y eligieron dos que juntos formaban una pasarela segura.",
+    "Al cruzar, una semilla dorada brotó en el Jardín de las Ideas. La brújula se convirtió en una tarjeta: Una buena pregunta puede abrir un camino.",
+    "Lía guardó la tarjeta y preguntó qué encontrarían después. Un sendero plateado se iluminó y los tres amigos avanzaron juntos."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {"narradora": "cálida y tranquila"},
+    "tono_por_pagina": ["curioso", "misterioso", "curioso", "atento", "colaborativo", "maravillado", "reflexivo"],
+    "audio_por_pagina": [null, null, null, null, null, null, null]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué hacía brillar la brújula?",
+      "opciones": ["Una buena pregunta", "Un ruido fuerte", "Una carrera"],
+      "correcta": 0,
+      "explicacion": "La brújula brillaba cuando alguien formulaba una buena pregunta."
+    },
+    {
+      "enunciado": "¿Cómo resolvieron el problema del puente?",
+      "opciones": ["Se fueron sin intentarlo", "Investigaron los materiales y probaron una pasarela segura", "Esperaron a que desapareciera el arroyo"],
+      "correcta": 1,
+      "explicacion": "Observaron los materiales, eligieron dos troncos y probaron la pasarela con cuidado."
+    },
+    {
+      "enunciado": "¿Qué aprendizaje recibieron?",
+      "opciones": ["Preguntar, observar y colaborar ayuda a encontrar soluciones", "Solo hay una forma de resolver cada problema", "No hace falta escuchar a los demás"],
+      "correcta": 0,
+      "explicacion": "El cuento muestra que preguntar, observar y colaborar ayuda a encontrar soluciones."
+    }
+  ],
+  "comic": {
+    "paneles": 7,
+    "ilustraciones": [
+      {"escena": "Lía, Nico y Brizna encuentran la brújula dorada bajo el árbol de hojas estrelladas.", "texto": "¿Qué será este objeto?", "alt": "Lía sostiene una brújula dorada mientras Nico observa y Brizna ilumina las hojas."},
+      {"escena": "La brújula gira y se detiene cuando Lía formula una pregunta.", "texto": "Una buena pregunta la hace brillar.", "alt": "La aguja de la brújula emite una luz cálida mientras Lía piensa y Nico escribe en su libreta."},
+      {"escena": "El mapa muestra los símbolos de pregunta, lupa y semilla.", "texto": "Primero observemos.", "alt": "Un mapa dorado proyecta tres símbolos luminosos sobre el suelo del bosque."},
+      {"escena": "El equipo descubre el puente incompleto sobre un arroyo brillante.", "texto": "¿Qué pieza falta?", "alt": "Lía examina el puente, Nico compara piedras y Brizna ilumina unas huellas junto al arroyo."},
+      {"escena": "La tortuga sabia señala los troncos disponibles.", "texto": "¿Qué materiales podemos usar?", "alt": "Una tortuga amable conversa con los niños junto a un montón de troncos pequeños."},
+      {"escena": "Lía y Nico construyen una pasarela y la prueban con una rama.", "texto": "Probemos con cuidado.", "alt": "Los niños colocan dos troncos sobre el hueco del puente mientras Brizna ilumina la zona."},
+      {"escena": "La semilla dorada brota y un sendero plateado aparece hacia la próxima aventura.", "texto": "¿Qué descubriremos ahora?", "alt": "Una planta luminosa crece en el jardín mientras los tres amigos miran un sendero plateado."}
+    ]
+  }
+}
