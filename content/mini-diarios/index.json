@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-10-26",
+    "fecha": "2026-10-26",
+    "titulo": "La piedra que escuchaba",
+    "emoji": "🪨",
+    "archivo": "mini-diario-2026-10-26.json"
+  },
+  {
     "id": "mini-diario-2026-10-25",
     "fecha": "2026-10-25",
     "titulo": "El semáforo interior",

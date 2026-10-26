@@ -336,6 +336,22 @@
     "archivo": "inicial-portal-seguro.json"
   },
   {
+    "id": "semanal-eco-amable-223",
+    "titulo": "El eco de las palabras amables · Episodio 223",
+    "nivel_lector": "inicial",
+    "edad_min": 6,
+    "edad_max": 8,
+    "valor": "amabilidad",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 223,
+    "genero": "aventura educativa",
+    "tema": "Un tono amable ayuda a que otros se sientan seguros",
+    "sinopsis": "Lumo y Tinkie visitan la cueva del eco, resuelven una dificultad con calma y practican amabilidad.",
+    "palabra_clave": "tono",
+    "imagen": "",
+    "archivo": "semanal-eco-amable-223.json"
+  },
+  {
     "id": "intermedio-huevo-dinosaurio",
     "titulo": "El huevo que hacía toc toc",
     "nivel_lector": "intermedio",
