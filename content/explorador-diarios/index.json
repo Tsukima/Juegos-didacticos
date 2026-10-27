@@ -1,5 +1,14 @@
 [
   {
+    "id": "explorador-diario-2026-10-27",
+    "fecha": "2026-10-27",
+    "titulo": "El hilo de la respiración",
+    "emoji": "🧵",
+    "edad_min": 8,
+    "edad_max": 12,
+    "archivo": "explorador-diario-2026-10-27.json"
+  },
+  {
     "id": "explorador-diario-2026-10-26",
     "fecha": "2026-10-26",
     "titulo": "La piedra que escuchaba",
