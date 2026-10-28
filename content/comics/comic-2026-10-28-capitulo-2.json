@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-10-28-capitulo-2",
+  "fecha": "2026-10-28",
+  "coleccion": "El misterio de la estrella verde",
+  "edicion": 4,
+  "capitulo": 2,
+  "titulo": "Las voces del bosque",
+  "valor": "colaboración",
+  "sinopsis": "El equipo sigue la señal y aprende a escuchar antes de avanzar.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Hilito encuentra huellas bajo una hoja.",
+      "alt": "Escena 1 de Las voces del bosque."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de Las voces del bosque."
+    },
+    {
+      "numero": 3,
+      "texto": "Todos guardan silencio durante diez segundos.",
+      "alt": "Escena 3 de Las voces del bosque."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de Las voces del bosque."
+    },
+    {
+      "numero": 5,
+      "texto": "Un eco repite la palabra «juntos».",
+      "alt": "Escena 5 de Las voces del bosque."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de Las voces del bosque."
+    },
+    {
+      "numero": 7,
+      "texto": "Las huellas conducen hasta una puerta luminosa.",
+      "alt": "Escena 7 de Las voces del bosque."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de Las voces del bosque."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}

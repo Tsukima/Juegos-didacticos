@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-10-28-capitulo-3",
+  "fecha": "2026-10-28",
+  "coleccion": "El misterio de la estrella verde",
+  "edicion": 4,
+  "capitulo": 3,
+  "titulo": "Una luz para compartir",
+  "valor": "colaboración",
+  "sinopsis": "Los amigos descubren que la estrella necesitaba reunir sus ideas.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "La puerta se abre cuando cada amigo aporta una pista.",
+      "alt": "Escena 1 de Una luz para compartir."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de Una luz para compartir."
+    },
+    {
+      "numero": 3,
+      "texto": "Dentro encuentran una pequeña estrella cansada.",
+      "alt": "Escena 3 de Una luz para compartir."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de Una luz para compartir."
+    },
+    {
+      "numero": 5,
+      "texto": "Construyen un faro con materiales seguros.",
+      "alt": "Escena 5 de Una luz para compartir."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de Una luz para compartir."
+    },
+    {
+      "numero": 7,
+      "texto": "La estrella vuelve al cielo y agradece la colaboración.",
+      "alt": "Escena 7 de Una luz para compartir."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de Una luz para compartir."
+    }
+  ],
+  "reflexion": "¿Dónde viste colaboración durante los tres capítulos?"
+}

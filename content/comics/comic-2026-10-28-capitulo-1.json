@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-10-28-capitulo-1",
+  "fecha": "2026-10-28",
+  "coleccion": "El misterio de la estrella verde",
+  "edicion": 4,
+  "capitulo": 1,
+  "titulo": "La señal en el cielo",
+  "valor": "colaboración",
+  "sinopsis": "Tinkie y Roki ven una estrella verde que parpadea tres veces.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "La estrella dibuja una ruta sobre las nubes.",
+      "alt": "Escena 1 de La señal en el cielo."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de La señal en el cielo."
+    },
+    {
+      "numero": 3,
+      "texto": "Roki quiere correr, pero Tinkie propone observar.",
+      "alt": "Escena 3 de La señal en el cielo."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de La señal en el cielo."
+    },
+    {
+      "numero": 5,
+      "texto": "Juntos copian el patrón de luces.",
+      "alt": "Escena 5 de La señal en el cielo."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de La señal en el cielo."
+    },
+    {
+      "numero": 7,
+      "texto": "El mapa señala el Bosque Sonoro.",
+      "alt": "Escena 7 de La señal en el cielo."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de La señal en el cielo."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}
