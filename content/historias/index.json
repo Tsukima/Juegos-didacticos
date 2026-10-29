@@ -688,6 +688,22 @@
     "archivo": "semanal-puente-luminoso-221.json"
   },
   {
+    "id": "semanal-reloj-de-pausas-224",
+    "titulo": "El reloj de las pausas valientes · Episodio 224",
+    "nivel_lector": "intermedio",
+    "edad_min": 8,
+    "edad_max": 10,
+    "valor": "autocuidado",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 224,
+    "genero": "aventura educativa",
+    "tema": "Hacer una pausa también forma parte de avanzar",
+    "sinopsis": "Tinkie y Tinkie visitan el taller de los minutos, resuelven una dificultad con calma y practican autocuidado.",
+    "palabra_clave": "pausa",
+    "imagen": "",
+    "archivo": "semanal-reloj-de-pausas-224.json"
+  },
+  {
     "id": "el-mapa-de-las-palabras-perdidas",
     "titulo": "El mapa de las palabras perdidas",
     "nivel_lector": "avanzado",
