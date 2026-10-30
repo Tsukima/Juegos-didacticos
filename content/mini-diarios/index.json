@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-10-30",
+    "fecha": "2026-10-30",
+    "titulo": "El rugido pequeñito",
+    "emoji": "🦖",
+    "archivo": "mini-diario-2026-10-30.json"
+  },
+  {
     "id": "mini-diario-2026-10-29",
     "fecha": "2026-10-29",
     "titulo": "La nube que pidió una pausa",
