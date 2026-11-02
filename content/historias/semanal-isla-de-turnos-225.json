@@ -1,0 +1,104 @@
+{
+  "id": "semanal-isla-de-turnos-225",
+  "titulo": "La isla de los buenos turnos · Episodio 225",
+  "nivel_lector": "avanzado",
+  "edad_min": 10,
+  "edad_max": 12,
+  "valor": "cooperación",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 225,
+  "genero": "aventura educativa",
+  "tema": "Un acuerdo justo permite disfrutar en equipo",
+  "sinopsis": "Roki y Tinkie visitan la isla de los juegos cooperativos, resuelven una dificultad con calma y practican cooperación.",
+  "imagen": "",
+  "palabra_clave": {
+    "palabra": "acuerdo",
+    "silabas": [
+      "a",
+      "cuer",
+      "do"
+    ],
+    "definicion": "Decisión aceptada por varias personas.",
+    "ejemplo_cuento": "Roki usó «acuerdo» para explicar una idea importante.",
+    "ejemplo_cotidiano": "Puedes practicar acuerdo durante una tarea o un juego acompañado.",
+    "reto": "Busca hoy una ocasión segura para practicar acuerdo.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «acuerdo»?",
+      "opciones": [
+        "Decisión aceptada por varias personas.",
+        "Hacer todo con prisa",
+        "Evitar escuchar"
+      ],
+      "correcta": 0,
+      "explicacion": "Decisión aceptada por varias personas."
+    }
+  },
+  "paginas": [
+    "Roki y Tinkie llegaron a la isla de los juegos cooperativos. Allí descubrieron un tablero gigante que necesitaba a todo el equipo. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "Dos fichas querían ocupar el mismo lugar. Antes de actuar, respiraron y observaron lo que ocurría. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Tinkie escuchó todas las ideas. Roki recordó la palabra «acuerdo» y explicó por qué podía ayudarles. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "El equipo imaginó dos soluciones. Revisaron cuál era más tranquila, clara y segura antes de escoger. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Acordaron turnos y celebraron cada avance. Cada paso pequeño permitió descubrir una pista nueva. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Al terminar, celebraron el esfuerzo. Un acuerdo justo permite disfrutar en equipo. Roki guardó el aprendizaje para otra aventura. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "De regreso, Roki escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar cooperación en casa, en clase y durante el próximo reto."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué descubrieron al comenzar?",
+      "opciones": [
+        "un tablero gigante que necesitaba a todo el equipo",
+        "Una carrera sin reglas",
+        "Un premio inesperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Descubrieron un tablero gigante que necesitaba a todo el equipo."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Sin mirar",
+        "acordaron turnos y celebraron cada avance",
+        "Abandonando la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo acordaron turnos y celebraron cada avance."
+    },
+    {
+      "enunciado": "¿Qué aprendieron?",
+      "opciones": [
+        "Que siempre hay que competir",
+        "Que escuchar no sirve",
+        "Un acuerdo justo permite disfrutar en equipo"
+      ],
+      "correcta": 2,
+      "explicacion": "Un acuerdo justo permite disfrutar en equipo"
+    }
+  ]
+}

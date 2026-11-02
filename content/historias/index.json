@@ -1038,5 +1038,21 @@
     "palabra_clave": "germinar",
     "imagen": "",
     "archivo": "semanal-semillas-viajeras-222.json"
+  },
+  {
+    "id": "semanal-isla-de-turnos-225",
+    "titulo": "La isla de los buenos turnos · Episodio 225",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "cooperación",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 225,
+    "genero": "aventura educativa",
+    "tema": "Un acuerdo justo permite disfrutar en equipo",
+    "sinopsis": "Roki y Tinkie visitan la isla de los juegos cooperativos, resuelven una dificultad con calma y practican cooperación.",
+    "palabra_clave": "acuerdo",
+    "imagen": "",
+    "archivo": "semanal-isla-de-turnos-225.json"
   }
 ]
