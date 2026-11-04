@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-11-04-capitulo-1",
+  "fecha": "2026-11-04",
+  "coleccion": "La carrera de los caminos tranquilos",
+  "edicion": 7,
+  "capitulo": 1,
+  "titulo": "Motores preparados",
+  "valor": "autorregulación",
+  "sinopsis": "Turbo invita al equipo a una carrera donde también cuenta saber parar.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Los vehículos llegan a la línea de salida.",
+      "alt": "Escena 1 de Motores preparados."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de Motores preparados."
+    },
+    {
+      "numero": 3,
+      "texto": "Un semáforo muestra colores desconocidos.",
+      "alt": "Escena 3 de Motores preparados."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de Motores preparados."
+    },
+    {
+      "numero": 5,
+      "texto": "Mio propone descubrir qué significa cada luz.",
+      "alt": "Escena 5 de Motores preparados."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de Motores preparados."
+    },
+    {
+      "numero": 7,
+      "texto": "La primera pista dice: respirar también es avanzar.",
+      "alt": "Escena 7 de Motores preparados."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de Motores preparados."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}

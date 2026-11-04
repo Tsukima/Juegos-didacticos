@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-11-04-capitulo-2",
+  "fecha": "2026-11-04",
+  "coleccion": "La carrera de los caminos tranquilos",
+  "edicion": 7,
+  "capitulo": 2,
+  "titulo": "La curva de la paciencia",
+  "valor": "autorregulación",
+  "sinopsis": "Una curva difícil enseña a elegir el ritmo adecuado.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Turbo nota que su motor va demasiado rápido.",
+      "alt": "Escena 1 de La curva de la paciencia."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de La curva de la paciencia."
+    },
+    {
+      "numero": 3,
+      "texto": "Bruno acompaña una respiración lenta.",
+      "alt": "Escena 3 de La curva de la paciencia."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de La curva de la paciencia."
+    },
+    {
+      "numero": 5,
+      "texto": "El equipo cruza la curva sin competir.",
+      "alt": "Escena 5 de La curva de la paciencia."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de La curva de la paciencia."
+    },
+    {
+      "numero": 7,
+      "texto": "Una bandera amarilla revela el último camino.",
+      "alt": "Escena 7 de La curva de la paciencia."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de La curva de la paciencia."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}
