@@ -352,6 +352,22 @@
     "archivo": "semanal-eco-amable-223.json"
   },
   {
+    "id": "semanal-brujula-curiosa-226",
+    "titulo": "La brújula de las preguntas · Episodio 226",
+    "nivel_lector": "inicial",
+    "edad_min": 6,
+    "edad_max": 8,
+    "valor": "curiosidad",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 226,
+    "genero": "aventura educativa",
+    "tema": "Preguntar e investigar abre caminos para aprender",
+    "sinopsis": "Hilito y Tinkie visitan el bosque de los porqués, resuelven una dificultad con calma y practican curiosidad.",
+    "palabra_clave": "investigar",
+    "imagen": "",
+    "archivo": "semanal-brujula-curiosa-226.json"
+  },
+  {
     "id": "intermedio-huevo-dinosaurio",
     "titulo": "El huevo que hacía toc toc",
     "nivel_lector": "intermedio",
