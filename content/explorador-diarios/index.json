@@ -1,5 +1,14 @@
 [
   {
+    "id": "explorador-diario-2026-11-06",
+    "fecha": "2026-11-06",
+    "titulo": "El rugido pequeñito",
+    "emoji": "🦖",
+    "edad_min": 8,
+    "edad_max": 12,
+    "archivo": "explorador-diario-2026-11-06.json"
+  },
+  {
     "id": "explorador-diario-2026-11-05",
     "fecha": "2026-11-05",
     "titulo": "La nube que pidió una pausa",
