@@ -1,5 +1,14 @@
 [
   {
+    "id": "explorador-diario-2026-11-09",
+    "fecha": "2026-11-09",
+    "titulo": "La piedra que escuchaba",
+    "emoji": "🪨",
+    "edad_min": 8,
+    "edad_max": 12,
+    "archivo": "explorador-diario-2026-11-09.json"
+  },
+  {
     "id": "explorador-diario-2026-11-08",
     "fecha": "2026-11-08",
     "titulo": "El semáforo interior",

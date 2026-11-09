@@ -720,6 +720,22 @@
     "archivo": "semanal-reloj-de-pausas-224.json"
   },
   {
+    "id": "semanal-nube-de-colores-227",
+    "titulo": "La nube que aprendió sus colores · Episodio 227",
+    "nivel_lector": "intermedio",
+    "edad_min": 8,
+    "edad_max": 10,
+    "valor": "educación emocional",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 227,
+    "genero": "aventura educativa",
+    "tema": "Nombrar una emoción ayuda a comprender lo que necesitamos",
+    "sinopsis": "Turbo y Tinkie visitan el observatorio de las emociones, resuelven una dificultad con calma y practican educación emocional.",
+    "palabra_clave": "emoción",
+    "imagen": "",
+    "archivo": "semanal-nube-de-colores-227.json"
+  },
+  {
     "id": "el-mapa-de-las-palabras-perdidas",
     "titulo": "El mapa de las palabras perdidas",
     "nivel_lector": "avanzado",
