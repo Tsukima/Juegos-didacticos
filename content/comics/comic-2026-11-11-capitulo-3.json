@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-11-11-capitulo-3",
+  "fecha": "2026-11-11",
+  "coleccion": "La biblioteca bajo el mar",
+  "edicion": 10,
+  "capitulo": 3,
+  "titulo": "El cuento que regresó",
+  "valor": "curiosidad",
+  "sinopsis": "Los amigos ayudan al libro a encontrar su estante.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "La bibliotecaria tortuga reconoce la portada.",
+      "alt": "Escena 1 de El cuento que regresó."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de El cuento que regresó."
+    },
+    {
+      "numero": 3,
+      "texto": "Cada amigo cuenta una pista del viaje.",
+      "alt": "Escena 3 de El cuento que regresó."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de El cuento que regresó."
+    },
+    {
+      "numero": 5,
+      "texto": "El libro ocupa de nuevo su lugar.",
+      "alt": "Escena 5 de El cuento que regresó."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de El cuento que regresó."
+    },
+    {
+      "numero": 7,
+      "texto": "Una burbuja les regala una pregunta nueva.",
+      "alt": "Escena 7 de El cuento que regresó."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de El cuento que regresó."
+    }
+  ],
+  "reflexion": "¿Dónde viste curiosidad durante los tres capítulos?"
+}

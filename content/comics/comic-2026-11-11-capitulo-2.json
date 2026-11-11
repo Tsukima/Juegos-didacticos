@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-11-11-capitulo-2",
+  "fecha": "2026-11-11",
+  "coleccion": "La biblioteca bajo el mar",
+  "edicion": 10,
+  "capitulo": 2,
+  "titulo": "Palabras entre corales",
+  "valor": "curiosidad",
+  "sinopsis": "El equipo busca sílabas escondidas sin tocar los corales.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Goliat señala una sílaba brillante.",
+      "alt": "Escena 1 de Palabras entre corales."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de Palabras entre corales."
+    },
+    {
+      "numero": 3,
+      "texto": "Roki encuentra otra detrás de una roca.",
+      "alt": "Escena 3 de Palabras entre corales."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de Palabras entre corales."
+    },
+    {
+      "numero": 5,
+      "texto": "Unen las partes y forman «cuidado».",
+      "alt": "Escena 5 de Palabras entre corales."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de Palabras entre corales."
+    },
+    {
+      "numero": 7,
+      "texto": "La palabra abre la biblioteca submarina.",
+      "alt": "Escena 7 de Palabras entre corales."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de Palabras entre corales."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}

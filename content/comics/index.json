@@ -1,5 +1,38 @@
 [
   {
+    "id": "comic-2026-11-11-capitulo-1",
+    "fecha": "2026-11-11",
+    "coleccion": "La biblioteca bajo el mar",
+    "edicion": 10,
+    "capitulo": 1,
+    "titulo": "El libro mojado",
+    "valor": "curiosidad",
+    "sinopsis": "Mio encuentra un libro que deja pequeñas gotas azules.",
+    "archivo": "comic-2026-11-11-capitulo-1.json"
+  },
+  {
+    "id": "comic-2026-11-11-capitulo-2",
+    "fecha": "2026-11-11",
+    "coleccion": "La biblioteca bajo el mar",
+    "edicion": 10,
+    "capitulo": 2,
+    "titulo": "Palabras entre corales",
+    "valor": "curiosidad",
+    "sinopsis": "El equipo busca sílabas escondidas sin tocar los corales.",
+    "archivo": "comic-2026-11-11-capitulo-2.json"
+  },
+  {
+    "id": "comic-2026-11-11-capitulo-3",
+    "fecha": "2026-11-11",
+    "coleccion": "La biblioteca bajo el mar",
+    "edicion": 10,
+    "capitulo": 3,
+    "titulo": "El cuento que regresó",
+    "valor": "curiosidad",
+    "sinopsis": "Los amigos ayudan al libro a encontrar su estante.",
+    "archivo": "comic-2026-11-11-capitulo-3.json"
+  },
+  {
     "id": "comic-2026-11-04-capitulo-1",
     "fecha": "2026-11-04",
     "coleccion": "La carrera de los caminos tranquilos",

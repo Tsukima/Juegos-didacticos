@@ -1,0 +1,54 @@
+{
+  "id": "comic-2026-11-11-capitulo-1",
+  "fecha": "2026-11-11",
+  "coleccion": "La biblioteca bajo el mar",
+  "edicion": 10,
+  "capitulo": 1,
+  "titulo": "El libro mojado",
+  "valor": "curiosidad",
+  "sinopsis": "Mio encuentra un libro que deja pequeñas gotas azules.",
+  "imagen": "",
+  "paneles": [
+    {
+      "numero": 1,
+      "texto": "Una ola deposita el libro en la arena.",
+      "alt": "Escena 1 de El libro mojado."
+    },
+    {
+      "numero": 2,
+      "texto": "El equipo observa una señal nueva antes de continuar.",
+      "alt": "Escena 2 de El libro mojado."
+    },
+    {
+      "numero": 3,
+      "texto": "Sus páginas muestran peces con letras.",
+      "alt": "Escena 3 de El libro mojado."
+    },
+    {
+      "numero": 4,
+      "texto": "Cada compañero comparte una idea y escucha las demás.",
+      "alt": "Escena 4 de El libro mojado."
+    },
+    {
+      "numero": 5,
+      "texto": "Tinkie formula una pregunta para abrirlo.",
+      "alt": "Escena 5 de El libro mojado."
+    },
+    {
+      "numero": 6,
+      "texto": "Hacen una pausa breve para comprobar cómo se sienten.",
+      "alt": "Escena 6 de El libro mojado."
+    },
+    {
+      "numero": 7,
+      "texto": "Aparece una escalera de burbujas.",
+      "alt": "Escena 7 de El libro mojado."
+    },
+    {
+      "numero": 8,
+      "texto": "La siguiente pista aparece cuando avanzan juntos.",
+      "alt": "Escena 8 de El libro mojado."
+    }
+  ],
+  "reflexion": "¿Qué crees que ocurrirá en el siguiente capítulo?"
+}
