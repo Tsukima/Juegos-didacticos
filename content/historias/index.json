@@ -1086,5 +1086,21 @@
     "palabra_clave": "acuerdo",
     "imagen": "",
     "archivo": "semanal-isla-de-turnos-225.json"
+  },
+  {
+    "id": "semanal-portal-cuidadoso-228",
+    "titulo": "El portal de la pregunta segura · Episodio 228",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "seguridad digital",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 228,
+    "genero": "aventura educativa",
+    "tema": "Parar y pedir ayuda es una decisión digital segura",
+    "sinopsis": "Mio y Tinkie visitan la ciudad digital, resuelven una dificultad con calma y practican seguridad digital.",
+    "palabra_clave": "privacidad",
+    "imagen": "",
+    "archivo": "semanal-portal-cuidadoso-228.json"
   }
 ]

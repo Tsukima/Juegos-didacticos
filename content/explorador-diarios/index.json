@@ -1,5 +1,14 @@
 [
   {
+    "id": "explorador-diario-2026-11-12",
+    "fecha": "2026-11-12",
+    "titulo": "La nube que pidió una pausa",
+    "emoji": "☁️",
+    "edad_min": 8,
+    "edad_max": 12,
+    "archivo": "explorador-diario-2026-11-12.json"
+  },
+  {
     "id": "explorador-diario-2026-11-11",
     "fecha": "2026-11-11",
     "titulo": "La mochila de las preocupaciones",

@@ -1,0 +1,105 @@
+{
+  "id": "semanal-portal-cuidadoso-228",
+  "titulo": "El portal de la pregunta segura · Episodio 228",
+  "nivel_lector": "avanzado",
+  "edad_min": 10,
+  "edad_max": 12,
+  "valor": "seguridad digital",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 228,
+  "genero": "aventura educativa",
+  "tema": "Parar y pedir ayuda es una decisión digital segura",
+  "sinopsis": "Mio y Tinkie visitan la ciudad digital, resuelven una dificultad con calma y practican seguridad digital.",
+  "imagen": "",
+  "palabra_clave": {
+    "palabra": "privacidad",
+    "silabas": [
+      "pri",
+      "va",
+      "ci",
+      "dad"
+    ],
+    "definicion": "Cuidado y derecho de proteger la información personal.",
+    "ejemplo_cuento": "Mio usó «privacidad» para explicar una idea importante.",
+    "ejemplo_cotidiano": "Puedes practicar privacidad durante una tarea o un juego acompañado.",
+    "reto": "Busca hoy una ocasión segura para practicar privacidad.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «privacidad»?",
+      "opciones": [
+        "Cuidado y derecho de proteger la información personal.",
+        "Hacer todo con prisa",
+        "Evitar escuchar"
+      ],
+      "correcta": 0,
+      "explicacion": "Cuidado y derecho de proteger la información personal."
+    }
+  },
+  "paginas": [
+    "Mio y Tinkie llegaron a la ciudad digital. Allí descubrieron un portal que ofrecía premios por datos personales. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "El mensaje exigía responder con prisa. Antes de actuar, respiraron y observaron lo que ocurría. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Tinkie escuchó todas las ideas. Mio recordó la palabra «privacidad» y explicó por qué podía ayudarles. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "El equipo imaginó dos soluciones. Revisaron cuál era más tranquila, clara y segura antes de escoger. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Cerraron el mensaje y pidieron ayuda a una persona adulta. Cada paso pequeño permitió descubrir una pista nueva. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Al terminar, celebraron el esfuerzo. Parar y pedir ayuda es una decisión digital segura. Mio guardó el aprendizaje para otra aventura. Analizaron las consecuencias de cada alternativa y defendieron su elección con argumentos respetuosos.",
+    "De regreso, Mio escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar seguridad digital en casa, en clase y durante el próximo reto."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué descubrieron al comenzar?",
+      "opciones": [
+        "un portal que ofrecía premios por datos personales",
+        "Una carrera sin reglas",
+        "Un premio inesperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Descubrieron un portal que ofrecía premios por datos personales."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Sin mirar",
+        "cerraron el mensaje y pidieron ayuda a una persona adulta",
+        "Abandonando la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo cerraron el mensaje y pidieron ayuda a una persona adulta."
+    },
+    {
+      "enunciado": "¿Qué aprendieron?",
+      "opciones": [
+        "Que siempre hay que competir",
+        "Que escuchar no sirve",
+        "Parar y pedir ayuda es una decisión digital segura"
+      ],
+      "correcta": 2,
+      "explicacion": "Parar y pedir ayuda es una decisión digital segura"
+    }
+  ]
+}
