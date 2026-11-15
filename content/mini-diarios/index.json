@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-11-15",
+    "fecha": "2026-11-15",
+    "titulo": "El semáforo interior",
+    "emoji": "🚦",
+    "archivo": "mini-diario-2026-11-15.json"
+  },
+  {
     "id": "mini-diario-2026-11-14",
     "fecha": "2026-11-14",
     "titulo": "Las huellas tranquilas",
