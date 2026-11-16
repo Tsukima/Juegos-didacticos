@@ -368,6 +368,22 @@
     "archivo": "semanal-brujula-curiosa-226.json"
   },
   {
+    "id": "semanal-mapa-de-sonidos-229",
+    "titulo": "El mapa de los sonidos escondidos · Episodio 229",
+    "nivel_lector": "inicial",
+    "edad_min": 6,
+    "edad_max": 8,
+    "valor": "perseverancia",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 229,
+    "genero": "aventura educativa",
+    "tema": "Dividir una dificultad en partes facilita continuar",
+    "sinopsis": "Goliat y Tinkie visitan la biblioteca sonora, resuelven una dificultad con calma y practican perseverancia.",
+    "palabra_clave": "sílaba",
+    "imagen": "",
+    "archivo": "semanal-mapa-de-sonidos-229.json"
+  },
+  {
     "id": "intermedio-huevo-dinosaurio",
     "titulo": "El huevo que hacía toc toc",
     "nivel_lector": "intermedio",
