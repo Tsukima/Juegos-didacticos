@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-11-18",
+    "fecha": "2026-11-18",
+    "titulo": "La mochila de las preocupaciones",
+    "emoji": "🎒",
+    "archivo": "mini-diario-2026-11-18.json"
+  },
+  {
     "id": "mini-diario-2026-11-17",
     "fecha": "2026-11-17",
     "titulo": "El hilo de la respiración",
