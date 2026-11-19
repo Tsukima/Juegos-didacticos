@@ -752,6 +752,22 @@
     "archivo": "semanal-nube-de-colores-227.json"
   },
   {
+    "id": "semanal-faro-de-ideas-230",
+    "titulo": "El faro de las ideas compartidas · Episodio 230",
+    "nivel_lector": "intermedio",
+    "edad_min": 8,
+    "edad_max": 10,
+    "valor": "trabajo en equipo",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 230,
+    "genero": "aventura educativa",
+    "tema": "Las ideas crecen cuando colaboramos",
+    "sinopsis": "Bruno y Tinkie visitan la bahía de las historias, resuelven una dificultad con calma y practican trabajo en equipo.",
+    "palabra_clave": "colaborar",
+    "imagen": "",
+    "archivo": "semanal-faro-de-ideas-230.json"
+  },
+  {
     "id": "el-mapa-de-las-palabras-perdidas",
     "titulo": "El mapa de las palabras perdidas",
     "nivel_lector": "avanzado",

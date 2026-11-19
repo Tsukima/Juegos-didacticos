@@ -1,0 +1,105 @@
+{
+  "id": "semanal-faro-de-ideas-230",
+  "titulo": "El faro de las ideas compartidas · Episodio 230",
+  "nivel_lector": "intermedio",
+  "edad_min": 8,
+  "edad_max": 10,
+  "valor": "trabajo en equipo",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 230,
+  "genero": "aventura educativa",
+  "tema": "Las ideas crecen cuando colaboramos",
+  "sinopsis": "Bruno y Tinkie visitan la bahía de las historias, resuelven una dificultad con calma y practican trabajo en equipo.",
+  "imagen": "",
+  "palabra_clave": {
+    "palabra": "colaborar",
+    "silabas": [
+      "co",
+      "la",
+      "bo",
+      "rar"
+    ],
+    "definicion": "Trabajar con otras personas para lograr una meta.",
+    "ejemplo_cuento": "Bruno usó «colaborar» para explicar una idea importante.",
+    "ejemplo_cotidiano": "Puedes practicar colaborar durante una tarea o un juego acompañado.",
+    "reto": "Busca hoy una ocasión segura para practicar colaborar.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «colaborar»?",
+      "opciones": [
+        "Trabajar con otras personas para lograr una meta.",
+        "Hacer todo con prisa",
+        "Evitar escuchar"
+      ],
+      "correcta": 0,
+      "explicacion": "Trabajar con otras personas para lograr una meta."
+    }
+  },
+  "paginas": [
+    "Bruno y Tinkie llegaron a la bahía de las historias. Allí descubrieron un faro que brillaba al compartir ideas. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "La niebla ocultó el camino. Antes de actuar, respiraron y observaron lo que ocurría. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Tinkie escuchó todas las ideas. Bruno recordó la palabra «colaborar» y explicó por qué podía ayudarles. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "El equipo imaginó dos soluciones. Revisaron cuál era más tranquila, clara y segura antes de escoger. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Unieron sus propuestas y comprobaron las señales. Cada paso pequeño permitió descubrir una pista nueva. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Al terminar, celebraron el esfuerzo. Las ideas crecen cuando colaboramos. Bruno guardó el aprendizaje para otra aventura. Compararon lo que ya sabían con la nueva pista y explicaron sus razones.",
+    "De regreso, Bruno escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar trabajo en equipo en casa, en clase y durante el próximo reto."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué descubrieron al comenzar?",
+      "opciones": [
+        "un faro que brillaba al compartir ideas",
+        "Una carrera sin reglas",
+        "Un premio inesperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Descubrieron un faro que brillaba al compartir ideas."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Sin mirar",
+        "unieron sus propuestas y comprobaron las señales",
+        "Abandonando la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo unieron sus propuestas y comprobaron las señales."
+    },
+    {
+      "enunciado": "¿Qué aprendieron?",
+      "opciones": [
+        "Que siempre hay que competir",
+        "Que escuchar no sirve",
+        "Las ideas crecen cuando colaboramos"
+      ],
+      "correcta": 2,
+      "explicacion": "Las ideas crecen cuando colaboramos"
+    }
+  ]
+}
