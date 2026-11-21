@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-11-21",
+    "fecha": "2026-11-21",
+    "titulo": "Las huellas tranquilas",
+    "emoji": "🐾",
+    "archivo": "mini-diario-2026-11-21.json"
+  },
+  {
     "id": "mini-diario-2026-11-20",
     "fecha": "2026-11-20",
     "titulo": "El rugido pequeñito",
