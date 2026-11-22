@@ -1,5 +1,14 @@
 [
   {
+    "id": "explorador-diario-2026-11-22",
+    "fecha": "2026-11-22",
+    "titulo": "El semáforo interior",
+    "emoji": "🚦",
+    "edad_min": 8,
+    "edad_max": 12,
+    "archivo": "explorador-diario-2026-11-22.json"
+  },
+  {
     "id": "explorador-diario-2026-11-21",
     "fecha": "2026-11-21",
     "titulo": "Las huellas tranquilas",
