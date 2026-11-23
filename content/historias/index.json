@@ -1134,5 +1134,21 @@
     "palabra_clave": "privacidad",
     "imagen": "",
     "archivo": "semanal-portal-cuidadoso-228.json"
+  },
+  {
+    "id": "semanal-puente-luminoso-231",
+    "titulo": "El puente de las luces tranquilas · Episodio 231",
+    "nivel_lector": "avanzado",
+    "edad_min": 10,
+    "edad_max": 12,
+    "valor": "atención",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 231,
+    "genero": "aventura educativa",
+    "tema": "Observar con atención ayuda a decidir con calma",
+    "sinopsis": "Lumo y Tinkie visitan el valle luminoso, resuelven una dificultad con calma y practican atención.",
+    "palabra_clave": "patrón",
+    "imagen": "",
+    "archivo": "semanal-puente-luminoso-231.json"
   }
 ]
