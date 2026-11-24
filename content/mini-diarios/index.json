@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-11-24",
+    "fecha": "2026-11-24",
+    "titulo": "El hilo de la respiración",
+    "emoji": "🧵",
+    "archivo": "mini-diario-2026-11-24.json"
+  },
+  {
     "id": "mini-diario-2026-11-23",
     "fecha": "2026-11-23",
     "titulo": "La piedra que escuchaba",
