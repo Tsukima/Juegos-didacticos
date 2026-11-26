@@ -1,5 +1,12 @@
 [
   {
+    "id": "mini-diario-2026-11-26",
+    "fecha": "2026-11-26",
+    "titulo": "La nube que pidió una pausa",
+    "emoji": "☁️",
+    "archivo": "mini-diario-2026-11-26.json"
+  },
+  {
     "id": "mini-diario-2026-11-25",
     "fecha": "2026-11-25",
     "titulo": "La mochila de las preocupaciones",

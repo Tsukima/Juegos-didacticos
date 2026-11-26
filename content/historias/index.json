@@ -384,6 +384,22 @@
     "archivo": "semanal-mapa-de-sonidos-229.json"
   },
   {
+    "id": "semanal-semillas-viajeras-232",
+    "titulo": "Las semillas viajeras · Episodio 232",
+    "nivel_lector": "inicial",
+    "edad_min": 6,
+    "edad_max": 8,
+    "valor": "paciencia",
+    "serie": "Expediciones de Tinkie",
+    "episodio": 232,
+    "genero": "aventura educativa",
+    "tema": "Cada ser vivo necesita tiempo y cuidado para crecer",
+    "sinopsis": "Tinkie y Tinkie visitan el jardín del cielo, resuelven una dificultad con calma y practican paciencia.",
+    "palabra_clave": "germinar",
+    "imagen": "",
+    "archivo": "semanal-semillas-viajeras-232.json"
+  },
+  {
     "id": "intermedio-huevo-dinosaurio",
     "titulo": "El huevo que hacía toc toc",
     "nivel_lector": "intermedio",

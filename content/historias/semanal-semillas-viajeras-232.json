@@ -1,0 +1,104 @@
+{
+  "id": "semanal-semillas-viajeras-232",
+  "titulo": "Las semillas viajeras · Episodio 232",
+  "nivel_lector": "inicial",
+  "edad_min": 6,
+  "edad_max": 8,
+  "valor": "paciencia",
+  "serie": "Expediciones de Tinkie",
+  "episodio": 232,
+  "genero": "aventura educativa",
+  "tema": "Cada ser vivo necesita tiempo y cuidado para crecer",
+  "sinopsis": "Tinkie y Tinkie visitan el jardín del cielo, resuelven una dificultad con calma y practican paciencia.",
+  "imagen": "",
+  "palabra_clave": {
+    "palabra": "germinar",
+    "silabas": [
+      "ger",
+      "mi",
+      "nar"
+    ],
+    "definicion": "Comenzar a crecer una planta desde una semilla.",
+    "ejemplo_cuento": "Tinkie usó «germinar» para explicar una idea importante.",
+    "ejemplo_cotidiano": "Puedes practicar germinar durante una tarea o un juego acompañado.",
+    "reto": "Busca hoy una ocasión segura para practicar germinar.",
+    "pregunta": {
+      "enunciado": "¿Qué significa «germinar»?",
+      "opciones": [
+        "Comenzar a crecer una planta desde una semilla.",
+        "Hacer todo con prisa",
+        "Evitar escuchar"
+      ],
+      "correcta": 0,
+      "explicacion": "Comenzar a crecer una planta desde una semilla."
+    }
+  },
+  "paginas": [
+    "Tinkie y Tinkie llegaron a el jardín del cielo. Allí descubrieron semillas suaves que buscaban tierra y agua. Conversaron con frases claras y repitieron la pista más importante.",
+    "El viento cambiaba de dirección. Antes de actuar, respiraron y observaron lo que ocurría. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Tinkie escuchó todas las ideas. Tinkie recordó la palabra «germinar» y explicó por qué podía ayudarles. Conversaron con frases claras y repitieron la pista más importante.",
+    "El equipo imaginó dos soluciones. Revisaron cuál era más tranquila, clara y segura antes de escoger. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Prepararon macetas y protegieron cada semilla. Cada paso pequeño permitió descubrir una pista nueva. Conversaron con frases claras y repitieron la pista más importante.",
+    "Cuando algo cambió, ajustaron el plan, se ayudaron y comprobaron juntos el resultado. Cada integrante aportó una observación diferente y el grupo la recibió con respeto.",
+    "Al terminar, celebraron el esfuerzo. Cada ser vivo necesita tiempo y cuidado para crecer. Tinkie guardó el aprendizaje para otra aventura. Conversaron con frases claras y repitieron la pista más importante.",
+    "De regreso, Tinkie escribió lo ocurrido con sus propias palabras. El equipo conversó sobre cómo aplicar paciencia en casa, en clase y durante el próximo reto."
+  ],
+  "narracion": {
+    "formato": "audio/ogg; codecs=opus",
+    "voces": {
+      "narradora": "cálida y tranquila"
+    },
+    "tono_por_pagina": [
+      "curioso",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "tranquilo",
+      "reflexivo"
+    ],
+    "audio_por_pagina": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "preguntas": [
+    {
+      "enunciado": "¿Qué descubrieron al comenzar?",
+      "opciones": [
+        "semillas suaves que buscaban tierra y agua",
+        "Una carrera sin reglas",
+        "Un premio inesperado"
+      ],
+      "correcta": 0,
+      "explicacion": "Descubrieron semillas suaves que buscaban tierra y agua."
+    },
+    {
+      "enunciado": "¿Cómo avanzó el equipo?",
+      "opciones": [
+        "Sin mirar",
+        "prepararon macetas y protegieron cada semilla",
+        "Abandonando la misión"
+      ],
+      "correcta": 1,
+      "explicacion": "El equipo prepararon macetas y protegieron cada semilla."
+    },
+    {
+      "enunciado": "¿Qué aprendieron?",
+      "opciones": [
+        "Que siempre hay que competir",
+        "Que escuchar no sirve",
+        "Cada ser vivo necesita tiempo y cuidado para crecer"
+      ],
+      "correcta": 2,
+      "explicacion": "Cada ser vivo necesita tiempo y cuidado para crecer"
+    }
+  ]
+}
